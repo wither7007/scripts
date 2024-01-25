@@ -1,0 +1,6 @@
+#!/bin/bash
+##c erase db for npm json server and rerun
+cd /mnt/c/projects/server
+batcat db.json | jq 'del(.posts[] )' > temp && mv temp db.json
+pgrep node | xargs kill -9 && ( npm run server > jserver.txt 2>&1  & )
+cd -

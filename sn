@@ -1,0 +1,8 @@
+#!/bin/bash -v
+##c concat snip all to old snipsa #concat snip all to old snips #ctrl-shft J, consoleHist snippet, save as all/snips
+cd /mnt/c/all/ || exit
+sed 's/\\"/"/g' snips | sed 's/\\n/\r/g' | tr -d '\15\32' > emp && mv emp snips
+cat snips snipsAll > xtemp && mv xtemp snipsAll
+#uniq file
+awk '!a[$0]++' /mnt/c/all/snipsAll > testfile.tmp && mv testfile.tmp /mnt/c/all/snipsAll
+#crazy " slash

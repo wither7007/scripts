@@ -1,0 +1,5 @@
+#!/bin/bash
+##c get psql history
+tr '\1' '\n'  < ~/.psql_history  > ~/psql.txt
+nvim -c "normal Gzz" ~/psql.txt
+

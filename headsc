@@ -1,0 +1,5 @@
+#!/bin/bash
+##C not sure | could be -x script for fd
+printf '\n%s\n' "========================================================================"
+printf '%s\n' "$1"
+head "$1"

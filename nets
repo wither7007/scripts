@@ -1,0 +1,4 @@
+#!/bin/bash
+##c simple print of servers
+printf '%s\n' "netstat -tulpn | grep LISTEN"
+netstat -tulpn | grep LISTEN

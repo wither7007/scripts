@@ -1,0 +1,17 @@
+#!/usr/bin/bash -v
+##c start http npm server with directory parm
+printf "npx serve . >output.log 2>&1 &\n"
+if [ -z "$1" ]; then
+    echo "No arguments provided"
+    cd /mnt/c/projects/server || exit
+    npx serve . >output.log 2>&1 &
+else
+    echo "First argument '$1' provided"
+    cd "$1" || echo 'cannot find dir $1' && exit 1
+    npx serve . 
+fi
+#printf "npm run server > jserver.txt 2>&1  & \n
+#npm run server >jserver.txt 2>&1 &
+cd -
+#npm --prefix /mnt/c/projects/server/ run server > jserver.txt 2>&1  &
+#( npm --prefix /mnt/c/projects/server/ run server > jserver.txt 2>&1  &)

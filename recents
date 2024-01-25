@@ -1,0 +1,21 @@
+#!/bin/bash 
+##c list recent file changes to projects/left.txt
+#todo mv left to better dir?
+shopt -s expand_aliases
+source ~/.bash_aliases
+rm /mnt/c/projects/recent.txt || echo "no recent"
+#https://unix.stackexchange.com/questions/1496/why-doesnt-my-bash-script-recognize-aliases
+if [ -e $HOME/.bash_aliases ]; then
+  source $HOME/.bash_aliases
+fi
+if [ $# -eq 0 ]
+  then
+  echo "No arguments supplied!"
+  day=2
+  fdm --changed-within="$day"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort > /mnt/c/projects/left.txt
+else
+  me=$1
+  echo "Hello passed, $me!"
+  fdm --changed-within="$me"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort  > /mnt/c/projects/left.txt
+fi
+/mnt/c/projects/lsort.py

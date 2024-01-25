@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+#start server
+cd /mnt/c/projects/server 
+
+printf "npx serve . >output.log 2>&1 &\n"
+printf "npm run server > jserver.txt 2>&1  & \n"
+npx serve . >output.log 2>&1 &
+npm run server > jserver.txt 2>&1  & 
+cd -
+#npm --prefix /mnt/c/projects/server/ run server > jserver.txt 2>&1  &
+#( npm --prefix /mnt/c/projects/server/ run server > jserver.txt 2>&1  &)

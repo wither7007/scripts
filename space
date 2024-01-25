@@ -1,0 +1,8 @@
+#!/bin/bash -v
+##c remove files with spaces, etc
+n=$(echo 'fd -tf -d 1 "[^a-zA-Z0-9\.]" -exec rename "s/[^a-zA-Z0-9\.]/_/g"')
+#now remove double lines
+m=$(echo 'fd -tf -d 1 "_+" -exec rename "s/_+/_/g"')
+eval $n
+eval $m
+

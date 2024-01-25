@@ -1,0 +1,31 @@
+#!/bin/bash
+##c utility to download you tube  videos SOUND
+clear
+
+printf '%s\n' "-----------------------------"
+printf '%s\n' "Youtube audio downloader"
+printf '%s\n' "-----------------------------"
+printf '%s\n' "-----------------------------"
+cd /mnt/c/you || exit
+fd . -td -d 2 | column | nl
+cd - || exit
+printf '%s\n' "Youtube audio downloader"
+printf '%s\n' "-----------------------------"
+printf "Enter DL youtube directory: "; read -r DIRY
+# DIRY="lazy"
+newdir="/mnt/c/you/$DIRY"
+printf '\%s\n' "$newdir"
+mkdir -p "$newdir"
+cd "$newdir" || exit
+printf '%s\n' "Enter DL youtube audio: "; read -r USERVAR && printf '%s\n' "USERVAR IS: ${USERVAR}"
+printf '%s\n' "Enter file name"; read -r  ANAME && printf '\%s\n' "ANAME is ${ANAME}"
+ #yt-dlp -f 'ba' --embed-metadata -x --audio-format mp3 "$USERVAR" -o '%(title)s.mp3' > /dev/null 2>&1 
+yt-dlp -f 'ba' --embed-metadata -x --audio-format mp3 "$USERVAR" -o "$ANAME.mp3"
+name=$(yt-dlp --get-filename -o "%(title)s.%(ext)s" "$USERVAR" | sed 's/webm/mp3/')
+printf '%s\n' "$(date) name is $name $USERVAR $newdir"
+echo "$(date)" '- mp3 ' "$name" ' - ' "$USERVAR" "$newdir" >>/mnt/c/you/dates.txt
+touch "$ANAME.mp3"
+#>output.log 2>&1 &
+printf '%s\n' "runing space"
+/home/steff007/script/space
+printf '%s\n' "done with $COMP"

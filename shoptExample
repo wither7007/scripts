@@ -1,0 +1,5 @@
+#!/bin/bash 
+##c quick expand alias in script
+shopt -s expand_aliases
+source ~/.bash_aliases
+fdm  | column

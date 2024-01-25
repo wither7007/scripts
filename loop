@@ -1,0 +1,6 @@
+##c simple loop example
+https://linuxopsys.com/topics/bash-loop-through-lines-in-a-file
+while read -r line
+do
+    echo "$line"
+done < sample.txt

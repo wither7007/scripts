@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+##c edit ipython start files
+nvim  /home/steff007/.ipython/profile_default/startup/start.py

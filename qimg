@@ -1,0 +1,11 @@
+#!/bin/bash
+##c get quick images
+wget https://picsum.photos/600/400/\?random -O a.jpg
+wget https://picsum.photos/600/400/\?random -O b.jpg
+wget https://picsum.photos/600/400/\?random -O c.jpg
+wget https://picsum.photos/600/400/\?random -O d.jpg
+wget https://picsum.photos/600/400/\?random -O e.jpg
+wget https://picsum.photos/600/400/\?random -O f.jpg
+wget https://picsum.photos/600/400/\?random -O g.jpg
+wget https://picsum.photos/600/400/\?random -O h.jpg
+wget https://picsum.photos/600/400/\?random -O i.jpg

@@ -1,0 +1,4 @@
+#!/bin/bash
+##c sql_hist awk | not sure necessary
+cp sql_hist sql_hist.bak
+awk '!a[$0]++' sql_hist > testfile.tmp && mv testfile.tmp sql_hist

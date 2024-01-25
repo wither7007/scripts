@@ -1,0 +1,5 @@
+#!/bin/bash
+##c replaced by mycut?
+printf '%s\n' "ffmpeg -i "$1"  -ss "$2" -to "$3"  -vcodec libx264 -acodec copy x"$1""
+printf '%s\n' "$1 $2 $3"
+#ffmpeg -i "$1"  -ss "$2" -to "$3"  -vcodec libx264 -acodec copy x"$1".mp4

@@ -1,0 +1,7 @@
+#!/bin/bash
+##c check if arg1 is json
+if jq -e . >/dev/null 2>&1 < "$1" ; then
+    printf '%s\n' "$1 parsed successfully"
+else
+    printf '%s\n' "$1 could not parse json string"
+fi

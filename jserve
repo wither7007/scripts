@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /mnt/c/projects/server
+( ssq > htt 2>&1  & ) 
+( npm run server > jserver.txt 2>&1  & )
+cd -

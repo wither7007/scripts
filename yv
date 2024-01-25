@@ -1,0 +1,32 @@
+#!/bin/bash
+##c utility to download you tube videos
+clear
+
+echo "-----------------------------"
+echo "-----------------------------"
+echo "-----------------------------"
+echo "Youtube video downloader"
+echo "-----------------------------"
+cd /mnt/c/you || exit
+fd . -td -d 2 | column | nl
+cd - || exit
+echo "Youtube video downloader"
+read -p 'Enter DL youtube directory: ' DIRY
+# DIRY="lazy"
+newdir="/mnt/c/you/$DIRY"
+echo "$newdir"
+mkdir -p "$newdir"
+cd "$newdir" || exit
+read -p 'Enter DL youtube video: ' USERVAR
+echo "USERVAR IS: ${USERVAR}"
+#print you directeries
+read -p 'enter name: ' ANAME
+# yt-dlp -f "best[height<=?720]" --embed-metadata "$USERVAR" -o '%(title)s.%(ext)s' 
+yt-dlp -f "best[height<=?720]" --embed-metadata "$USERVAR" -o "$ANAME.mp4"
+name=$(yt-dlp --get-filename -o "%(title)s.%(ext)s" "$USERVAR" | sed 's/webm/mp4/')
+echo "$(date)" '- mp3 ' "$name" ' - ' "$USERVAR" "$newdir" >>/mnt/c/you/dates.txt
+echo "$name"
+touch "$ANAME.mp4"
+echo "runing space"
+/home/steff007/script/space
+echo "all done $COMP"

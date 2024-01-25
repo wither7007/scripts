@@ -1,0 +1,11 @@
+/usr/bin/python3.10 ~/script/ipysql.py
+##c part one of ipy | needs ipysql python script
+#uniq py output !!tried this but screwed order
+#awk '!a[$0]++' ~/script/ipy_linux3 > ip_sql.txt
+cp ~/script/sql_hist /mnt/c/projects/p3/sql_hist.txt
+awk '!a[$0]++' ~/script/sql_hist > ~/script/sql_hist_awk
+#not sure if awk unique is still good
+#t=$(mktemp)
+#awk '...' filename >"$t" && mv "$t" filename
+#changed to awk unique version
+nvim -c "normal Gzz" ~/script/sql_hist_awk
