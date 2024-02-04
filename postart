@@ -1,4 +1,5 @@
 #!/bin/bash -v
+##c start postgres
 echo 'bash'
 echo "sudo service postgresql start"
 sudo service postgresql start

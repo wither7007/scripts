@@ -1,0 +1,4 @@
+#!/bin/bash
+##c quick local directory http 
+npx serve . > ~/temp/output.log 2>&1 &
+

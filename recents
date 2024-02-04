@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 ##c list recent file changes to projects/left.txt
 #todo mv left to better dir?
 shopt -s expand_aliases
@@ -8,14 +8,14 @@ rm /mnt/c/projects/recent.txt || echo "no recent"
 if [ -e $HOME/.bash_aliases ]; then
   source $HOME/.bash_aliases
 fi
-if [ $# -eq 0 ]
-  then
-  echo "No arguments supplied!"
+if [ $# -eq 0 ]; then
+  printf '%s\n' "running recent from ~/script"
   day=2
-  fdm --changed-within="$day"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort > /mnt/c/projects/left.txt
+  cd /mnt/c/projects/
+  fdm --changed-within="$day"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort >/mnt/c/projects/myr/left.txt
+  cd -
 else
   me=$1
-  echo "Hello passed, $me!"
-  fdm --changed-within="$me"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort  > /mnt/c/projects/left.txt
+  fdm --changed-within="$me"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort >/mnt/c/projects/myr/left.txt
 fi
-/mnt/c/projects/lsort.py
+/mnt/c/projects/myr/lsort.py

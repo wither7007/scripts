@@ -1,4 +1,5 @@
 #!/bin/bash -v
+##c stop postgres
 echo 'bash'
 echo "sudo service postgresql stop"
 sudo service postgresql stop

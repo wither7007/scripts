@@ -7,13 +7,31 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+myr(){
+  nvim /mnt/c/projects/recent.txt
+}
+lintow() {
+  #send linux file path to window vim
+#  printf '%s\n' "$1"
+#  printf '%s\n' "$1" | sed 's.C:./mnt/c.g' | sed 's.\\./.g'
+#wintoL $(fd -a iv)
+printf "$(fd -a $1)" | sed 's|\/mnt\/c|c\:|' | sed 's|\/|\\|g' | nvim -
+}
 wpwd() {
+  #clip path window windows
   printf '%s\n' "' pwd | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g'"
   pwd | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g'
   pwd | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' | cl
 
 }
+
+wone() {
+  #takes linux file and clips window path
+  echo "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' | cl
+  echo "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' 
+}
 bigGit() {
+  #crazy function to find big git commit
 git rev-list --objects --all |\n  git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | sed -n 's/^blob //p' | sort --numeric-sort --key=2 | cut -c 1-12,41- | $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest 
 }
 #fe() {
@@ -61,7 +79,7 @@ html() {
 }
 
 pretty() {
-  npx js-beautify "$1" >temp && mv temp "$1"
+  npx js-beautify "$1" >tempx && mv tempx "$1"
 }
 tid() {
   tidy "$1" >temp || mv temp "$1"
@@ -154,8 +172,8 @@ cputest() {
 }
 
 f2() {
-  echo "fd -a -tf --changed-within 2d | more"
-  fd -a -tf --changed-within 2d | more
+  echo "fd -a -tf --ignore-file ~/.fdignore --changed-within 2d | xargs -r ls -lhrt| more"
+  fd -I -a -tf --ignore-file ~/.fdignore --changed-within 2d | xargs -r ls -lhrt| more
 }
 wind() {
   fdi --ignore-file ~/.fdignore -a -d 2 "$1" | sed 's|\/mnt\/c|c\:|' | sed 's|\/|\\|g' | nvim -

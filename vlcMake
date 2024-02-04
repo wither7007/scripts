@@ -1,0 +1,57 @@
+#!/usr/bin/python3.10 
+##c script to make vlc playlist good!
+
+#https://stackoverflow.com/questions/18394147/how-to-do-a-recursive-sub-folder-search-and-return-files-in-a-list
+#log way fd to text and python read might be quicker
+#folder to search
+print('\nCreates random m3u file in /you directory\nand updates all\ps\son.ps1 to play it')
+folder='/mnt/c/you/'
+import random
+from datetime import datetime
+#create file name date
+to=datetime.now()
+import os
+#creat random name for file
+fn=f"{to.strftime('%b')}-{to.day}-{to.microsecond}"
+#complicated function to walk dir and get extensions
+def run_fast_scandir(dir, ext):    # dir: str, ext: list
+    subfolders, files = [], []
+    for f in os.scandir(dir):
+        if f.is_dir():
+            subfolders.append(f.path)
+        if f.is_file():
+            if os.path.splitext(f.name)[1].lower() in ext:
+                files.append(f.path)
+    for dir in list(subfolders):
+        sf, f = run_fast_scandir(dir, ext)
+        subfolders.extend(sf)
+        files.extend(f)
+    return subfolders, files
+
+subfolders, files = run_fast_scandir(folder, [".mp3"])
+files=[a for a in files if not 'spoken' in a]
+#shuffle and clips files
+random.shuffle(files)
+files=files[:100]
+#setup for windows vlc style
+newl=[]
+vlist=''
+for a in files:
+    new=a.replace("/mnt/c","file:///C:")
+    vlist+=new+'\n'
+    newl.append(new)
+#write m3u to you direc file from date + random
+writeF=f"/mnt/c/you/{fn}.m3u"
+with open(writeF, 'w') as pl:
+    pl.write(vlist)
+
+#change son.ps1
+psScript="/mnt/c/all/ps/son.ps1"
+#don't have to use original powershell
+# with open(psScript,'r') as f:
+#     lines = f.readlines()
+#     linest=[line for line in lines if line.strip() != '']
+#     linest[1]=f'vlc -Z c:\you\{fn}.m3u'
+scriptLine=f'vlc -Z c:\you\{fn}.m3u'
+with open(psScript,'w') as myaut:
+    myaut.write(scriptLine)

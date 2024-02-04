@@ -12597,3 +12597,263 @@ j=input()
 #string2=" ".join(listSort)
 #ps play array
 #print(f'{string1} {string3} \n ` ')
+from bs4 import BeautifulSoup as bsoup
+data=open('local','r', encoding='utf-8').read()
+data=open('local.html','r', encoding='utf-8').read()
+soup=bsoup(data, 'html-parser')
+soup=bsoup(data, 'html.parser')
+soup['style')
+soup['style']
+for a in soup['style']:
+for a in soup['script']:
+for a in soup(['script']):
+for a in soup(['style']):
+str(soup.prettify)
+soup.prettify
+cps(soup.prettify)
+cps(soup.body)
+cps(soup.html)
+open('soup.html','w',encoding='utf-8').write(str(soup.html))
+[a for a in os.scan('.')]
+ll=open('image','r',encoding='utf-8').read().strip().split('\n'))
+ll=open('image','r',encoding='utf-8').read().strip().split('\n')
+[chr(a) for a in range(10)]
+[chr(a) for a in range(50:60)]
+[chr(a) for a in range(50,60)]
+[chr(a) for a in range(50,120)]
+print([chr(a) for a in range(50,120)])
+print([(a,chr(a)) for a in range(50,120)])
+print([[a,chr(a)] for a in range(50,120)])
+print([[a,chr(a)] for a in range(50,120)].join('\n'))
+print([[a,chr(a)] for a in range(50,140)])
+chrs=[[a,chr(a)] for a in range(50,140)]
+chrs
+'\n'.join(chrs)
+[' - '.join(a) for a in chrs)]
+[' - '.join(a) for a in chrs]
+chrs[1]
+str(chrs[1])
+chrs=[[str(a),chr(a)] for a in range(50,140)]
+chrs[:10]
+chrs[:20]
+chrs[10:]
+print(chrs)
+chrs=[[str(a),chr(a)] for a in range(97,122)]
+chrs=[[str(a),chr(a)] for a in range(97,123)]
+data=open('image','r', encoding='utf-8').read()
+data=open('image','r', encoding='utf-8').read().strip()
+ds=data.split('\n')
+m1('jim')
+[m1(a) for a in ds]
+[(a,b) for a,b in enumerate(ds)]
+[(m1(a),b) for a,b in enumerate(ds)]
+[(chrs[a],b) for a,b in enumerate(ds)]
+[(chrs[a][1],b) for a,b in enumerate(ds)]
+[f'{(chrs[a][1]}',b) for a,b in enumerate(ds)]
+' '.join(chrs)
+' '.join(f'{chrs[1]}')
+''.join(f'{chrs[1]}')
+[a[1] for a in chrs]
+[f'{a[1]} for a in chrs]
+[f'{a[1]}' for a in chrs]
+[(f'{(chrs[a][1]}',b) for a,b in enumerate(ds)]
+[(f'{a}',b) for a,b in enumerate(ds)]
+chrs[23]
+chrs[23][1]
+[' '.join(a) for a in part1]
+[' '.join(a) for a in part1][1]
+cps([' '.join(a) for a in part1][1])
+ds
+for a in enumerate(ds):
+    print(chrs[a[0]])
+for a,b in enumerate(ds):
+    print(b)
+    print(f'{chrs[a]}')
+    print(f'{chrs[a][1]}')
+    print(f'{chrs[a][1]} {b}')
+ds[1]
+ds[1][:-3]
+ds[1][-3]
+ds[1][-3:]
+    print(f'{chrs[a][1]} {b[-3:}')
+    print(f'{chrs[a][1]} {b[-3:]}')
+mm=[]
+'\n'.join(mm)
+open('final','w', encoding='utf-8').write('\n'.join(mm))
+[a.name for a in os.scandir('.') if 'png' in a]
+[a.name for a in os.scandir('.') if 'png' in a.name]
+pic=[a.name for a in os.scandir('.') if 'png' in a.name]
+pic
+[img(a) for a in pics]
+[img(a) for a in pic]
+'\n'.join([img(a) for a in pic])
+cps('\n'.join([img(a) for a in pic]))
+    html=f'<img src="{x}" alt="">\n <div> {x} </div> '
+    return html
+    html=f' <div> {x} </div>\n <img src="{x}" alt="">\n  '
+ds[4]
+cps(ds[4])
+img_url = 'https://blog.finxter.com/wp-content/uploads/2022/04/greenland_04a.jpg'
+urllib.request.urlretrieve(img_url, "greenland_04a.png")
+data=open('image','r', encoding='utf-8').read().strip().split('\n')
+for a,b in enumerate(data):
+    print(f'{a} ,{b}')
+    print(f'{a} {b}')
+f"greenland_04a.png"
+f"{chrs[23][1]}greenland_04a.png"
+    urllib.request.urlretrieve(b, f"{chrs[a][1]}greenland_04a.png")   
+u='https://raw.githubusercontent.com/tg12/script-toolbox/main/fast_portscanner.py'
+print(response.text)
+with open('port.py', 'w', encoding='utf-8').write(response.text)
+with open('port.py', 'w', encoding='utf-8').write(response.text))
+open('port.py', 'w', encoding='utf-8').write(response.text))
+open('port.py', 'w', encoding='utf-8').write(response.text)
+import socket
+from concurrent.futures import ThreadPoolExecutor
+def scan_port(host, port):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(1)
+            s.connect((host, port))
+# Define a list of hosts and ports to scan
+hosts = ['google.com', 'facebook.com', 'amazon.com']
+ports = [80, 443, 8080]
+# Scan the hosts and ports using multithreading
+results = []
+with ThreadPoolExecutor(max_workers=10) as executor:
+    for host in hosts:
+        for port in ports:
+            results.append({'Host': host, 'Port': port, 'Open': executor.submit(scan_port, host, port).result()})
+# Create a Pandas DataFrame from the results
+df = pd.DataFrame(results)
+# Print the results
+from Wappalyzer import Wappalyzer, WebPage
+webpage = WebPage.new_from_url('http://example.com')
+wappalyzer = Wappalyzer.latest()
+wappalyzer.analyze(webpage)
+site="https://onlineservices.dps.mn.gov/EServices/_/"
+webpage = WebPage.new_from_url(site)
+webpage = WebPage.new_from_url(mysite)
+mysite="https://onlineservices.dps.mn.gov/EServices/_/"
+mysite
+    #convert mm:ss to decimal
+    if ':' in x:
+        a,b=x.split(':')
+        return int(a)*60+int(b)
+        return 'no colon'
+fime('330')
+file_path = 'path/to/save/myscore.mscx'
+print(os.environment)
+print(os.environ)
+import head.py
+xx=[a for a in range(10)]
+def f(x):
+    return x>3
+filter(f,xx)
+list(filter(f,xx))
+list(filter(lambda n:n>3,xx))
+k='The lady doth protest too much, methinks'.split('')
+k='The lady doth protest too much, methinks'.split(' ')
+list(filter(lambda n:'0' in n,k))
+list(filter(lambda n:'o' in n,k))
+type(zdir(os))
+type(dir(os))
+dir(os)[:3]
+import * from  head.py
+import head
+zdir(head)
+head.response
+head.response.text
+head.BeautifulSoup
+head.url
+soup=bsoup(response, 'html.parser')
+dir(head)
+soup=head.bsoup(response, 'html.parser')
+soup.pretty
+str(soup.find_all('head'))
+open('head','w',encoding='utf-i').write(str(soup.find_all('head')))
+open('head','w',encoding='utf-8').write(str(soup.find_all('head')))
+execfile('head.py')
+exec('head.py')
+exec('head')
+exec(open('head.py').read())
+'\n'.join(soup.find_all('head'))
+'\n'.join(str(soup.find_all('head')))
+''.join(str(soup.find_all('head')))
+''.join(str(soup.find_all('head')[0]))
+k=''.join(str(soup.find_all('head')[0]))
+open('head','w',encoding='utf-8').write(k)
+head_datas
+[head for head in soup.find_all('head')]
+soup.find_all('head')[1]
+soup.find('head')
+[a for a in soup.find('head')]
+soup.input
+str(soup.head)
+soup.head.text
+soup.head.html
+soup.head.contents
+print(soup.head.contents)
+list(soup.head.children)
+list(soup.head.children)[1]
+list(soup.head.children)[3]
+[a for a in list(soup.head.children)]
+file='/mnt/c/projects/myr/left.txt'
+left.split(' ')
+left[0].split(' ')
+calendar.month_abbr[2]
+calendar.month_abbr[22]
+[calendar.month_abbr[a] for a in range(1,23)]
+[calendar.month_abbr[a] for a in range(1,12)]
+[calendar.month_abbr[a] for a in range(1,13)]
+[[a, calendar.month_abbr[a]] for a in range(1,13)]
+[{a, calendar.month_abbr[a]} for a in range(1,13)]
+mon=[{a, calendar.month_abbr[a]} for a in range(1,13)]
+type(mon[1])
+mult[1]
+dict('jim'='steffes')
+dict(jim='steffes')
+dict(1='steffes')
+dict(str(1)='steffes')
+str(1)
+dict('1'='steffes')
+dict.fromkeys(range(1, 4))
+dict([(1, 2), (3, 4)])
+dict([1,'feb'])
+dict([1,2])
+dict((1,'feb']))
+dict((1,'feb')])
+dict([(1, 2), (3, 'jim')])
+mo=[calendar.month_abbr[a] for a in range(1,13)]
+mo
+d=dict([(1, 2), (3, 'jim')])
+d[4]='bob'
+d=dict()
+d.clear
+d.clear()
+c=1
+for a in mo:
+    d[1]=mo
+    c+=1
+    d[c]=a
+    d[a]=c
+[(a,b) for a,b in enumerate(mo, start=1)]
+[(b,a) for a,b in enumerate(mo, start=1)]
+[dict(b,a) for a,b in enumerate(mo, start=1)]
+for a,b in enumerate(mo,start=1):
+    d[a]=b
+moN=dict()
+    moN[a]=b
+moN
+    moN[b]=a
+left[1].split(' ')[1]
+moN[left[1].split(' ')[1]]
+    # return int(x.split(' ',1)[1].split(' ',1)[1].replace(':','').replace(' ',''))
+    return moN(x.split(' ')[1])
+mk
+    return moN[x.split(' ')[1]]
+left[1].split(' ')[2]
+    return moN[x.split(' ')[1]] + x.split(' ')[2]
+    return moN[x.split(' ')[1]] + str(x.split(' ')[2])
+moN(left[1].split(' ')[1])
+str(moN[left[1].split(' ')[1]])
+    return str(moN[x.split(' ')[1]]) + str(x.split(' ')[2])

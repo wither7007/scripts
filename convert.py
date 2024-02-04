@@ -8,5 +8,10 @@ def decTime(x):
 
 def fime(x):
     #convert mm:ss to decimal
-    a,b=x.split(':')
-    return int(a)*60+int(b)
+    if ':' in x:
+        breakpoint()
+        a,b=x.split(':')
+        print(f'{a},{b}')
+        return int(a)*60+int(b)
+    else:
+        return 'no colon'
