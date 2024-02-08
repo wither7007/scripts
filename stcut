@@ -1,0 +1,21 @@
+#!/usr/bin/python3.10
+##c good to print ffmeg cut string to clip
+import argparse
+from convert import decTime, fime
+import pyperclip
+print( "format is:\n mycut 2:22 3:33 TomorrowLongTime.mp4")
+user_input = input("Do you want to continue?  ")
+if user_input.lower() in ["yes", "y"]:
+    print("Continuing...")
+else:
+    print("Exiting...")
+parser = argparse.ArgumentParser(description='Create ffm command')
+
+parser.add_argument('start', type=str, help='Start n:nn')
+
+parser.add_argument('finish', type=str, help='Finish n:nn')
+parser.add_argument('name', type=str, help='Name of file')
+args = parser.parse_args()
+out=f'ffmpeg -i {args.name}  -ss {fime(args.start)} -to {fime(args.finish)}  -vcodec libx264 -acodec copy x{args.name}'
+pyperclip.copy(out)
+print(out)

@@ -9,7 +9,6 @@ def decTime(x):
 def fime(x):
     #convert mm:ss to decimal
     if ':' in x:
-        breakpoint()
         a,b=x.split(':')
         print(f'{a},{b}')
         return int(a)*60+int(b)

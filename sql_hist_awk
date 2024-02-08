@@ -12857,3 +12857,200 @@ left[1].split(' ')[2]
 moN(left[1].split(' ')[1])
 str(moN[left[1].split(' ')[1]])
     return str(moN[x.split(' ')[1]]) + str(x.split(' ')[2])
+left[1].split(' ')[3]
+cps(moN)
+left=[line.strip() for line in open(file) if not ['sql_'] in line.strip() ]
+['sql_']
+left=[line.strip() for line in open(file) if  line.strip() not in ['sql_'] ]
+left=[line.strip() for line in open(file) if  line.strip() not in ['sql_', '.bhistory'] ]
+left=[line.strip() for line in open(file) if  line.strip() not in ['sql_', '\.bhistory'] ]
+left=[line.strip() for line in open(file) if  line.strip() not in ['sql_', '\.bhistory', 'left.py'] ]
+'The lady doth protest too much, methinks'.split(' ')
+l='The lady doth protest too much, methinks'.split(' ')
+l[:2]
+m=l[:2]
+[a for a in l if not a in m]
+[a for a in l if  a in m]
+left=[line.strip() for line in open(file) if  line.strip() not in ['sql_', '.bhistory', 'left.txt'] ]
+left=[line.strip() for line in open(file) if  line.strip() ]
+left[0]
+'b' in left[0]
+'.b' in left[0]
+'.c' in left[0]
+'.c' not in left[0]
+'.bhistory' not in left[0]
+[a for a in left if not '.b' in a]
+c=['a','b','c']
+[a for a in left if not a in c]
+'a' in c
+c in 'bbb'
+left=[line.strip() for line in open(file) if  line.strip() not in [x for x in['sql_', '.bhistory', 'left.txt']] ]
+a='The lady doth protest too much, methinks'.split(' ')
+b=a[:2]
+a,b
+[x for x in a]
+[x for x in a if not x in b]
+a[0]=' '+a[0]
+[x for x in a if str.find('a')]
+[x for x in a if x.find('a')]
+[x for x in a if x.find('x')]
+'s'.find('x')
+[x for x in a if x.find('x')>0]
+[x for x in a if x.find('a')>0]
+for a in x:
+for x in a:
+pa='The lady doth protest too much, methinks'.split(' ')
+pb=['too', 'doth']
+pa
+pa='The lady doth protest too much methinks'.split(' ')
+for a in pa:
+    if a in pb:
+    if not a in pb:
+pa[1] in [a for a in pb]
+pb
+'t' in [a for a in pb]
+'too' in [a for a in pb]
+'to' in [a for a in pb]
+l1 = ['A', 'B', 'C', 'D', 'A', 'A', 'C']
+s = 'A'
+matched_indexes = []
+i = 0
+length = len(l1)
+while i < length:
+    if s in l1[i]:
+        matched_indexes.append(i)
+    i += 1
+print(f'{s} is present in {l1} at indexes {matched_indexes}')
+re.findall('a','ax')
+re.findall('s','ax')
+[a for a in pa if re.findall('s',a)]
+[a for a in pa if re.findall('sest',a)]
+[a for a in pa if re.findall('test',a)]
+[a for a in pa if re.findall('st',a)]
+    for y in pb:
+        if re.findall(y,a):
+            print(a)
+        if not re.findall(y,a):
+text = "Hello, codedamn coders! Welcome to codedamn community!"
+new_text = re.sub("co.d.mn", "CODEDAMN", text)
+print(new_text)
+            print(f'word {a}')
+not re.findall('a','ax')
+        print(f'{a} {y}')
+            pass
+        print(f'pb loop {a} {y}')
+pa,pb
+    breakpoint()
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+for x in adj:
+  for y in fruits:
+    print(x, y)
+    if y=='apple':
+        print(x, y)
+    if re.findall(y, 'apple'):
+fruits = ["red", "apple", "banana", "cherry"]
+    for y in fruits:
+        if re.findall(y, 'apple'):
+            print(x, y)
+        if re.findall(y, x):
+adj
+fruits
+        if not re.findall(y, x):
+if not re.findall('j','tim'):
+    print('t')
+if not re.findall('t','tim'):
+my_list = ["yes", "yes", "no", "yes", "no", "yes"]
+logical = [item=='yes' for item in my_list]
+logical
+my_list = ["yes", "yes", "no", "yes", "no", "yes", "maybe"]
+re.findall('t','ax')
+re.findall('t','ax')=[]
+re.findall('t','ax')==[]
+re.findall('t','ax')!=[]
+re.findall('a','ax')!=[]
+        if not re.findall(y, x)!=[]:
+        if re.findall(y, x)!=[]:
+moN={'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}
+    #   not in [x for x in['sql_', '.bhistory', 'left.txt']] ]
+    return str(moN[x.split(' ')[1]]) + str(x.split(' ')[2]) + str(x.split(' ')[3]) 
+[a for a in st]
+[a for a in st if 'bhistory' not in a]
+[a for a in st if 'left' not in a]
+def myex(x):
+    ex=['bhistory', 'left.py']
+    if x in x:
+myex('left.py')
+myex('looking left.py is ')
+myex('looking lefty.py is ')
+myex('looking  is ')
+    if x in ex:
+myex('c left.py')
+'l' in 'cdeflg'
+myex('.bhistory')
+myex('bhistory')
+ex
+ex=['bhistory', 'left.py']
+' '.join(ex)
+'.bhis' in ' '.join(ex)
+'bhis' in ' '.join(ex)
+'history' in ' '.join(ex)
+'historyd' in ' '.join(ex)
+'bhistory' in ' '.join(ex)
+'c:\bhistory' in ' '.join(ex)
+ex=['.bhistory', 'left.py']
+ex[0]
+ex[0] in st [0]
+ex[0] in st [1]
+ex[1] in st [1]
+ex[1]
+ex=['.bhistory', 'left.txt']
+    ex=['.bhistory', 'left.txt']
+[myex(a) for a in st]
+    ex=' '.join(['.bhistory', 'left.txt'])
+st=st[:4]
+ex=' '.join(['.bhistory', 'left.txt'])
+'.bhis' in ex
+myex('bbhistory')
+    for y in ex:
+        if y in x:
+myex(st[0])
+    #filter files out
+[a for a in st if myex(a)]
+[a for a in st if not myex(a)]
+folder='/mnt/c/you/newMix'
+foler
+folder
+folder='/mnt/c/you/'
+open('allsongs','w', encoding='utf-8').write('/n'.join(files))
+pwd
+open('allsongs','w', encoding='utf-8').write('\n'.join(files))
+    linest[1]=f'vlc -Z c:\you\{fn}.m3u'
+scriptLine=f'vlc -Z c:\you\{fn}.m3u'
+scriptLine
+with open(psScript,'w') as myaut:
+    myaut.write(scriptLine)
+files[:100]
+print('creates random m3u file in /you directory\nand updates all\ps\son.ps1 to play it')
+print('\nCreates random m3u file in /you directory\nand updates all\ps\son.ps1 to play it')
+mnt/c/projects/pillow()
+import os, sys
+infile='pill.png'
+with Image.open(infile) as im:
+    im.save('pill.jpg')
+    im.convert('RGB')
+    nim=im.convert('RGB')
+    nim.save('pill.jpg')
+size = (128, 128)
+i=Image.open('pill.jpg')
+im=Image.open('pill.jpg')
+im.thumbnail(size)
+im.save('xx', "JPEG")
+myfile=[line.strip() for line in open("jpgs")]
+import urllib.request
+myfile=[line.strip() for line in open('jpgs')]
+def download_image(url, file_path, file_name):
+    full_path = file_path + file_name + '.jpg'
+    urllib.urlretrieve(url, full_path)
+url=myfile[1]
+download_image(url, '.', 'url.jpg')

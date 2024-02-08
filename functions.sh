@@ -7,6 +7,9 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+allBigs(){
+(cd /mnt/c && fdi --size +30m -x ls -lhrt  > /mnt/c/all/bigC 2>&1 &)
+}
 myr(){
   nvim /mnt/c/projects/recent.txt
 }
