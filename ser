@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 ##c start http npm server with directory parm
-printf "npx serve . >output.log 2>&1 &\n"
+printf "npx serve . >~/temp/output.log 2>&1 &\n"
 printf "\n\n\n"
 printf "/projects/server by default"
 if [ -z "$1" ]; then

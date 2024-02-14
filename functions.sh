@@ -7,6 +7,16 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+gitweb()
+{
+#py script to web format git remote -v 
+#depends on /mnt/c/projects/script/gitr.py
+gitr.py $(git ls-remote --get-url)
+}
+wintol()
+{
+printf '%s\n' "C:\Users\YourUsername" | sed 's.C:.mnt\/c.' | sed 's.\\./.g'
+}
 allBigs(){
 (cd /mnt/c && fdi --size +30m -x ls -lhrt  > /mnt/c/all/bigC 2>&1 &)
 }
@@ -69,7 +79,8 @@ pkill() {
   pgrep "$1" | xargs kill -9
 }
 mcut() {
-  ffmpeg -ss 30 -i "$1" -acodec copy o"$1"
+  printf '%s\n' 'ffmpeg -ss 90 -i "$1" -acodec copy o$1'
+  ffmpeg -ss 90 -i "$1" -acodec copy o"$1"
 }
 dpost() {
   cat db.json | jq 'del(.posts[] )' >temp && mv temp db.json
