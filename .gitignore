@@ -151,3 +151,6 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 junk*
 nOutput*
+# added feb 15
+sql_hist
+sql_hist_awk

@@ -13,6 +13,10 @@ gitweb()
 #depends on /mnt/c/projects/script/gitr.py
 gitr.py $(git ls-remote --get-url)
 }
+gitp()
+{
+git add -A && git commit  -am "more example" && git push
+}
 wintol()
 {
 printf '%s\n' "C:\Users\YourUsername" | sed 's.C:.mnt\/c.' | sed 's.\\./.g'

@@ -13054,3 +13054,136 @@ def download_image(url, file_path, file_name):
     urllib.urlretrieve(url, full_path)
 url=myfile[1]
 download_image(url, '.', 'url.jpg')
+Fs = 8000
+f = 5
+sample = 8000
+x = np.arange(sample)
+y = np.sin(2 * np.pi * f * x / Fs)
+plt.plot(x, y)
+plt.xlabel('sample(n)')
+plt.ylabel('voltage(V)')
+plt.show()
+sample = 9000
+Fs = 9000
+Fs = 10000
+sample = 10000
+[a.name for a in os.scandir('.') 'png' in a.name]
+    return f'<div class="grid-item"><img src="{x}" alt=""> <p>girlPart1</p></div>'
+[img(a.name) for a in os.scandir('.') if 'png' in a.name]
+    return f'<div class="grid-item"><img src="{x}" alt=""> <p>{x}</p></div>'
+a=[img(a.name) for a in os.scandir('.') if 'png' in a.name]
+cps('\n'.join(a))
+print('my first')
+s='''origin	git@github.com:JamesSteffes/jamessteffes.github.io.git (push)'''
+s.split('@')
+s.split('@').split(':')
+s.split('@').split(':',1)
+s.split('@',1)
+s.split('@')[1]
+s.split('@')[1].split(' ')
+s.split('@')[1].split(' ',0)
+s.split('@')[1].split(' ')[1]
+s.split('@')[1].split(' ')[0]
+s.split('@')[1].split(' ')[0].replace('github.com:','https://github')
+s.split('@')[1].split(' ')[0].replace('github.com:','https://github.com/')
+    print(5 / 0)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+cps(s)
+import camelot
+[a for a in os.scandir('.') ]
+[a.name for a in os.scandir('.') ]
+tables=camelot.read_pdf('bridges.pdf')
+tables.export('foo.csv', f='csv', compress=True)
+tables.export('foo.csv', f='csv', compress=False)
+tables[0].parsing_report
+tables[0].to_csv('foo.csv')
+tables=camelot.read_pdf('bridges.pdf', pages='all')
+tables=camelot.read_pdf('bridges.pdf', pages='1,2,3')
+df = pd.read_csv('allfiles.csv')
+print(df.loc[[0, 1]])
+df.shape
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
+print(df) 
+print(df.loc[0])
+pd.set_option('max_columns', 50)
+pd.set_option('max_rows', 100)
+pd.set_option('display.expand_frame_repr', True)
+df = pd.read_csv(sales2.csv, index_col='month')
+df = pd.read_csv('sales2.csv', index_col='month')
+df=pd.read_csv('sales.csv', index_col='month')
+df.iloc[4, 2]
+df.iloc[4, 1]
+df.iloc[2, 2]
+df_new = df[['salt','eggs']]
+df_new
+df.head()
+vals_sr = pd.Series(["Val_1", "Val_2", "Val_3", "Val_4", "Val_5"]) 
+print(vals_sr) 
+import pandas as pd 
+vals_sr = pd.Series(["Val_1", "Val_2", "Val_3", "Val_4", "Val_5"], index=["A", "B", "C", "D", "E"]) 
+ct_data = { 
+'client_id': ['C34P', 'C35S', 'C35P', 'C97S', 'C58S'], 
+'card_transactions': [11, 244, 31, 458, 63] 
+} 
+client_transaction_df = pd.DataFrame(ct_data) 
+print(client_transaction_df) 
+'count': [11, 244, 31, 458, 63] 
+df = pd.DataFrame(ct_data) 
+print(df['client_id'])
+print(df.iloc[0])
+df.sort_values('count')
+df.columns
+df.columns.tolist
+df.columns.tolist()
+col=df.columns.tolist()
+col
+df[cl[1]]
+df[col[1]]
+[a for a in df[col[1]]]
+print([a for a in df[col[1]]])
+df[col[1], col[5]]
+col[1]
+col[5]
+df['Phone']
+df[['Phone','City']]
+dd=df[['Phone','City']]
+df = pd.DataFrame(np.random.rand(1000, 50), columns=[f'col_{i}' for i in range(50)])
+import np
+pd.options.display.max_columns = None
+print(df.columns)
+df.info
+df.info()
+os.chdir('pandas')
+os.chdir('panda')
+print(df.info())
+open('myaut','w') as myaut
+mya=open('myaut','w')
+print(df.info(),file=myaut)
+print(df.info(),file=mya)
+mya.close()
+    print(df.info(), file=f)
+n=df.info()
+print(n)
+pd.DataFrame(df.dtypes)
+m=pd.DataFrame(df.dtypes)
+print(m)
+buffer
+[a for a in buffer]
+buffer = io.StringIO()
+open('xx', 'w', encoding='utf-8').write(s)
+df.dtypes
+print(df.dtypes)
+df.info(buf=buffer)
+open('buf','w').write(s)
+import panda as pd
+df2 = pd.read_csv('/mnt/c/projects/jup/pds/countries of the world.txt')
+df2
+jim='steffes'
+print(jim)
+j='jojo'
+print(j)
