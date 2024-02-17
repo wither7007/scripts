@@ -13187,3 +13187,156 @@ jim='steffes'
 print(jim)
 j='jojo'
 print(j)
+data = {'name': ['Alice', 'Bob', 'Charlie'],
+        'age': [25, 30, 35],
+        'gender': ['female', 'male', 'male']}
+df.to_csv('data.txt', sep='\t', index=False)
+myfile=[line.strip() for line in open('data.txt")]
+myfile=[line.strip() for line in open('data.txt')]
+print(myfile)
+print(str(myfile))
+myfile[1]
+print(myfile[1])
+[print(a) for a in myfile]
+myfile[1].replace('\t','     ')
+data = pd.DataFrame(data=[tweet.text for tweet in tweets], columns=['Tweets'])
+display(data.head(10))
+data = pd.DataFrame(data=[urn for tweet in tweets], columns=['Tweets'])
+data=pd.read_csv(urn)
+data=pd.read_csv('urn')
+data=pd.read_fwf('urn')
+data.describe()
+display(data.tail(10))
+    'A': [1, 2, 3, None, 5],  
+    'B': [None, 2, 3, 4, 5],  
+    'C': [1, 2, None, None, 5]
+print("Original Data:\n",df)
+print()
+# use dropna() to remove rows with any missing values
+df_cleaned = df.dropna()
+print("Cleaned Data:\n",df_cleaned)
+sl='-rwxrwxrwx 1 steff007 steff007 56M Dec  6  2021 mmp/slowgood.mp4'
+sl.split(' ')
+sl.split(' ')[:3]
+sl.split(' ')[3:]
+sl.split(' ')[4:]
+sl.split(' ')[4:-1]
+name='simple'
+name[2:3]
+name[1:3]
+[str(a) for a in range(10)]
+s=[str(a) for a in range(10)]
+s[0:5]
+s[4:5]
+tpl(s[4:5])
+s[-1]
+s[-1:2]
+s[-1:-2]
+s[1:9:2]
+s[0:9:2]
+sl='-rwxrwxrwx 1 steff007 steff007 56M Dec  6  2021 mmp/slowgood.mp4'.split(' ')
+sl[-1]
+[[x,y] for x,y in enumerate(sl[1])]
+enumerate(sl)
+[a,b for a,b in enumerate(sl)]
+[[a,b] for a,b in enumerate(sl)]
+sl[10]
+f'{sl[10]}'
+f'{sl[10]} {sl[4]'
+f'{sl[10]} {sl[4]}'
+f'{sl[4]} {sl[10]}'
+bg=[line.strip() for line in open('bigSort')]
+bg
+[f'{sl[4]} {sl[10]}' for sl in bg]
+[f'{sl[4]} {sl[10]}' for sl.split(' ') in bg]
+[a.sl.split(' ') for a in bg]
+[a.split(' ') for a in bg]
+[f'{sm[4]} {sm[10]}' for sm in [a.split(' ') for a in bg]]
+[a.split(' ') for a in bg][:2]
+bg[1]
+[f'{sm[4]} {sm[1]}' for sm in [a.split(' ') for a in bg]]
+[sm[1] for sm in [a.split(' ') for a in bg]]
+[sm[1] for sm in [a.split(' ') for a in bg]][:2]
+[sm[0] for sm in [a.split(' ') for a in bg]][:2]
+print(bg)
+print(bg[-2])
+print(bg[-2:3])
+print(bg[-2:-13])
+print(bg[-2:])
+dg
+bg=[line.strip() for line in open('bigSort') if not 'denied' in line.strip() ]
+bg[:-3]
+bg[-3:]
+save=[line.strip() for line in open('save.txt')]
+save
+[f'mv {a}' for a in save]
+[f'mv {a} ..' for a in save]
+[f'mv {a} /mnt/c/you/dylanb' for a in save]
+'\n'.join([f'mv {a} /mnt/c/you/dylanb' for a in save])
+cps('\n'.join([f'mv {a} /mnt/c/you/dylanb' for a in save]))
+bg[2:]
+bg[:2]
+bg[:5]
+bg=[line.strip() for line in open('bigC') if not 'denied' in line.strip() ]
+bg[1].split(' ')
+bg[1].split(' ')[:3]
+bg[1].split(' ')[4:]
+[a.split(' ') for a in bg][4:]
+[a.split(' ') for a in bg][:4]
+[a.split(' ') for a in bg][:6]
+[a.split(' ')[:4] for a in bg]
+[a.split(' ')[5:] for a in bg]
+[a.split(' ')[6:] for a in bg]
+[a.split(' ')[3:] for a in bg]
+[a.split(' ')[4:] for a in bg]
+myf=[a.split(' ')[4:] for a in bg]
+myf[1]
+myf
+bg=[line.strip() for line in open('/mnt/c/all/bigC') if not 'denied' in line.strip() ]
+myf[8:]
+myf[:5]
+myf.sort()
+len(myf)
+print(myf)
+myf[:-5]
+myf[-5:]
+[a[0] for a in myf]
+set([a[0] for a in myf])
+print(set([a[0] for a in myf]))
+myf[:3]
+def mysize(line):
+  value=line[0]
+  return value
+[mysize(a) for a in myf]
+[mysize(a) for a in myf][1]
+[mysize(a) for a in myf][1][-1]
+myf[1][1]
+myf[1][0]
+myf[1][0][:-1]
+  nvalue=value[:-1]
+  return nvalue
+  nvalue=float(value[:-1])
+  mult=line[:-1]
+[mysize(a) for a in myf][3:]
+[mysize(a) for a in myf][:3]
+myf[1][0][-1]
+  nvalue=float(value[:-1])*100
+  mult=value[-1]
+  return f'${nvalue} ${mult}'
+mult['M']
+mult['MB']
+mult['G']
+  unit=value[-1]
+  return f'{nvalue} {unit} {mult[unit]}'
+    value=line[0]
+    nvalue=float(value[:-1])*100
+    unit=value[-1]
+    final=nvalue*mult[unit]
+    #   return f'{nvalue} {unit} {mult[unit]}'
+    return final
+myf.sort(key=mysize)
+myf[3:]
+myf[:-3]
+myf[:-1]
+myf[-1]
+[f'{a[0]} {a[-1]}' for a in myf]

@@ -14,6 +14,7 @@ gitweb()
 gitr.py $(git ls-remote --get-url)
 }
 gitp()
+  #quick commit and push
 {
 git add -A && git commit  -am "more example" && git push
 }
@@ -22,6 +23,7 @@ wintol()
 printf '%s\n' "C:\Users\YourUsername" | sed 's.C:.mnt\/c.' | sed 's.\\./.g'
 }
 allBigs(){
+  #general find bigg file
 (cd /mnt/c && fdi --size +30m -x ls -lhrt  > /mnt/c/all/bigC 2>&1 &)
 }
 myr(){
@@ -51,11 +53,7 @@ bigGit() {
   #crazy function to find big git commit
 git rev-list --objects --all |\n  git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | sed -n 's/^blob //p' | sort --numeric-sort --key=2 | cut -c 1-12,41- | $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest 
 }
-#fe() {
-#local files
-#  IFS=$'\n' files=($(fzf-tmux --preview='nvim {}' --query="$1" --multi --select-1 --exit-0))
-#  [[ -n "$files" ]] && nvim "${files[@]}"
-#}
+
 big() {
   (fdi --size +10m | xargs ls -lhrt | awk '{ print $5 " :  " $9 }' >big)
 }
@@ -92,10 +90,6 @@ dpost() {
 lsd() {
   ls -ltr | awk '{ print $9 }'
 }
-html() {
-  curl "$1" >scratch.html && tidy scratch.html >temp || mv temp scratch.html
-}
-
 pretty() {
   npx js-beautify "$1" >tempx && mv tempx "$1"
 }
