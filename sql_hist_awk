@@ -1,5 +1,10 @@
+get_ipython().run_line_magic('pinfo', 'sheet')
+get_ipython().run_line_magic('pinfo2', 'sheet')
+get_ipython().run_line_magic('c', '')
 print('is this fixed')
 import re
+get_ipython().run_line_magic('pinfo', 're')
+get_ipython().run_line_magic('pinfo2', 're')
 pf(??re)
 original_stdout = sys.stdout # Save a reference to the original standard output
 #swtich to with statment
@@ -59,14 +64,20 @@ import rich
 
 inspect(rich)
 d()
+get_ipython().run_line_magic('h', '')
 inspect(sheet)
 inspect(wikipedia)
+get_ipython().run_line_magic('pinfo2', 'wikipedia')
 print(d())
+get_ipython().run_line_magic('w', '')
 dd
+get_ipython().run_line_magic('page', 'dd')
+get_ipython().run_line_magic('e', '13')
 mm=ws(kk[4])
 mm
 x = os.environ.keys()
 x
+get_ipython().run_line_magic('page', 'x')
 type(x)
 '/'.join(x)
 [a for a in x]
@@ -76,7 +87,31 @@ inspect(x)
 ['a']*25
 _dh
 inspect(Out)
+get_ipython().run_line_magic('page', 'inspect(Out)')
+get_ipython().run_line_magic('page', 'print[a for a in range(10000)')
+get_ipython().run_line_magic('page', 'print([a for a in range(10000))')
+def pagetext(text_lined, num_lines=25):
+   for index,line in enumerate(text_lined):
+       if index % num_lines == 0 and index:
+           input=raw_input("Hit any key to continue press q to quit")
+           if input.lower() == 'q':
+               break
+       else:
+           print line
+           print(line)
+           
+pagetext([a for a in range(10000)])
+get_ipython().run_line_magic('e', '38')
 hi()
+get_ipython().run_line_magic('e', '37')
+           input=input("Hit any key to continue press q to quit")
+get_ipython().run_line_magic('e', '44')
+get_ipython().run_line_magic('e', '43')
+           stuff=input("Hit any key to continue press q to quit")
+           if stuff.lower() == 'q':
+get_ipython().run_line_magic('e', '49')
+get_ipython().run_line_magic('e', '48')
+get_ipython().run_line_magic('e', '47')
 re.search('<[^/>][^>]*>', '<table>')
 re.search('^s','ssss')
 re.search('^s','ssss')==True
@@ -84,11 +119,13 @@ re.search('^s','ssss')==None
 re.search('^x','ssss')==None
 re.search('x','ssxss')==None
 re.search('x','ssxss')
+get_ipython().run_line_magic('e', '9')
 re.findall('x','ssxss')
 re.findall('x+','ssxss')
 re.findall('x*','ssxss')
 import urllib
 x = urllib.urlopen('https://www.w3resource.org')
+get_ipython().run_line_magic('pinfo2', 'urllib')
 zdir(urllib)
 x = urllib.request('https://www.w3resource.org')
 def reg(s):
@@ -150,6 +187,7 @@ reg('22')
 re.findall(r'\d$','ssxss')
 re.findall(r'\d$','ssxssi4')
 re.match(r'\d$','ssxssi4')
+get_ipython().run_line_magic('e', '92')
 print( re.match(r'\d$','ssxssi4') )
 print( re.match(r's','ssxssi4') )
 print( re.match(r'\d$','44') )
@@ -174,6 +212,7 @@ patterns = '\Bz\B'
 text="The quick brown fox jumps over the lazy dog.")
 text="The quick brown fox jumps over the lazy dog."
 re.match(patterns,text)
+get_ipython().run_line_magic('e', '121')
 print( re.match(patterns,text) )
 text
 patterns
@@ -226,6 +265,7 @@ enumerate(maxw.split(' ',8))
 [list((a,b)) for a,b in enumerate(maxw.split(' ',8))]
 rend([list((a,b)) for a,b in enumerate(maxw.split(' ',8))])
 rend([list(''.join(map(str,a),b)) for a,b in enumerate(maxw.split(' ',8))])
+get_ipython().run_line_magic('e', '163')
 [list(''.join(map(str,a),b)) for a,b in enumerate(maxw.split(' ',8))]
 [list((map(str,a),b)) for a,b in enumerate(maxw.split(' ',8))]
 [list(a,b)) for a,b in enumerate(maxw.split(' ',8))]
@@ -263,6 +303,7 @@ try:
 except OSError:
     # 'File not found' error message.
     print("Fichier non trouvé")
+get_ipython().run_line_magic('ls', '')
     with open('data.txt', 'r') as f:
 f
 f.close()
@@ -310,6 +351,7 @@ def displaymatch(match):
     if match is None:
         return None
     return '<Match: %r, groups=%r>' % (match.group(), match.groups())
+get_ipython().run_line_magic('e', '263')
 displaymatch(valid.match("akt5n"))  # Valid.
 with open('Bookmarks') as user_file:
   bm = user_file.read()
@@ -345,6 +387,7 @@ type(bm)
 for key,value in bm.items():
     print(key,value)
 for key,value in bmj.items():
+get_ipython().run_line_magic('e', '36')
     print(f'{ key },{ value }\n')
 kk=open('filename.txt', 'w') as f
 kk=open('filename.txt', 'w')
@@ -401,7 +444,9 @@ except IndexError:
         guide_style="bold bright_blue",
     walk_directory(pathlib.Path(directory), tree)
     print(tree)
+get_ipython().run_line_magic('e', '1')
 import os
+get_ipython().run_line_magic('pwd', '')
 os.chdir('..')
 os.chdir("/mnt/c/Users/jayst/AppData/Local/Google/Chrome/User Data/Default")
 with open('Bookmarks', 'r') as json_file:
@@ -410,8 +455,13 @@ print(json_object)
 print(json.dumps(json_object))
 print(json.dumps(json_object, indent=1))
     jo = json.load(json_file)
-pretty_response
+get_ipython().run_line_magic('pprint', '(jo)')
+get_ipython().run_line_magic('pprint(jo)', '')
 import requests
+response = requests.get("https://www.boredapi.com/api/activity")
+pretty_response = json.dumps(response.json(), indent=4, sort_keys=True)
+print(pretty_response)
+pretty_response
 from pprint import pprint
 pprint(jo)
 pprint(jo, file=kk)
@@ -567,6 +617,7 @@ n_dict = {'1': '1', '2': '2', '3': [1, 2, 3, 4, 5],
 print(n_dict)
 print(jo)
 print(jo, file=kk)
+cps(os.getcwd())
 len(jo)
 jo[1]
 joo=json.dumps(jo)
@@ -577,10 +628,13 @@ with open('joo.txt', 'w') as jsf:
 joo=json.dumps(jo, indent=4)
 joo=json.dumps(jo, indent=2)
 inspect(jo)
+pagetext(jo)
 [a for a in jo['roots']['bookmark_bar']]
 [a for a in jo['roots']['bookmark_bar']['children']]
+pagetext([a for a in jo['roots']['bookmark_bar']['children']])
 [a for a in jo['roots']['bookmark_bar']['children'][3]]
 [a for a in jo['roots']['bookmark_bar']['children'][3]['name']]
+get_ipython().run_line_magic('e', '29')
 jo['roots']['bookmark_bar']['children'][3]
 jo['roots']['bookmark_bar']['children'][2]
 jo['roots']['bookmark_bar']['children'][1]
@@ -617,7 +671,9 @@ type(jos)
 [list((a['type'], a['name'])) for a in jos if a['type'=='folder']]
 [list((a['type'], a['name'])) for a in jos if a['type']=='folder']]
 [list((a['type'], a['name'])) for a in jos if a['type']=='folder']
+get_ipython().run_line_magic('e', '14')
 [a for a in jos if a['type']=='folder']
+pagetext([a for a in jos if a['type']=='folder'])
 fold=[a for a in jos if a['type']=='folder']
 [a['name'] for a in fold]
 [a for a in jos if a['type']=='folder' and a['name']='next']
@@ -670,6 +726,7 @@ cps(int(myt))
 timel(int(myt)/1_000_000_000)
 timel(int(myt)/1_000_000_00)
 timel(int(myt)/1_000_000_0)
+get_ipython().run_line_magic('time', '')
 epoch_time = int(time.time())
 import time
 epoch_time
@@ -694,6 +751,7 @@ one
     mm=((x - 116444736000000000) / 10000000)
     return mm
     x=int(x)
+get_ipython().run_line_magic('e', '87')
 print(timeln(myt))
     print(mm)
 len(myt)
@@ -712,12 +770,15 @@ sheetc('pods')
 sheetc('pods')['values']
 sheetc('pods')['values'][1]
 sheetc('pods')['values'][1][1]
+sheetc('pods')['values'][1][1].replace('wget ','')
+get_ipython().run_line_magic('e', '4')
 vv=sheetc('pods')['values']
 vv
 [a[1] for a in vv]
 cps([a[1] for a in vv])
 cps([a[1]+'\n' for a in vv])
 '\n'.join([a[1] for a in vv])
+get_ipython().run_line_magic('e', '16')
 cps('\n'.join([a[1] for a in vv]))
 cps(vv[1][1])
 def ct(x):
@@ -725,6 +786,7 @@ def ct(x):
     return nt
 ct(1)
 jos[1]['date_added']
+get_ipython().run_line_magic('e', '7')
 ct(jos[1]['date_added'])
 cps(time.time())
 time.gmtime(1676677831.8070912)
@@ -739,11 +801,14 @@ jos[5]
 newt=13321151697634282
 ct(13321151697634282)
 time.gmtime(ct(13321151697634282))
+named_tuple = time.localtime() # get struct_time
+time_string = time.strftime("%m/%d/%Y, %H:%M:%S", named_tuple)
 time_string
 time.localetime()
 time.localtime()
 time.strftime("%m/%d/%Y, %H:%M:%S", time.localetime())
 time.strftime("%m/%d/%Y, %H:%M:%S", time.localtime())
+get_ipython().run_line_magic('e', '31')
 jos[4][1]
 jos[4][0]
 type(jos[4])
@@ -765,6 +830,7 @@ newt
 time.localtime(newt)
 time.localtime(int(newt))
     fnt=int(fnt)
+get_ipython().run_line_magic('e', '63')
 type(time.localtime(int(newt)))
     # fnt=time.localtime(nt)
     # fnt=int(fnt)
@@ -780,11 +846,13 @@ jos[4]['children']['date_added']
 [list(a['name'], ct(a['date_added'])) for a in jos[4]['children']]
 [list(a['name'] ct(a['date_added'])) for a in jos[4]['children']]
 [['name'], ct(a['date_added']) for a in jos[4]['children']]
+get_ipython().run_line_magic('e', '86')
 [(['name'], ct(a['date_added'])) for a in jos[4]['children']]
 [(a['name'], ct(a['date_added'])) for a in jos[4]['children']]
 [(a['name'], ct(a['date_added']),ct(a['date_last_used'])) for a in jos[4]['children']]
 [a for a in jos if a['type']=='folder' ]
 [a['name'] for a in jos if a['type']=='folder' ]
+get_ipython().run_line_magic('e', '97')
 type([a['name'] for a in jos if a['type']=='folder' ])
 del jos[4]
 type([a['name'] for a in jo if a['type']=='folder' ])
@@ -815,6 +883,7 @@ print(factorial)
 x=[a for in range(5)]
 x=[a for a in range(5)]
 (n * 2 for n in x)
+get_ipython().run_line_magic('e', '10')
 list((n * 2 for n in x))
 kk='/mnt/c/you/gut'
 os.chdir(kk)
@@ -828,7 +897,9 @@ from export import cps
 with open(fileA, 'a') as f:
     f.write(wcom)
 with open('fileA', 'a') as f:
+get_ipython().system('nvim fileA')
     f.write(wcom+'\n')
+get_ipython().system('rm fileA')
 dirI="/mnt/c/you/gut/"
 dirO=("/mnt/c/you/gut/clips")
 clip=dirI+song
@@ -841,11 +912,16 @@ windir
 '/'.replace('/','\\')
 print('/'.replace('/','\\'))
     f.write('/'.replace('/','\\'))
+os.getcwd()
+ff=os.getcwd()
 ff
 ff.replace('/mnt/c/','c:\\")
 ff.replace('/mnt/c/','c:\\')
+get_ipython().run_line_magic('e', '33')
 print(ff.replace('/mnt/c/','c:\\'))
+get_ipython().run_line_magic('cd', 'p3')
 print(ff.replace('/mnt/c/','c:\\').replace('/','\\'))
+get_ipython().run_line_magic('e', '40')
 def wdir(x):
     ff=x.replace('/mnt/c/','c:\\').replace('/','\\')
     return ff
@@ -858,7 +934,9 @@ from moviepy.editor import *
 from export import wdir
 wdir(clip)
 'vlc ' + wdir(clip)
+get_ipython().run_line_magic('c', ':\\you\\gut\\unknown.mp4')
 out=cp+song
+get_ipython().run_line_magic('cp', '')
 with open('vlcs', 'a') as f:
 console = Console()
 cp="/mnt/c/you/gut/"
@@ -870,7 +948,9 @@ wcom=f'vlc --no-video-title  {wdir(dirI+song)} --start-time {vstart} --stop-time
     f.write(wcom+'\n'+wcom2+'\n')
 start
 start[0]+'_'+start[1]
+get_ipython().run_line_magic('e', '3')
 str( start[0] )+'_'+str( start[1] )
+get_ipython().run_line_magic('e', '5')
 sts=str( start[0] )+'_'+str( start[1] )
 stf=str( finish[0] )+'_'+str( finish[1] )
 out=dirO+song+sts+--+stf
@@ -907,6 +987,7 @@ song='knocking'
 start=(6,02)
 finish=(6,19)
 start=(6,2)
+get_ipython().system('nvim vlcs')
 out=dirO+song+'-'+sts+'-'+stf+'.mp4'
 with open('/mnt/c/you/gut/vlcs', 'a') as f:
 # print([a for a in enumerate(res)])
@@ -996,6 +1077,7 @@ os.chdir('/mnt/c/twit')
 subdirs('.')[0]
 f = music_tag.load_file([a for a in subdirs('.')][0])
 with open('m.jpg', 'rb') as img_in:
+get_ipython().run_line_magic('e', '81')
 with open('mp.jpg', 'rb') as img_in:
 f['title'].first.replace(' ','_')
 [a for a in subdirs('.')][1]
@@ -1027,6 +1109,7 @@ kk=re.sub(r'_{2,}', '_',kk)
 [a for a in subdirs('.') if a.__contains__('mp3')]
 res=[a for a in subdirs('.') if a.__contains__('mp3')]
 res
+get_ipython().run_line_magic('e', '138')
 mm=re.sub(r'[^a-zA-Z0-9]','_', res)
 mm[1]
 res[0]
@@ -1074,12 +1157,33 @@ height = 300
 message = "FOSS 2-22"
 width = 150
 height = 150
+left, top, right, bottom = font.getbbox("Hello world")
+width, height = right - left, bottom - top
+im = Image.new("RGB", (100, 100))
+draw = ImageDraw.Draw(im)
+width = draw.textlength("Hello world")
+left, top, right, bottom = draw.multiline_textbbox((0, 0), "Hello\nworld")
+img.save('x.jpg')
+# font = ImageFont.truetype("Tests/fonts/FreeMono.ttf")
 im.save('x.jpg')
-import PIL from PIL
-from PIL import PIL
+import PILfrom PIL
 import Imagefrom PIL.ExifTags 
 import TAGSdef 
+def resize(filepath, filepath_new):
+    percent = 50
+    img = Image.open(filepath)
+    exifdata = img.getexif()
+    width  = int( img.size[0] * percent / 100 )
+    height = int( img.size[1] * percent / 100 )
+    new_size = (width, height)
+    img = img.resize(new_size, Image.Resampling.LANCZOS)
+    img.save(filepath_new, exif = exifdata)
+    modify_time = os.path.getmtime(filepath)
+    os.utime(filepath_new, (modify_time, modify_time))
+import PIL from PIL
+from PIL import PIL
 from PIL Imagefrom PIL.ExifTags
+get_ipython().run_line_magic('lf', '')
 im=Image.open('m.jpg')
 imamge.show()
 image.show()
@@ -1101,19 +1205,27 @@ new_img = Image.alpha_composite(img, flip_img)
 myfont="/usr/share/fonts/truetype/freefont/FreeMono.ttf"
 font = ImageFont.truetype(myfont, size=25)
 # font = ImageFont.truetype('WorkSans-Regular.ttf', 62)
-img.save('x.jpg')
 new = Image.new("RGBA", (2000,2000))
 new.save('n.jpg')
 imgDraw.text((xText, yText), message, font=font, fill=(255, 255, 255))
 my=res[1]
 my
 len(f['comment'])
+get_ipython().run_line_magic('e', '12')
+get_ipython().run_line_magic('less', 'inspect(f)')
+get_ipython().run_line_magic('page', '')
+get_ipython().run_line_magic('less', '')
+get_ipython().run_line_magic('less', '--help')
+get_ipython().run_line_magic('less', 'print("hi")')
+get_ipython().run_line_magic('page', "print('a')")
 music_tag
 jj=inspect(f)
 inspect(inspect, methods=True)
 inspect(f, methods=True)
 inspect(inspect, dunder=True)
+get_ipython().run_line_magic('page', 'inspect(inspect, dunder=True)')
 dir(inspect)
+get_ipython().run_line_magic('lsmagic', '')
 from rich.pretty import pprint
 pprint(locals())
 pprint(x)
@@ -1140,9 +1252,25 @@ inspect(rpint)
 inspect(rprint)
 gg=[a for a in range(10000)]
 gg
+get_ipython().run_line_magic('page', '-r gg')
+get_ipython().run_line_magic('page', 'gg')
+get_ipython().run_line_magic('e', '')
+import io
+from contextlib import redirect_stdout
+f = io.StringIO()
+with redirect_stdout(f):
+    print(x)
+out = f.getvalue()
+    print('im')
+myout = f.getvalue()
 myout
+get_ipython().run_line_magic('e', '102')
+get_ipython().run_line_magic('e', '101')
+    inspect(inspect)
+woo = f.getvalue()
 woo
 hi(0)
+get_ipython().run_line_magic('e', '105')
 pprint(myout)
 fp = music_tag.load_file('m.jpg') 
 f = music_tag.load_file(res[1]) 
@@ -1161,6 +1289,7 @@ f['album'].first
 message = "FLOSS\nfeb-23"
 data = {f"{n}": n for n in range(11)}
 data
+get_ipython().run_line_magic('pprint', '(data)')
 print(data)
 type(data)
 lt
@@ -1204,7 +1333,11 @@ print(locals())
 str
 with open('esc.txt','w') as o:
     o.writelines(woo)
+    inspect(rprint)
+    print('\n\n')
 from rich import rprint
+    inspect(music_tag)
+    inspect(music_tag, all=True)
 def catch(func, handle=lambda e : e, *args, **kwargs):
     try:
         return func(*args, **kwargs)
@@ -1217,19 +1350,50 @@ eggs
 eggs = [1,3,4]
 eggs = [1,3,4,'jim']
 eggs = [1,3,4,'jim',3 ,22]
+get_ipython().run_line_magic('quickref', '')
+   quickref 
+get_ipython().run_line_magic('e', '171')
+   get_ipython().run_line_magic('quickref', '')
 wo
+files=get_ipython().getoutput('ls')
 files
+get_ipython().show_usage()
+get_ipython().run_line_magic('config', '')
+get_ipython().run_line_magic('dhist', '')
+get_ipython().run_line_magic('pinfo', 'inspect')
+get_ipython().run_line_magic('pinfo', 'fil')
+get_ipython().run_line_magic('pinfo', 'woo')
+get_ipython().run_line_magic('pinfo', 'print')
+get_ipython().run_line_magic('pinfo', 'rich')
 from rich import rich
 dir(rich)
+get_ipython().run_line_magic('alias', '')
+get_ipython().run_line_magic('ldir', '')
+get_ipython().run_line_magic('logstart', '')
+get_ipython().run_line_magic('logstop', '')
 -
 -,
 _oh
+get_ipython().run_line_magic('page', 'esc.txt')
+get_ipython().run_line_magic('page', "'pf.txt'")
+get_ipython().run_line_magic('page', 'o')
+get_ipython().run_line_magic('page', 'data')
+get_ipython().run_line_magic('psource', 'o')
+get_ipython().run_line_magic('psource', 're')
 with redirect_output("my_output.txt"):
     ls
+get_ipython().run_cell_magic('capture', 'captured', 'ls\ncaptured()\n\nls\nprint("okay, I\'m done now")\n\n')
 captured()
+get_ipython().run_cell_magic('capture', 'x', 'help\n\n')
 x()
 help
 capture x
+get_ipython().run_cell_magic('capture', 'x', 'help(help)\n\n')
+get_ipython().run_cell_magic('capture', 'x', 'inspect(inspect, dunder=True)\n\n')
+get_ipython().run_line_magic('pylab', '')
+import wget
+help(wget)
+get_ipython().run_line_magic('save', 'help(wget)')
 _oh[3]
 _oh[0]
 type(_oh)
@@ -1240,6 +1404,7 @@ len(_oh)
 _oh[9]
 [a for a in _oh[9]]
 inspect(_oh[9])
+get_ipython().run_line_magic('e', '23')
 print(_oh[9])
 _oh[9].keys()
 dir(_oh[9])
@@ -1261,6 +1426,9 @@ _oh[17]
 for a in _oh[17]:
        inspect(a)
        
+inspect(wget)
+dir(wget)
+wget.usage
 import subprocess
 def runcmd(cmd, verbose = False, *args, **kwargs):
     process = subprocess.Popen(
@@ -1274,6 +1442,8 @@ def runcmd(cmd, verbose = False, *args, **kwargs):
         print(std_out.strip(), std_err)
     pass
 runcmd('echo "Hello, World!"', verbose = True)
+runcmd("wget https://www.scrapingbee.com/images/logo-small.png", verbose = True)
+ww="wget https://dcs.megaphone.fm/TWI6021185329.mp3\?key\=6fd48f265ffb65859031af3bf76c65f4\&request_event_id\=bd71bc80-981d-4b56-9b4f-9a3ecd4614fc -O AskTech.mp3"
 runcmd(ww, verbose = True)
 p = re.compile('^.+-.+-.+$')
 l1 = ["AB.22-01-01", "AB.33-01-44", "--4", "AA.44--05", "--"]
@@ -1298,7 +1468,6 @@ class redirect_output(object):
         sys.stdout = self.sys_stdout
         sys.stderr = self.sys_stderr
 inspect(redirect_output)
-    inspect(music_tag, all=True)
     help(help)
 from IPython.display import display
 from IPython.display import Image
@@ -1318,6 +1487,13 @@ myitems=[]
         myitems.append(f'{a} - {f[a]}')
         myitems.append(f'{a} - can\'t {e}')
 myitems
+from bs4 import BeautifulSoup as soup
+from time import time
+from datetime import datetime
+url="https://www.bbc.co.uk/programmes/p01dh5yg/episodes/downloads"
+print("url is " + url)
+page_raw = requests.get(url).text
+soup = soup(page_raw, "html.parser")
 soup
 with open('soup.txt','w') as w:
     w.writelines(soup)
@@ -1333,7 +1509,13 @@ with open('fileRan', "w", encoding="utf-8") as tex:
 print(soup.title)
 nb_links = len(soup.find_all('a'))
 print(f"There are {nb_links} links in this page")
+print(soup.get_text())
 soup.a
+from collections import Counter
+all_hrefs = [a.get('href') for a in soup.find_all('a')]
+top_3_links = Counter(all_hrefs).most_common(3)
+print(top_3_links)
+top_3_links = Counter(all_hrefs).most_common(5)
 soup('script')
 [s.extract() for s in soup('script')]
 soup('svg')
@@ -1372,9 +1554,11 @@ res[3]
 res[:3]
 res[:3].sort()
 sorted(res[:3])
+get_ipython().run_line_magic('cd', '/mnt/c/you/intime/')
 import glob
 files = glob.glob("*.mp3")
 len(files)
+files.sort(key=os.path.getmtime)
 files[:5]
 files[5:]
 files[-5:]
@@ -1384,6 +1568,7 @@ files[-5:]
 [a for a in files if a.__contains__'sumer')
 [a for a in files if a.__contains__'sumer']
 [a for a in files if a.__contains__('sumer')]
+get_ipython().run_line_magic('e', '78')
 mfile=[a for a in files if a.__contains__('sumer')][0]
 from pathlib import Path
 Path('somefile.txt').touch()
@@ -1457,15 +1642,51 @@ for f in files[90:124]:
 [(a,b) for a,b in enumerate(files)][:89]
 [(a,b) for a,b in enumerate(files)][:90]
 [(a,b) for a,b in enumerate(files)][:91]
+for f in files[:90]:
 files[90:]
+get_ipython().run_line_magic('more', 'files[90:]')
+get_ipython().run_line_magic('page', 'files[90:]')
+get_ipython().run_line_magic('page', '-r files[90:]')
+get_ipython().run_line_magic('page', '-r files')
+from IPython.core import page
+from IPython.core.magic import register_line_magic
+@register_line_magic('help')
+def magic_help(s):
+    """Retrieve the pydoc help for an object and display it through a pager.
+    See http://stackoverflow.com/a/1176180/1410871
+    """
+    import pydoc
+    import sys
+    obj = reduce(getattr, s.split("."), sys.modules[__name__])
+    page.page(pydoc.plain(pydoc.render_doc(obj)))
+del magic_help
+get_ipython().run_line_magic('help', 're')
 d
+get_ipython().run_line_magic('help', 'glob')
 from functools import reduce
+get_ipython().run_line_magic('help', 'rich')
 files[100:]
 for f in files:
-files = glob.glob(mpath+"*.mp3")
 mpath="/mnt/c/you/time13 "
+for fi in files:
+    mfile=mpath+'/'+fi
+files = glob.glob(mpath+"*.mp3")
 mpath="/mnt/c/you/time13/"
+    f = music_tag.load_file(fi) 
+get_ipython().run_line_magic('cd', '/mnt/c/you/intime13')
+get_ipython().run_line_magic('cd', '/mnt/c/you/time13')
+    mfile=fi
+mpath="/mnt/c/you/ourtime "
 filex
+mpath="/mnt/c/you/ourtime/"
+            com=re.sub(r'[^a-zA-Z0-9]','_', f['tracktitle'].first )
+            kk=re.sub(r'_{2,}', '_',com)
+            newFile=mpath+kk+'.mp3'
+            os.rename(mfile, newFile)
+            Path(newFile).touch()
+        except:
+            print(f'fail: {fi}')
+mpath="/mnt/c/you/timep/"
 from sympy import init_printing, Symbol, expand
 init_printing()
 a = Symbol("a")
@@ -1484,11 +1705,29 @@ logging.error("An error message")
 logging.critical("A critical message")
 logger.setLevel(logging.DEBUG)
 logging.setLevel(logging.DEBUG)
+logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
+logger = logging.getLogger('dev')
+logger.debug('This is a debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning message')
+logger.error('This is an error message')
+logger.critical('This is a critical message')
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+# Test
+logger = logging.getLogger('LOGGER_NAME')
+logger.debug('This is hidden')
+logger.info('So this is shown on the console')
+logger.warning('This too')
 date_strftime_format = “%Y-%m-%y %H:%M:%S”
 logging.basicConfig(stream=sys.stdout, level=logging.INFO, format="%(asctime)s %(message)s", datefmt=date_strftime_format)
 date_strftime_format = "%Y-%m-%y %H:%M:%S"
+mport logging
+logger = logging.getLogger('package') # Create logger with name 'package'
+handler = logging.StreamHandler(stream=sys.stdout)
+logger.addHandler(handler)
 logger.warning('This is a warning message to stdout')
-logger.warning('This is a warning message')
+logger.debug('This will not be displayed.')
+logger.info('Neither will this.')
 logger.warning('This will be displayed!')
 logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
 logging.debug('This message should go to the log file')
@@ -1499,6 +1738,16 @@ logging.basicConfig(filename='myapp.log', format='%(asctime)s %(message)s', leve
 dfile='myapp.log'
 data = open(dfile, 'r', encoding='utf-8').read().splitlines()
 logging.warning('mylog')
+get_ipython().system('nvim myapp.log')
+get_ipython().run_line_magic('cd', '/mnt/c/projects/bs')
+url="https://twit.tv/shows/this-week-in-enterprise-tech/episodes/532?autostart=false"
+for script in soup(["script", "style"]):
+    script.extract()
+bod = str(soup.body)
+fileRan='soup.html'
+with open(fileRan, "w", encoding="utf-8") as tex:
+    print(datetime.now().strftime("%a %m/%d/%Y, %H:%M:%S"), file=tex)
+get_ipython().run_line_magic('cd', '/mnt/c/twit')
 files[6]
 files=files[6]
 files=files[5:6]
@@ -1506,19 +1755,11 @@ filest=files[6:7]
 filest
 filest=files[6:8]
 for fi in filest:
-    mfile=fi
-    f = music_tag.load_file(fi) 
-            com=re.sub(r'[^a-zA-Z0-9]','_', f['tracktitle'].first )
-            kk=re.sub(r'_{2,}', '_',com)
-            newFile=mpath+kk+'.mp3'
-            os.rename(mfile, newFile)
-            Path(newFile).touch()
-        except:
-            print(f'fail: {fi}')
             print(f'fail: {fi} error {e}')
             myE=f'fail: {fi} error {e}'
             print(myE)
             logging.warning(myE)
+mpath="/mnt/c/twit/"
 files[6:8]
 for fi in files[6:8]:
 files[5:8]
@@ -1544,11 +1785,11 @@ from IPython.core.debugger import set_trace
 def ii():
     x = 5
     set_trace()
-    print(x)
 ii()
 logging.warning('hoh')
 [a for a in files if a.startswith('TW')]
 [a for a in files if 'TW' in a]
+get_ipython().run_line_magic('e', '8')
 for fi in mfi:
             set_trace()
 mfi=[a for a in files if 'TW' in a]
@@ -1556,6 +1797,8 @@ mfi=[a for a in files if 'TW' in a]
 mfi
 mfi=[a for a in files if 'sn' in a]
     pdb.set_trace()
+mpath="/mnt/c/you/linux/"
+mfi=[a for a in files if 'fed' in a]
         com=re.sub(r'[^a-zA-Z0-9]','_', f['tracktitle'].first )
         kk=re.sub(r'_{2,}', '_',com)
         newFile=mpath+kk+'.mp3'
@@ -1564,13 +1807,15 @@ mfi=[a for a in files if 'sn' in a]
         myE=f'fail: {fi} error {e}'
         print(myE)
         logging.warning(myE)
+files = glob.glob(mpath+"*.mp*")
 [a for a in files if len(a)<20]
 [a for a in files if len(a)<30]
 [a for a in files if len(a)<40]
 [a for a in files if len(a)>40]
+get_ipython().run_line_magic('e', '35')
 mfiles
 mfi=[a for a in files if len(a)<40]
-for fi in files:
+mpath="/mnt/c/you/mcoding/"
 fi="/mnt/c/you/mcoding/dataClass.mp4"
 f['tracktitle']
 f['tracktitle'].first
@@ -1587,13 +1832,27 @@ if f['tracktile'].first:
         if f['tracktitle'].first:
             com='not_title'
 from tinytag import TinyTag
+files = glob.glob(mpath+"*.mp4")
+TinyTag.get(files[2])
+ti=TinyTag.get(files[2])
 ti.title
+    ti=TinyTag.get(fi)
+    print(ti.title)
 cps(files[0])
+    print(f'{fi}  {ti.title}')
+    com=re.sub(r'[^a-zA-Z0-9]','_', ti.title)
+    print(com)
+    # print(f'{fi}  {ti.title}')
+    print(com+'.mp4')
+    print(mpath+com+'.mp4')
+    newFile=mpath+com+'.mp4'
+    print(f'os.rename({fi}, {newFile})')
+    os.rename(fi, newFile)
+mpath="/mnt/c/you/lazy/"
 import pdb; 
 print(files)
 me=[(a,b) for a,b in enumerate(files)]
 me
-with open(fileRan, "w", encoding="utf-8") as tex:
     print(me, file=tex)
 fileRan='all'
 me=[(a,b)+'\n' for a,b in enumerate(files)]
@@ -1619,6 +1878,7 @@ file_list
 file_list = glob.glob("/mnt/c/twit/")
 file_list = glob.glob("/mnt/c/twit/*")
     if (int(time.time()) - int(os.stat(file).st_mtime) < 33300):
+get_ipython().run_line_magic('e', '46')
 myfile=[]
         myfile.append(file)
 myfile
@@ -1633,6 +1893,7 @@ except Exception as e:
 for fi in myfile:
     for a in myfile:
 files=glob.glob('*')
+ti=TinyTag.get(files[1])
 dir(ti)
 t.title
 si=os.state(files[0])
@@ -1647,6 +1908,7 @@ now = datetime.datetime.now()
 now
 si.st_ctime
 si.st_ctime.strftime("%B %d, %Y")
+create_time = os.path.getctime(files[0])
 create_time
 nt=st.ctime
 nt=si=.ctime
@@ -1662,16 +1924,41 @@ files=glob.glob(mpath+'*')
 for a in files:
     ti=TinyTag(a)
     print(f'{a}   {ti.title}')
+TinyTag.get(files[0])
+    ti=TinyTag.get(a)
+    print(f'{fi}   {ti.title}')
+    if ti.title:
+        com=re.sub(r'[^a-zA-Z0-9]','_', ti.title)
+        com='NONE'
+    # print(f'{fi}   {ti.title}')
 com=re.sub(r'_{2,}','_', com)
+        com=re.sub(r'_{2,}','_', com)
 files=glob.glob(mpath+'.mp*')
 files=glob.glob(mpath+'mp*')
 files=glob.glob(mpath+'*mp*')
+    os.rename(fi,newFile)
 os.path.splitext(files[0])
 os.path.splitext(files[0])[1]
 ext=os.path.splitext(files[0])[1]
+get_ipython().run_line_magic('e', '77')
+    ext=os.path.splitext(files[0])[1]
+    newFile=mpath+com+ext
+mpath="/mnt/c/you/letit/"
+mpath="/mnt/c/you/physics/"
+mpath="/mnt/c/you/windows/"
+mpath="/mnt/c/you/muse/"
+# datetime object containing current date and time
 ext
+mpath="/mnt/c/bat"
+    ext=os.path.splitext(fi[1])
+mpath="/mnt/c/bat/"
 ext=os.path.splitext(fi)
 ext=os.path.splitext(fi)[1]
+    ext=os.path.splitext(fi)[1]
+mpath="/mnt/c/you/kb"
+mpath="/mnt/c/you/kb/"
+mpath="/mnt/c/you/woddy/"
+mpath="/mnt/c/you/woody/"
 rend([a for a in range(20)])
 rend(d())
 [a for a in range(10)]
@@ -1727,7 +2014,7 @@ mpy
 file=cfilter('/mnt/c/twit')
 files=cfilter('/mnt/c/twit')
 import tinytag
-mpath="/mnt/c/twit/"
+mpath="/mnt/c/twit"
 files=[a for a in files if not a.contains('.mp')]
 files=[a for a in files if not a.contains('.mp')]mpath="/mnt/c/twit/"
 'jim'.contain
@@ -1771,6 +2058,7 @@ importlib.reload(cfilter)
 sys.modules
 zdir(d())
 [a for a in sys.modules]
+get_ipython().run_line_magic('h', '16')
 print([a for a in sys.modules])
 importlib.reload(pyperclip)
 dir(cfilter)
@@ -1793,6 +2081,17 @@ print([a+'\n' for a in sys.modules], file=tex)
 with open('sysM', "w", encoding="utf-8") as tex:
     print([a+'\n' for a in sys.modules],file=tex)
 help(sys)
+    with open('myf;, "w", encoding='utf-8') as target:
+        sys.stdout = target
+        print('This gets redirected to nothing')
+finally:
+    sys.stdout = sys.__stdout__
+print('This message is shown')
+    with open('myf', "w", encoding='utf-8') as target:
+        inspect(cfilter,all=True)
+s
+        help(sys)
+        # inspect(cfilter,all=True)
 dir()
 start=(6,4)
 finish=(6,43)
@@ -1818,6 +2117,7 @@ ws('Blaise Pascal')
 re.sub(r'mp[34],'ps1')
 re.sub(r'mp[34],'ps1',wcom2)
 re.sub(r'mp[34]','ps1',wcom2)
+get_ipython().run_line_magic('e', '30')
 psOut=re.sub(r'mp[34]','ps1',wcom2)
 psOut
 psOut=re.sub(r'mp[34]','ps1',wcom)
@@ -1846,7 +2146,6 @@ clipOut=dirO+song+'-'+sts+'-'+stf+'.mp4'
 # clipOut=dirO+song+'-'+sts+'-'+stf+'.mp4'
 wcom2=f'vlc --no-video-title  {wdir(out)}'
 # psw=wcom2.replace
-from datetime import datetime
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 dt_string
@@ -1875,8 +2174,8 @@ def cfilter(path,day):
 cfilter('.',5)
 ins(cfilter)
 cfilter('.',15)
-# datetime object containing current date and time
 files=cfilter(mpath,5)
+# from export import cfilter
 aa="/mnt/c/you/fireship/Stack.mp4"
 help(replace)
 aa.replace('\/mnt/','c:\\')
@@ -1947,6 +2246,7 @@ aa.replace(r"C:", '/mnt/c/').replace('\','/')
 aa.replace(r"C:", '/mnt/c/').replace('\\','/')
 print(aa.replace(r"C:", '/mnt/c/').replace('\\','/'))
 print(aa.replace(r"C:", '/mnt/c').replace('\\','/'))
+get_ipython().run_line_magic('e', '80')
     print(x.replace(r"C:", '/mnt/c').replace('\\','/'))
     y=x.replace(r"C:", '/mnt/c').replace('\\','/')
     cps(y)
@@ -2018,6 +2318,7 @@ co = re.compile(re.escape('c:'), re.IGNORECASE)
 co.sub(r'c:\\', '/mnt')
 co.sub(r'c:\\', '/mnt/c/')
 co.sub(r'C:\\', '/mnt/c/')
+get_ipython().run_line_magic('e', '32')
     co = re.compile(re.escape('c:'), re.IGNORECASE)
     lin=co.sub(r'C:\\', '/mnt/c/')
     lin=lin.replace('\\','/')
@@ -2028,6 +2329,7 @@ lin
 winL("c:\proj")
     cps(lin)
     return lin
+get_ipython().run_line_magic('r', "'\\\\\\'")
 xx=r"c:\\"
 xx
 print(xx)
@@ -2101,6 +2403,7 @@ re.sub('c:\\',' ','c:\\')
 re.sub(r'c:\\',' ','c:\\')
 re.sub(r'c:\\','/mnt/c/','c:\\')
 re.sub(r'c:\\','/mnt/c/','c:\\projects')
+get_ipython().run_line_magic('e', '140')
     co=re.sub(r'c:\\','/mnt/c/',x)
     print(co)
     # co = re.compile(re.escape('c:'), re.IGNORECASE)
@@ -2150,6 +2453,7 @@ re.sub(r'c:\\','/mnt/c/',r'c:\proj')
 temp = "1\2\3\4"
 temp
 print('path\to\the\thing')
+get_ipython().run_line_magic('e', '209')
 xx='path\to\the\thing'
 print(re.escape(xx))
 xx=r'path\to\the\thing'
@@ -2239,7 +2543,6 @@ print([(a,str(chr(a))) for a in range(130)])
 print([(a,str(chr(a))) for a in range(330)])
 print([(a,str(chr(a))) for a in range(3330)])
 s = ''.join(random.choice([chr(i) for i in range(ord('a'),ord('z'))]) for _ in range(5))
-s
 s = ''.join(random.choice([chr(i) for i in range(ord('A'),ord('z'))]) for _ in range(5))
 ord('A')
 ord('z')
@@ -2331,6 +2634,12 @@ print(math.__builtins__)
 print(re.__builtins__)
 c
 cls
+from inspect import getmembers, isfunction
+# Importing math module
+import math as mt
+# Printing all the functions in math module
+print(getmembers(mt), isfunction)
+print(getmembers(rend), isfunction)
 print(dir())
 print(date.__doc__)
 print(date.__builtins__)
@@ -2380,11 +2689,14 @@ random.randint(5,10)
 help(random.randint)
 [randcom.randint(1,5)*10 for a in range(10)]
 [random.randint(1,5)*10 for a in range(10)]
+get_ipython().run_line_magic('e', '153')
 [random.randint(1,5)*10 for a in range(10)] + [random.randint(1,5)*10 for a in range(10)]
 len([random.randint(1,5)*10 for a in range(10)] + [random.randint(1,5)*10 for a in range(10)])
 e155
+get_ipython().run_line_magic('e', '155')
 kk=[random.randint(800,1200)*10 for a in range(10)] + [random.randint(1800,220)*10 for a in range(10)]
 kk=[random.randint(800,1200)*10 for a in range(10)] + [random.randint(1800,2200)*10 for a in range(10)]
+get_ipython().run_line_magic('e', '161')
     if abs(1000-x)<=100:
         print(f'{x} within 100')
 [x(a) for a in kk]
@@ -2397,8 +2709,10 @@ kk=[random.randint(800,1200)*10 for a in range(10)]
 kk=[random.randint(80,120)*10 for a in range(10)]
         return True
         return False
+get_ipython().run_line_magic('e', '183')
 [list((a,x(a))) for a in kk]
 rend([list((a,x(a))) for a in kk])
+get_ipython().run_line_magic('e', '186')
 rend([list((str(a),x(a))) for a in kk])
 rend([list((str(a),x(a))) for a in kk][3])
 rend([list((str(a),str(x(a)))) for a in kk])
@@ -2417,6 +2731,7 @@ calendar(2023,3)
 zdir(calendar)
 calendar.monthly(2003,3)
 calendar.month(2003,3)
+get_ipython().run_line_magic('e', '217')
 print(calendar.month(2003,3))
 print(calendar.month(2023,3))
 ll=[1,3,4]
@@ -2601,10 +2916,19 @@ kk[6]
 platform.intertools
 platform.release
 platform.release()
+import sysconfig
+print("os.name                     ", os.name)
+print("sys.platform                ", sys.platform)
+print("platform.system()           ", platform.system())
+print("sysconfig.get_platform()    ", sysconfig.get_platform())
+print("platform.machine()          ", platform.machine())
+print("platform.architecture()     ", platform.architecture())
 zdir(sysconfig)
 sysconfig.realpath
 sysconfig.realpath()
 sysconfig.realpath('a')
+get_ipython().run_line_magic('cd', 'bs')
+get_ipython().run_line_magic('cd', '..')
 zdir('jim')
 'jim'.upper
 'jim'.upper()
@@ -2673,13 +2997,29 @@ re.search('[A-Z]','jiIm')
 re.findall('[A-Z]','jiIm')
 re.findall('[A-Z]',"This Week in Google")
 ''.join(re.findall('[A-Z]',"This Week in Google"))
+ti=TinyTag.get(files[3])
+ti=TinyTag.get(files[0])
 it
 ti["album"]
 type(ti)
 ti.album
+    print(ti.album)
+get_ipython().run_line_magic('e', '26')
+    com3=''.join(re.findall('[A-Z]', ti.album))
+    print(com3)
+    com=re.sub(r'_{2,}','_', com)
+    com2=ti.album
+    com4=com3+'_'+com
+    print(com4)
 import pudb
+        ti=TinyTag.get(ti)
+        com2=ti.album
+        com3=''.join(re.findall('[A-Z]', ti.album))
+        com=com3+'_'+com
+        # print(com4)
+        ti=TinyTag.get(fi)
+ 
 import bs4
-from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
 news_url="https://news.google.com/news/rss"
 Client=urlopen(news_url)
@@ -2734,6 +3074,7 @@ for a in nn:
 oo
 nn=[a for a in range(4)]
     oo.append((a,0))
+get_ipython().run_line_magic('e', '65')
     for b in nn:
         oo.append((a,b))
 del(oo[1])
@@ -2758,6 +3099,7 @@ nn=[ri() for a in range(5)]
 [a for a in range(nn)]
 [a for a in range(len(nn))]
 list(zip([a for a in range(len(nn))],nn))
+get_ipython().run_line_magic('e', '19')
 print(list(zip([a for a in range(len(nn))],nn)))
 ll=list(zip([a for a in range(len(nn))],nn))
 ll
@@ -2819,6 +3161,9 @@ chop(nn)
 ins(chop)
 zdir(inspect)
 import inspect
+inspect.getsource(chop)
+get_ipython().run_line_magic('e', '107')
+print(inspect.getsource(chop))
     for a in len(ch):
         r.append(ch[n:n+4])
         n+=1
@@ -2841,6 +3186,7 @@ res=wikipedia.search(x)
 x='cargillasdfasdfasdf'
 ee=list(zip([a for a in range(len(res))],res))
 print(ee)
+get_ipython().run_line_magic('e', '145')
     res=wikipedia.search(x)
     ee=list(zip([a for a in range(len(res))],res))
     print(ee)
@@ -2888,6 +3234,8 @@ wss('kepler')
 wss('my way')
 wss('fats waller')
 wss('platic jesus')
+inspect.getsource(wss)
+print(inspect.getsource(wss))
 wss('holiday')
 wss('b holiday')
 ws('billie holliday')
@@ -2896,6 +3244,7 @@ ws('Billie Holiday')
 wss('merle haggard')
 datetime
 ws('holiday')
+get_ipython().run_line_magic('pdb', '')
 modules
 print(dd)
 [a for a in dd]
@@ -2914,6 +3263,7 @@ intro(Firstname="Sita", Lastname="Sharma", Age=22, Phone=1234567890)
     print(data)
     print(f'data is {data})
     print(f'data is {data}')
+get_ipython().run_line_magic('e', '18')
 nn=intro(Firstname="Sita", Lastname="Sharma", Age=22, Phone=1234567890)
 type(nn)
 aa=[a for a in range(10)]
@@ -2931,9 +3281,17 @@ fileName = "/home/steff007/script/sql_hist"
 import sqlite3
 conn = sqlite3.connect(sqldb)
 c = conn.cursor()
+q='''
+SELECT source from history where source not like '%get%';
+ip = c.execute(q)
+ipl=list(ip)
 ipl
 len(ipl)
+print(inspect.getsource(sqll))
+print(inspect.getsource(quit))
 rend())[a for a in dd]
+inspect.getsource(rnd)
+print(inspect.getsource(rnd))
 ins(pd)
 pd
 pd(0)
@@ -2942,23 +3300,39 @@ ins(prag)
 wss('teddy wilson')
 print([a for a in dd])
 dd()
+getD()
 ins(rinspect)
 help(rinspect)
 ins(t)
-import io
+    ins(rend)
 print(out)
 len(out)
 eval(len(out))
 eval('len(out)')
 eval('ins(out)')
 eval('ins(ws)')
+    ins(ws)
 print(woo)
+def red(x='aa'):
+    f = io.StringIO()
+    with redirect_stdout(f):
+        print('\n\n')
+        ins(ws)
+    woo = f.getvalue()
+    print(woo)
 red()
+def red(x='ins(ws)'):
+        eval(x)
 red('ins(wss)')
+    return woo
 rr=red('rinspect(rinspect)')
 rr
 re.sub(r'\x1B\[[0-9;]*[a-zA-Z]','',rr)
 print(re.sub(r'\x1B\[[0-9;]*[a-zA-Z]','',rr))
+get_ipython().run_line_magic('e', '34')
+    woo2=re.sub(r'\x1B\[[0-9;]*[a-zA-Z]','',rr)
+    print(woo2)
+red('ins(pagetext)')
 red('ins(red)')
 ins(red)
 ins('red')
@@ -2966,16 +3340,27 @@ red(ins('red'))
 red(ins(red))
 red('ins(p)')
 ins(p)
+def red(x='ins(p)'):
 pp=ins(p)
 print('xx'*30)
+        print('xx'*30)
+        # eval(x)
+    woo2=re.sub(r'\x1B\[[0-9;]*[a-zA-Z]','',woo)
+        # print('xx'*30)
 red('inspect(p)')
 red('rinspect(p)')
+    return woo2
 red('rinspect(console)')
 gg=red('rinspect(console)')
 print(gg)
     print(gg,file=f)
+get_ipython().system('nvim x')
+get_ipython().run_line_magic('e', '79')
+    with open('x','w') as f:
+        print(woo2,file=f)
 gg=red('rinspect(logging)')
 gg=red(rinspect(logging))
+    x=str(x)
 gg=red(ins(logging))
 ins(logging)
 gg=red('ins(logging)')
@@ -2985,9 +3370,9 @@ red('cfilter')
 red(cfilter)
 gg=red('cfilter')
 red('red')
-from contextlib import redirect_stdout
 red('ins(exit)')
 dir(exit)
+inspect.getsource(exit)
 type(exit)
 def d():
     global dd
@@ -2998,13 +3383,18 @@ def d():
 red(sq)
 red('sq')
 red(ins(sq))
+    print(f' woo2 is: {woo2}')
 gg=red(ins(sq))
+    xx=str(x)
+        eval(xx)
 red('ins(sheet)')
 red(ins(sqll))
 red('ins(sqll)')
 red('ins(pyperclip)')
 str(map(str,gg))
 list(map(str,gg))
+    print(xx)
+    _=input('wait')
 red(ins(pyperclip))
 red('ins(prag)')
 gg=red('ins(prag)')
@@ -3016,6 +3406,10 @@ re.sub(r'\s',' ',gg)
 print(re.sub(r'\s',' ',gg))
 print(re.sub(r'\s+',' ',gg))
 print(re.sub(r'\n{2,}',' ',gg))
+    woo3=re.sub(r'\n{2,}',' ',woo2)
+        print(woo3,file=f)
+    print(f' woo2 is: {woo3}')
+    return woo3
 red('ins(sqlite)')
 red('ins(sqlite3)')
 red('ins(chop)')
@@ -3024,6 +3418,8 @@ rend(dd)
 DD
 red('ins(pf)')
 pf(gg)
+get_ipython().system('nvim pf.txt')
+red('ins(getD)')
 wss('keats')
 ws('John Keats')
 red('ins(ws)')
@@ -3056,7 +3452,46 @@ from .wikipedia import *
 from wikipedia import *
 zdir(wikipedia)
 help(wikipedia)
+subject = 'Python (programming language)'
+url = 'https://en.wikipedia.org/w/api.php'
+params = {
+        'action': 'query',
+        'format': 'json',
+        'titles': subject,
+        'prop': 'extracts',
+        'exintro': True,
+        'explaintext': True,
+    }
+response = requests.get(url, params=params)
+data = response.json()
+page = next(iter(data['query']['pages'].values()))
+print(page['extract'][:73])
 page
+query = 'python'
+            'action':'query',
+            'format':'json',
+            'list':'search',
+            'utf8':1,
+            'srsearch':query
+        }
+data = requests.get(url, params=params).json()
+for i in data['query']['search']:
+    print(i['title'], ' - Word count: ', i['wordcount'])
+from bs4 import BeautifulSoup
+subject = 'Machine learning'
+            'action': 'parse',
+            'page': subject,
+            'format': 'json',
+            'prop':'text',
+            'redirects':''
+raw_html = data['parse']['text']['*']
+soup = BeautifulSoup(raw_html,'html.parser')
+soup.find_all('p')
+text = ''
+for p in soup.find_all('p'):
+    text += p.text
+print(text[:58])
+print('Text length: ', len(text))
 len(text)
 print(wikipedia.suggest("Bill cliton"))
 print(wikipedia.suggest("keats"))
@@ -3099,6 +3534,7 @@ mac=re.split('\s','The lady doth protest too much, methinks')
 [list((str(a),b)) for a,b in enumerate(mac)]
 rend([list((str(a),b)) for a,b in enumerate(mac)])
 rend([str(list((str(a),b))) for a,b in enumerate(mac)])
+get_ipython().run_line_magic('e', '15')
 ff={[str(list((str(a),b))) for a,b in enumerate(mac)]}
 ff={(str(a),b) for a,b in enumerate(mac)}
 ff['0']
@@ -3178,6 +3614,7 @@ r2=re.sub('\s{2,}','',r1)
 r2=re.sub('\s{2,}',' ',r1)
 r2.replace('LINK','')
 chop(r2)
+get_ipython().run_line_magic('page', '-r chop(r2)')
 xx=chop(r2)
 len(xx)
 type(xx)
@@ -3223,6 +3660,7 @@ data = open('x', 'r', encoding='utf-8').read()
 data.splitlines
 data.splitlines()
 open('xx', 'w', encoding='utf-8').write('jim')
+get_ipython().system('nvim xx')
 open('xx', 'w', encoding='utf-8').write(data)
 open('xx', 'w', encoding='utf-8').writelines(data)
 open('xx', 'w', encoding='utf-8').writelines(r1)
@@ -3237,7 +3675,34 @@ t
 s.split()
 s.split('')
 list('aeio')
+def gp(listOFElements):
+    # Create a empty list of lists
+    listOfLists = []
+    if len(listOFElements) <= 1:
+        # If list has 0 or 1 element, then add in list of lists
+        listOfLists.append(listOFElements)
+        # If list has more than 1 elements
+        # Iterate over all elements by index position
+        for i in range(len(listOFElements)):
+            # Select element at ith poistion
+            elem = listOFElements[i]
+            # Select remaining elements
+            remainingList = listOFElements[:i] + listOFElements[i+1:]
+            # get permutations of all remaining elements, and add ith element to it
+            for perms in GetPermutations(remainingList):
+                listOfLists.append([elem] + perms)
+    # return permutations of given list
+    return listOfLists
 gp([1,3])
+def GetPermutations(listOFElements):
+listOfNumbers = [1, 2, 3]
+# Ger all permutations of a list 
+permutationList = GetPermutations(listOfNumbers)
+for subList in permutationList:
+    print(subList)
+GetPermutations(['a','b'])
+GetPermutations(list('jim'))
+gg= GetPermutations(list('jim'))
 set(gg)
 ' '.join(gg)
 [str(a) for a in gg]
@@ -3247,6 +3712,8 @@ set([''.join(a) for a in gg])
 [(a,b) for a,b in enumerate([''.join(a) for a in gg)]]
 [(a,b) for a,b in enumerate([''.join(p) for p in gg)]]
 nn=''.join(gg)
+            for perms in gp(remainingList):
+permutationList = gp(listOfNumbers)
 permutationList
 pe=permutationList
 [(a,b) for a,b in enumerate(pe)]
@@ -3258,11 +3725,13 @@ pe=gp(list('abcde'))
 len(pe)
 len('abcde')
 math.factorial(5)
+            ipb.set_trace()
 import ipb
 import idb
 gp(list('12345'))
 list(range(20)]
 list(range(20))
+            # pdb.set_trace()
 gp(list(range(10)))
 math.factorial(10)
 print("{:,}".format(x));
@@ -3347,6 +3816,7 @@ print(a)
 re.split('\s','The lady doth protest too much, methinks')[::2]
 kk=re.split('\s','The lady doth protest too much, methinks')
 zip(kk,range(len(kk)))
+get_ipython().run_line_magic('e', '178')
 [a for a in zip(kk,range(len(kk)))]
 [a for a in zip(range(len(kk))),kk]
 [a for a in zip(range(len(kk)),kk)]
@@ -3482,6 +3952,7 @@ for i in repeat(‘Red’,3):
 a = iter('Hello')
 dir(a)
 dir('jim')
+get_ipython().run_line_magic('e', '56')
 [a for a in dir('jim')]
 print([a for a in dir('jim')])
 'a'.__class__
@@ -3496,6 +3967,7 @@ rom itertools import product
 print("We are computing cartesian product using repeat Keyword Argument:")  
 print(list(product([1, 2], repeat=2)))  
 print()  
+get_ipython().run_line_magic('e', '69')
 from itertools import product  
 list(product([1,3]))
 list(product([1,3,4]))
@@ -3511,6 +3983,7 @@ print(list(permutations(['xyz'.split()],2)))
 list('xyz')
 print(list(permutations(list('xyz'),2)))
 print(list(permutations(list('xyz'),3)))
+get_ipython().run_line_magic('e', '82')
 x=list(permutations(list('xyz'),3))
 [a,b for a,b in enumerate(x)]
 3 86
@@ -3564,6 +4037,7 @@ factorial(4)
 dir(factorial)
 [a for a in dir(factorial)]
 print([a for a in dir(factorial)])
+inspect.getsource(factorial)
 factorial(-4)
 g=f'number is {math.sqrt(1000000):_}'
 g=f'number is {math.sqrt(10001234132)}'
@@ -3630,6 +4104,7 @@ rm(st[:100].split())
         cc.append(f'{a} {b}')
     return cc
         c+=(f'{a} {b}')
+get_ipython().run_line_magic('e', '154')
         cc+=(f'{a} {b}')
 dd=rm(st[:100].split())
         cc+=(f'{a} {b}\n')
@@ -3718,10 +4193,13 @@ for a in r3:
     if 1[0]==5:
         del r3[5]
 r3[5]
+get_ipython().run_line_magic('e', '285')
     if a[0]==5:
     if a[0]%3==0:
         del r3[a[0]]
         print(f'{a} remainder 3')
+get_ipython().run_line_magic('e', '291')
+get_ipython().run_line_magic('e', '292')
         print(f'{a} remainder 3 del {a[0]}')
 del r3[21]
 del r3[6]
@@ -3770,6 +4248,7 @@ sl=st[:120]
 k
 sl=st[:120].split()
                 print(f'deleting {k[a]}')
+get_ipython().run_line_magic('e', '378')
                 try:
                     k.pop(a)
                 except:
@@ -3812,6 +4291,7 @@ nums
     print(f'idx {idx} pop {int_list.pop(idx)}')
 random.shuffle(range(3))
 range(3)
+get_ipython().run_line_magic('e', '452')
 print(range(3))
 random.shuffle([a for a in range(3)])
 [a for a in range(3)]
@@ -3856,7 +4336,6 @@ counter = Counter(['D','C','C','E','E','E','A','A','X'])
 print(counter)
 from collections import counter
 counter = collections.Counter(['D','C','C','E','E','E','A','A','X'])
-from collections import Counter
 counter = Counter({'X':3,'Y':2,'Z':1})
 counter = collections.Counter(set(st))
 counter = collections.Counter(list(set(st)))
@@ -3870,6 +4349,7 @@ counter.items()
 [list(map(str,(a,b))0 for a,b in counter.items()]]
 [list(map(str,(a,b))) for a,b in counter.items()]
 all=[list(map(str,(a,b))) for a,b in counter.items()]
+get_ipython().run_line_magic('ll', '')
 print(sorted(all, key=lambda student: student[1]))
 print(sorted(all, key=lambda student: student[0]))
 print(sorted(all, key=lambda s: s[0]))
@@ -3883,8 +4363,10 @@ zdir(re)
 re.match('from',st)
 re.search('from',st)
 re.finditer('from',st)
+get_ipython().run_line_magic('e', '558')
 [a for a in re.finditer('from',st)]
 st[1178:1183]
+from operator import itemgetter, attrgetter
 print(sorted(all, key=lambda s: int(s[1]),reverse=True))
 re.findall('ə',st)
 student_objects = [
@@ -3900,11 +4382,15 @@ class Student:
     def __repr__(self):
         return repr((self.name, self.grade, self.age))
 student_objects[1]
+get_ipython().run_line_magic('e', '569')
 repr(student_objects[1])
 repr(student_objects)
+get_ipython().run_line_magic('e', '576')
+get_ipython().run_line_magic('e', '567')
         return "nothing"
 str(student_objects)
         return repr((self.name, self.grade, self.age+"bbbbbbbbbb"))
+get_ipython().run_line_magic('e', '580')
         return repr((self.name, self.grade, str(self.age)+"bbbbbbbbbb"))
 mydate = datetime.datetime.now()
 print("__str__() string: ", mydate.__str__())
@@ -3917,6 +4403,7 @@ mydate.__str__
 mydate.__str__()
 mydate.__repr__()
 lin=wsr('james monroe')
+get_ipython().run_line_magic('e', '598')
 os.chdir('p3')
 os.chdir('less')
 records = defaultdict(list)
@@ -3930,6 +4417,7 @@ rec['a']
 rec['1']
 rec[1]
 rec = defaultdict(int)
+get_ipython().run_line_magic('pprint', '(rec)')
 pprint(rec)
 lin=lin.split()[:20]
 lin[0]
@@ -3953,8 +4441,10 @@ dir(os.scandir)
 [a.name for a in os.scandir('.')]
 [a.name for a in os.scandir('.')][0]
 [a for a in os.scandir('.')][0]
+get_ipython().run_line_magic('e', '58')
 dir([a for a in os.scandir('.')][0])
 [a.name for a in os.scandir('.') if 'html' in  a.name ]
+get_ipython().run_line_magic('e', '38:52')
 with open('grid.html') as inputfile:
   for lines in inputfile:
     line = lines.rstrip('\n')
@@ -3969,9 +4459,20 @@ print([[a,b] for a,b in enumerate(data.split('\n'))])
 [str((a,b)) for a,b in enumerate(data.split('\n'))]
 rend([str((a,b)) for a,b in enumerate(data.split('\n'))])
 print("\n".join([str((a,b)) for a,b in enumerate(data.split('\n'))]))
+file_name = "grid.html"
+print(f'File Size is {os.stat(file_name).st_size / (1024 * 1024)} MB')
+txt_file = open(file_name)
+count = 0
+for line in txt_file:
+    # we can process file line by line here, for simplicity I am taking count of lines
+    count += 1
+txt_file.close()
+print(f'Number of Lines in the file is {count}')
+print('Peak Memory Usage =', resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+print('User Mode Time =', resource.getrusage(resource.RUSAGE_SELF).ru_utime)
+print('System Mode Time =', resource.getrusage(resource.RUSAGE_SELF).ru_stime)
 import resource
 import fileinput
-count = 0
 for lines in fileinput.input(['grid.html']):
     print(lines)
     count = count + 1
@@ -3984,6 +4485,7 @@ file[:5]
 [[a,b] for a, b in enumerate(sorted(set(file)[:5]))]
 [[a,b] for a, b in enumerate(list(sorted(set(file))[:5]))]
 data = open('head.html', 'r', encoding='utf-8').read()
+get_ipython().system('nvim head.html')
 re.findall('font',st)
 re.findall('font',data)
 re.match('font',data)
@@ -3991,6 +4493,7 @@ print(re.match('font',data))
 print(re.match('4',data))
 with open ('h2.html', 'w') as out:
     out.write(data)
+get_ipython().system('nvim h2.html')
 data = open('grid.html', 'r', encoding='utf-8').read().splitlines()
 data = open('google.py', 'r', encoding='utf-8').read().splitlines()
 print([a for a in data])
@@ -4001,6 +4504,7 @@ re.match('4',data)
 re.match('4',dx)
 re.match(r'4',dx)
 re.match(r'4','jim4')
+get_ipython().run_line_magic('e', '136')
 print(re.match(r'4','jim4'))
 re.match(r'From\s+', 'From amk Thu May 14 19:12:10 1998')
 re.match(r'4', 'From amk Thu May 14 19:12:10 1998')
@@ -4060,7 +4564,6 @@ jj="".join(listmap(mym,lin[:24]))
 jj="".join(list(map(mym,lin[:24])))
 open('xx', 'w', encoding='utf-8').write(jj)
     print(f"Error occurred: {e}")
-finally:
     print("Finally Block")
     jjjj
     3//0
@@ -4069,6 +4572,7 @@ list_numbers = [1, 2, 3, 4]
 map_iterator = map(lambda x: x * 2, list_numbers)
 pi(map_iterator)
 linsl[100:110]
+get_ipython().run_line_magic('e', '238')
 m=linsl[100:110]
 for a,b  in enumerate(m):
     print(a,b)
@@ -4104,8 +4608,11 @@ q.question_text
 Question.objects.all()
 [a for a in Question.objects.all()]
 current_year = timezone.now().year
+Question.objects.get(pub_date__year=current_year)
 Question.objects.filter(question_text__startswith='What')
 Question.objects.filter(question_text__startswith='xWhat')
+Question.objects.get(id=2)
+q = Question.objects.get(pk=1)
 q.choice_set.all()
 q.choice_set.create(choice_text='Not much', votes=0)
 q.choice_set.create(choice_text='The Sky', votes=0)
@@ -4116,9 +4623,20 @@ zdir(polls.models)
 polls.models.timezone
 polls.models.timezone()
 zdir(timezone)
+Question.objects.get(id=5)
+Question.objects.get(pk=1)
+############################# STATIC VARIABLES
+from export import wdir #my window path converter
+#Source
+#target for sliced video
+#target for ps1 stop start script
+#full name of song
 finish
 vstart
 video1 = video.subclip(vstart,vfinish)
+start=(1, 7)
+finish=(1,28)
+song='RedRiver'
 video1
 video
 video1 = video.subclip(vstart, vfinish)
@@ -4146,8 +4664,15 @@ moviepy.version
 moviepy.version()
 print(moviepy.version)
 clip = VideoFileClip('syncopated.mp4')
+target='unknown'
+scr=f'ffmpeg -i {target}+.mp4 -ss 2 -to 5 -vcodec libx264 -acodec copy output.mp4'
+print(scr)
+scr=f'ffmpeg -i {target}+mp4 -ss 2 -to 5 -vcodec libx264 -acodec copy output.mp4'
+scr=f'ffmpeg -i {target}.mp4 -ss 2 -to 5 -vcodec libx264 -acodec copy output.mp4'
+scr=f'ffmpeg -i {target}.mp4 -ss 2 -to 5 -vcodec libx264 -acodec copy {dirO}output.mp4'
 scr
 cps(scr)
+scr=f'ffmpeg -i {target}.mp4 -ss {vstart} -to {vfinish} -vcodec libx264 -acodec copy {dirO}output.mp4'
 scr=f'ffmpeg -i {clip} -ss {vstart} -to {vfinish} -vcodec libx264 -acodec copy {dirO}output.mp4'
 with open('/mnt/c/you/gut/script', 'a') as f:
     f.write(scr)
@@ -4173,10 +4698,12 @@ random.randint(0,10)
 bb[random.randint(0,10)]
 for a in range(5):
     print(bb[random.randint(0,20)])
+get_ipython().run_line_magic('e', '21')
 [ bb[random.randint(0,20)] for a in range(5) ]
 "\n".join([ bb[random.randint(0,20)] for a in range(5) ])
 "\n".join(bb)
 "\n".join(bb[0])
+get_ipython().run_line_magic('e', '27')
 print("\n".join(bb[0]))
 ["\n".join(a) for a in bb]
 "\n".join(["\n".join(a) for a in bb])
@@ -4219,6 +4746,12 @@ jj([1,2,34,])
 jj(1,23)
 jj(1 23)
 ins(hi)
+def get_info(self, *args):
+    return "Test data"
+hi.get_info = get_info
+hi.get_info
+hi.get_info()
+def get_info():
 dir(hi)
 dbName = 'database.db'
   conn = sqlite3.connect(dbName)
@@ -4304,8 +4837,12 @@ student_score = {   'Ritika': 5,
 kk=open('xxx','a') as j
 kk=open('xxx','a') 
 [print(key,':',value,'\n', file=kk) for key, value in student_score.items()]
+get_ipython().system('nvim kk')
+get_ipython().system('nvim xxx')
+get_ipython().system('rm xxx')
 cls Dd():
     phrase="The lady doth protest too much, methinks"
+get_ipython().run_line_magic('e', '57')
 class Dd():
 Dd.phrase
 me=Dd
@@ -4381,6 +4918,7 @@ nn.cfilter
 nn.cfilter()
 os.scandir('.')
 [a for a in os.scandir('.')][0]]
+get_ipython().run_line_magic('e', '74')
     def cc(myDir):
         print([a for a in os.scandir('.')][0])
 nn.cc()
@@ -4389,6 +4927,18 @@ nn.mDir
 nn.myDir
 nn.cc
         print([a for a in os.scandir(self.myDir)][0])
+class Wall():
+    def __init__(self, height):
+        # this stops us from accessing the __height
+        # property directly on an instance of a Wall
+        self.__height = height
+    def get_height(self):
+        return self.__height
+mm=wall(2)
+mm=Wall(2)
+mm.get_height()
+        self.height = height
+        return self.height
     def cc(self):
 nn.cc('\mnt\c')
 nn=Zz('\mnt\c\')
@@ -4422,6 +4972,7 @@ cfilter('/mnt/c')
 cfilter('/mnt/c/you')
 [a for a in subdirs('/')]
 [a for a in subdirs('/mnt/c/you')]
+get_ipython().run_line_magic('e', '23:27')
         [a for a in subdirs('.')]       
     def subdirs(self):
         """Yield directory names not starting with '.' under given path."""
@@ -4608,8 +5159,15 @@ cps([a for a in dir(student)[:8]][1])
 student.__builtins__
 cps([a for a in dir(student)[:8]][4])
 student.__closure__
+        student.__builtins__
+get_ipython().run_line_magic('e', '104')
+get_ipython().system('nvim myf')
+        print('This gets redirected to nothing again')
 print(student.__builtins__)
+get_ipython().run_line_magic('e', '109')
+        print(student.__builtins__)
 repr([a for a in dir(student)[:8]][1])
+get_ipython().run_line_magic('r', '([a for a in dir(student)[:8]][1])')
 abs
 pd.__module__
 pd.__sheet__
@@ -4640,14 +5198,18 @@ oo[1]
 [eval(f'student.'{n}) for n in oo]
 [eval(f'student.{n}') for n in oo]
 ss=[eval(f'student.{n}') for n in oo]
+get_ipython().run_line_magic('e', '146')
     print(eval('student.'+a))
     print(f"{eval('student.'+a)}")
     print(f"\n{eval('student.'+a)}")
     print(f"{a}\n{eval('student.'+a)}")
+get_ipython().run_line_magic('e', '176')
 with open('eva','w') as f:
     print(f"{a}\n{eval('student.'+a)}", file=f)
+get_ipython().run_line_magic('e', '177')
     for a in oo:
         print(f"{a}\n{eval('student.'+a)}", file=f)
+get_ipython().system('nvim eva')
     pass  
 print(type(Student))
 print(Student.__dict__.keys())
@@ -4743,6 +5305,7 @@ sheet('data')['values']
 sheetc('data')['values']
 " ".join(sheetc('data')['values'])
 " ".join(sheetc('data')['values'][0])
+get_ipython().run_line_magic('e', '286')
 sheetc('data')['values'][0]
 type(sheetc('data')['values'])
 sheetc('data')['values'][:3]
@@ -4791,14 +5354,48 @@ gg.title
 print(object)
 dir(object)
 object.__class__
+class Book:
+    # TODO: Properties defined at the class level are shared by all instances
+    BOOK_TYPES = ("HARDCOVER", "PAPERBACK", "EBOOK")
+    # TODO: double-underscore properties are hidden from other classes
+    __booklist = None
+    # static methods do not receive class or instance arguments
+    # and usually operate on data that is not instance- or
+    # class-specific
+    @staticmethod
+    def getbooklist():
+        if Book.__booklist == None:
+            Book.__booklist = []
+        return Book.__booklist
+    # class methods receive a class as their argument and can only
+    # operate on class-level data
+    @classmethod
+    def getbooktypes(cls):
+        return cls.BOOK_TYPES
+    # instance methods receive a specific object instance as an argument
+    # and operate on data specific to that object instance
+    def setTitle(self, newtitle):
+        self.title = newtitle
+    def __init__(self, title, booktype):
+        self.title = title
+        if (not booktype in Book.BOOK_TYPES):
+            raise ValueError(f"{booktype} is not a valid book type")
+            self.booktype = booktype
 gg=Book('a')
 gg=Book('a','Comic')
 gg=Book('a','PAPERBACK')
 gg.booktype
+gg.getbooktypes
+gg.getbooktypes()
+Book.getbooktypes()
 type(Book)
 isinstance(gg,Book)
+class Supervisor:
+    def get_to_work(self):
+        print("Got to work")
 s=Supervisor()
 zdir(s)
+s.get_to_work()
 def outer(x):
     def inner(y):
         return x + y
@@ -4836,7 +5433,13 @@ ins(ordinary)
 ins(make_pretty)
         print("==========================")
 @make_pretty
+def sheet(sh):
+    url = f"https://sheets.googleapis.com/v4/spreadsheets/1v0WTX_g0SEHb-EfG9faV3ayFo1WZUmUj8Lhgc2Kw2cA/values/{sh}?alt=json&key=AIzaSyCZ3y8Es42zvNGON7ezA6q4dxe8RNcyQIs"
+    r=requests.get(url)
+    ll=r.json()
+    return ll
 sheet('data')['values'][:3]
+get_ipython().run_line_magic('e', '387')
 def inner(x):
     # add some additional behavior to decorated function
     print("==========================")
@@ -4869,6 +5472,7 @@ f(3,2)
 new=smart_divide(f)
 new(3,2)
 new(3,0)
+get_ipython().run_line_magic('e', '415')
 print('*'*30)
 def dec(a):
     def b(x):
@@ -4893,11 +5497,22 @@ rev_itr = reversed(mystr)
 print(type(rev_itr))
 rev_itr
 list(rev_itr)
+class person:
+        self.__name=''
+    def setname(self, name):
+        print('setname() called')
+        self.__name=name
+    def getname(self):
+        print('getname() called')
+        return self.__name
+    name=property(getname, setname)
 from person import person
 'jim'.capitalize
 'jim'.capitalize()
 s="The Queen of Hearts, she made some tarts,  All on a summers day, The knave of Hearts, he stole the tarts, And took them clean away."
 " ".join(word.capitalize() for word in s.split(" "))
+get_ipython().run_line_magic('e', '455:456')
+get_ipython().run_line_magic('e', '455:458')
 (a for a in s.split())
 list((a for a in s.split()))
 kk=(a for a in s.split())
@@ -4925,6 +5540,7 @@ zdir(timezone.now().toordinal)
 timezone.now().toordinal
 timezone.now().toordinal()
 dir(Question)
+        dir(Question)
 cl
 Question.objects
 dir(Question.objects)
@@ -4933,6 +5549,7 @@ pp=[a for a in dir(Question.objects)]
 rend(pp)
 open('xx', 'w', encoding='utf-8').write(pp)
 open('xx', 'w', encoding='utf-8').write("\n".join(pp))
+Question.objects.getall()
 kk=[a for a in dir(Question)]
 kk='jim' +[a for a in dir(Question)]
 kk='jim' + "\n".join([a for a in dir(Question)])
@@ -4965,7 +5582,6 @@ Question.pub_date
 all='''
 SELECT sql FROM sqlite_master 
 sqldb="/mnt/c/projects/django/database.db"
-ip = c.execute(q)
 ip = c.execute(all)
 ip
 list(ip)
@@ -4999,7 +5615,9 @@ subprocess.call(["sqlite3", "database.db",
   ])
   ".schema" ])
 ".output results.xx",
+get_ipython().system('nvim results.xx')
 .tables
+get_ipython().run_line_magic('cd', 'mysite/')
 subprocess.call(["sqlite3", "db.sqlite3", 
   "select * from  " ])
   "select * from song " ])
@@ -5134,6 +5752,7 @@ data=data.strip().split('\n')
 for it in data:
   print(ins(it))
   cursor.execute(ins(it))
+get_ipython().system('head song.txt')
 data=open('song.txt', 'r', encoding='utf-8').read().strip()
 data=open('song.txt', 'r', encoding='utf-8').read().strip().split('\n')
 result=cursor.execute(oq)
@@ -5174,6 +5793,8 @@ con={'ls':s}
 latest_question_list = Question.objects.all()
 vv=xSongs.objects.all()
 for a in latest_question_list:
+get_ipython().run_line_magic('e', '52')
+get_ipython().run_line_magic('e', '51')
 for a in vv:
 vv[1]
 dir(vv[1])
@@ -5273,6 +5894,8 @@ re.sub(r'\d – ','',num[0])
 [re.sub(r'\d – ','',a) for a in num]
 [re.sub(r'\d+ – ','',a) for a in num]
 numc=[re.sub(r'\d+ – ','',a) for a in num]
+get_ipython().run_line_magic('e', '52:54')
+get_ipython().run_line_magic('e', '54')
 re.sub(r'\d\s? ','',num[0])
 re.sub(r'\d\s. ','',num[0])
 re.sub(r'\d . ','',num[0])
@@ -5357,6 +5980,7 @@ useless_cat_call = subprocess.run(["cat"],
                                   stdout=subprocess.PIPE, 
                                   text=True, 
                                   input="Hello from the other side")
+get_ipython().run_line_magic('e', '41')
 useless_cat_call
 zdir(useless_cat_call)
 useless_cat_call.stdout
@@ -5391,6 +6015,7 @@ datetime.date
 datetime.UTC
 datetime.now()
 ins("datime.now")
+inspect.getmembers(datetime)
 dn=datetime.now()
 dn
 dn.hour
@@ -5461,11 +6086,14 @@ ss='1:10'
 with open('cutter', 'w') as cut:
     cut.write(sl(song))
 # ffmpeg -i LetBe.mp3 -ss 1:45 -to 1:59 -vcodec libx264 -acodec copy LetBe_cut.mp3
+cps('cd /'+os.getcwd())
+get_ipython().run_line_magic('cd', 'music/')
 with open('ffm.py') as file:
     input = file.read()
 input
 import cv2
 import matplotlib.pyplot as plt
+get_ipython().run_line_magic('cd', 'junk/')
 img = cv2.imread('s.jpg')
 resize_img = cv2.resize(img, new_size)
 h, w, c = img.shape
@@ -5485,6 +6113,7 @@ fil=[a.name for a in os.scandir('.')]
 [(num2words(a),b) for a,b in enumerate(fil)]
 [(num2words(a)+'.jpg),b) for a,b in enumerate(fil)]
 [(num2words(a)+'.jpg'),b) for a,b in enumerate(fil)]
+get_ipython().run_line_magic('e', '11')
 [(num2words(a)+'.jpg',b) for a,b in enumerate(fil)]
 [list(map(str,(num2words(a)+'.jpg',b)) for a,b in enumerate(fil)]]
 [list(map(str,(num2words(a)+'.jpg',b))) for a,b in enumerate(fil)]
@@ -5532,8 +6161,10 @@ data=open('lightbox.html').read().strip().split('\n')
 data[1]
 data[1:7]
 "\n".join(data[1:7])
+get_ipython().run_line_magic('e', '20')
 print("\n".join(data[1:7]))
 a for a in data:
+get_ipython().run_line_magic('e', '24')
     if 'img' in a:
 for a,b  in enumerate(data):
     if 'img' in b:
@@ -5595,6 +6226,7 @@ type(all)
 for m in re.finditer(r"forty-seven", all):
 open('xx.html', 'a', encoding='utf-8').write(all)
 re.sub(r'forty-seven','thirty',all)
+get_ipython().run_line_magic('e', '64')
 re.match(r'forty-seven',all)
 re.match(r'forty',all)
 re.match(r'seven',all)
@@ -5647,10 +6279,13 @@ ht=''
     ht+=col(a)
 ht
 cps(ht)
+ti=TinyTag.get('one.jpg)
+ti=TinyTag.get('one.jpg')
 statinfo = os.stat('one.jpg')
 zdir(statinfo)
 statinfo.st_mtime()
 statinfo.st_mtime
+get_ipython().run_line_magic('e', '133')
 do=datetime.fromtimestamp(statinfo.st_mtime)
 do
 do.strftime( "%d-%m-%Y %H:%M:%S" )
@@ -5668,10 +6303,15 @@ print(statinfo)
 [a for a in statinfo]
 statinfo
 statinfo.st_atime
+def md(filename):
+    t = os.path.getmtime(filename)
+    return datetime.datetime.fromtimestamp(t)
 md('one.jpg')
+    return datetime.datetime.fromtimestamp(t).strftime( "%d-%m-%Y %H:%M:%S" )
     md(a)
     print(md(a))
     print(a,md(a))
+get_ipython().run_line_magic('e', '165:172')
 dates=[]
     dates.append(a,md(a))
     dates.append(list(a,md(a)))
@@ -5698,11 +6338,16 @@ type(dates)
 jj=[''.join(a) for a in dates]
 jj.sort(key=lambda date: datetime.strptime(date, "%m-%Y"))
 jj.sort(key=lambda date: datetime.datetime.strptime(date, "%m-%Y"))
+    # return datetime.datetime.fromtimestamp(t).strftime( "%d-%m-%Y %H:%M:%S" )
+    return datetime.datetime.fromtimestamp(t).strftime( "%m-%Y" )
 jj[4:]
 jj[:4]
+    # return datetime.datetime.fromtimestamp(t).strftime( "%m-%Y" )
+dates=["".join(a) for a in dates]
 dates.sort(key=lambda date: datetime.strptime(date, "%d-%m-%Y %H:%M:%S"))
 dates.sort(key=lambda date: datetime.datetime.strptime(date, "%d-%m-%Y %H:%M:%S"))
 dates[:8]
+    return datetime.fromtimestamp(t).strftime( "%d-%m-%Y %H:%M:%S" )
 [a[1] for a  in dates]
 [a[1] for a  in dates].sort(key=lambda date: datetime.strptime(date, "%d-%m-%Y %H:%M:%S"))
 nn=[a[1] for a  in dates].sort(key=lambda date: datetime.strptime(date, "%d-%m-%Y %H:%M:%S"))
@@ -5724,6 +6369,11 @@ sorted(dates,key=lamda x: jr(x))
 sorted(dates,key=lambda x: jr(x))
 newD=sorted(dates,key=lambda x: jr(x))
 print(newD)
+    return datetime.fromtimestamp(t).strftime( "%m-%d-%Y %H:%M:%S" )
+# from datetime import datetime
+    return datetime.strptime(x[1], "%m-%d-%Y %H:%M:%S")
+newd=sorted(dates,key=lambda x: jr(x))
+# dates=["".join(a) for a in dates]
 newd
 [a[1] for a  in newD]
 [a[0] for a  in newD]
@@ -5764,6 +6414,10 @@ ins(col)
         <h1 class="tile-marker">{x} </h1>
 [ a in os.scandir('.') if a.name.endswith('.jpg')]
 print(fil)
+#sort function
+#get files
+#create name dates list
+#sort array
 rend(newd)
 rend("".join(newd))
 newd[4:]
@@ -5774,6 +6428,7 @@ print(newd)
 [[a,b] for a,b in enumerate(newd)][:3]
 [[a,b] for a,b in enumerate(newd)][:6]
 ["".join([a,b]) for a,b in enumerate(newd)][:6]
+enewd=[[a,b] for a,b in enumerate(newd)][:6]
 enewd
 enewj=["".join(a) for a in enewd]
 enewd[0]
@@ -5785,8 +6440,10 @@ enewd[0][1]
 ", ".join(enewd[0][1])
 [(a[0],", ".join(a[1])) for a in enewd]
 [", ".join(b) for b in [(a[0],", ".join(a[1])) for a in enewd]]
+final=[", ".join(b) for b in [(a[0],", ".join(a[1])) for a in enewd]]
 final
 rend(final)
+enewd=[[str(a),b] for a,b in enumerate(newd)]
 from exif import Image
 with open("five.jpg", "rb") as palm_1_file:
     palm_1_image = Image(palm_1_file)
@@ -5799,6 +6456,7 @@ i=images[0]
 zdir(i)
 i.contrast
 i.datetime
+get_ipython().run_line_magic('cd', 'Camera/')
 ps
 [f[0] for f in px]
 os.stat('PXL_20230411_092918542.jpg')
@@ -5819,8 +6477,6 @@ newd[0][0]
     print(b[0],num2words(a))
     print(b[0],num2words(a)+'.mp3')
     os.rename(b[0],num2words(a)+'mp3')
-    return datetime.strptime(x[1], "%m-%d-%Y %H:%M:%S")
-newd=sorted(dates,key=lambda x: jr(x))
 def img(x):
     ret=f'"<img src=../{x}"'
 [a[0] for a  in newd]
@@ -5844,30 +6500,46 @@ print(ht)
     return f'<img src="../{x}">\n'
     # print(img(a[0]))
     <img src="../{x}">\n'
+    {os.path/getmtime(x)}
+    {os.path.getmtime(x)}
 xx='eight.jpg'
+os.path.getmtime(x)
 x='eight.jpg'
+datetime.fromtimestamp(os.path.getmtime(x))
+import os.path, time
+print("Last modified: %s" % time.ctime(os.path.getmtime(x)))
+time.ctime(os.path.getmtime(x))
+    {time.ctime(os.path.getmtime(x))}
+    <img src="../{x}">\n
     print(b[0],num2words(a)+'.jpg')
     os.rename(b[0],num2words(a)+'.jpg')
-#sort array
 from PIL import Image, ImageEnhance
 im = Image.open('five.jpg')
 im = im.rotate(90, expand=True)
 im.save('five.jpg')
+get_ipython().run_line_magic('e', '173:175')
+get_ipython().run_line_magic('e', '173:178')
 im = Image.open('six.jpg')
 im = im.rotate(180, expand=True)
 im.save('six.jpg')
 im = Image.open('seven.jpg')
 im.save('seven.jpg')
+get_ipython().run_line_magic('e', '184')
 im = Image.open('eleven.jpg')
 im.save('eleven.jpg')
+get_ipython().run_line_magic('e', '188')
 im = Image.open('ten.jpg')
 im = im.rotate(-90, expand=True)
 im.save('ten.jpg')
 i 191
+get_ipython().run_line_magic('e', '191')
 im = Image.open('twelve.jpg')
 im.save('twelve.jpg')
+get_ipython().run_line_magic('e', '194')
+get_ipython().run_line_magic('e', '198')
 im = Image.open('fourteen.jpg')
 im.save('fourteen.jpg')
+get_ipython().run_line_magic('e', '200')
 zz=[a for a in range(10)]
 zz[:3]
 zz[3:]
@@ -5905,6 +6577,7 @@ def tt(x)
 def tt(x):
     return datetime.fromtimestamp(x.st_atime).strftime('%m-%d-%y %H:%M:%S')
 tt(o)
+get_ipython().run_line_magic('e', '50')
 fil=[a.name for a in os.scandir('.') if a.name.endswith('.mp4')]
 [tt(os.stat(a)) for a in fil]
 [[a,tt(os.stat(a))] for a in fil]
@@ -5928,6 +6601,11 @@ have varied radically over time.'''
 'xx' in aa
 aa.count('1')
 aa.count('at')
+#for date array
+#for sort array
+    return datetime.fromtimestamp(t).strftime( "%m-%d-%y %H:%M:%S" )
+def format_date(x):
+newd=sorted(dates,key=lambda x: format_date(x))
 print('/n'.join(newd))
 [" - ".join(a) for a in newd]
 print([" - ".join(a) for a in newd])
@@ -5938,12 +6616,35 @@ id(x)
 jr(3)
 x = "jim"
 filename="x"
+t = eval(os.path.getatime(filename))
+t = eval('os.path.getatime(filename)')
+ev=f'os.path.get{a}time(filename)'
+t = eval(ev)
 a='a'
+    #accest time is geta
+    ev=f'os.path.get{a}time(filename)'
+    t = eval(ev)
 md(x)
 md('x')
 a='m'
 ev
 eval(ev)
+    print(ev)
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('-x', type=str, required=False, default='.mp3', help="-x Extension type")
+parser.add_argument('-t', type=str, required=False, default='a', help="-t Stat type")
+args = parser.parse_args()
+x = args.x
+t= args.t
+fil=[a.name for a in os.scandir('.') if a.name.endswith(x)]
+    pudb.set_trace()
+get_ipython().system('touch x.mp3')
+print(t)
+    print(f't in side md is {t}')
+    t="a"
+    ev=f'os.path.get{t}time(filename)'
+pdb.set_trace()
 ws('berlioz')
 wss('berlioz')
 gg='''Louis-Hector Berlioz (11 December 1803 – 8 March 1869) was a French Romantic composer
@@ -5986,6 +6687,16 @@ fil=[a.name for a in os.scandir('.') if re.search('x',a)]
 fil=[a.name for a in os.scandir('.') if 'x' in a]
 fil=[a.name for a in os.scandir('.') if 'x' in a.name]
 fil=[a.name for a in os.scandir('.') if '' in a.name]
+def rend(x):
+    user_renderables = [Panel(user, expand=True) for user in x]
+    console.print(Columns(user_renderables))
+parser.add_argument('-x', type=str, required=False, default='', help="-x Extension type")
+parser.add_argument('-t', type=str, required=False, default='m', help="-t Stat type")
+# t='a'
+fil=[a.name for a in os.scandir('.') if x in a.name] 
+# pdb.set_trace()
+    mytime = eval(ev)
+    return datetime.fromtimestamp(mytime).strftime( "%m-%d-%y %H:%M:%S" )
 "".join(enewd)
 "".join(newd)
 rend("\n".join([" - ".join(a) for a in newd]))
@@ -6088,6 +6799,8 @@ songCut=f"{song.replace(ext,'')}_{ss.replace(':','-')}-{to.replace(':','-')}{ext
 #cps(sl(song))
 with open('cutter', 'a') as cut:
     cut.write(f'\n#{mytime}\n{sl(song)}\n')
+get_ipython().system('nvim cutter')
+get_ipython().run_line_magic('cd', 'gut')
 song='knocking.mp4'
 [a.name for a in os.scandir('.') if rematch('jpg',a.name)]
 [a.name for a in os.scandir('.') if re.match('jpg',a.name)]
@@ -6122,7 +6835,15 @@ ei.artist
 vars(ei)
 ei.__dict__
 print(vars(ei))
+getattr(ei,'datetime')
+[getattr(ei,a) for a in zdir(ei)]
+[getattr(ei,a) for a in dir(ei)]
 x=zdir(ei)
+jj=['aperture_value', 'brightness_value', 'color_space', 'components_configuration', 'contrast', 'custom_rendered', 'datetime', 'datetime_digitized', 'datetime_original', 'delete', 'delete_all', 'digital_zoom_ratio', 'exif_version', 'exposure_bias_value', 'exposure_mode', 'exposure_program', 'exposure_time', 'f_number', 'flash', 'flashpix_version', 'focal_length', 'focal_length_in_35mm_film', 'get', 'get_all', 'get_file', 'get_thumbnail', 'gps_img_direction', 'gps_img_direction_ref', 'has_exif', 'image_height', 'image_width', 'list_all', 'make', 'max_aperture_value', 'metering_mode', 'model', 'offset_time', 'offset_time_digitized', 'offset_time_original', 'orientation', 'photographic_sensitivity', 'pixel_x_dimension', 'pixel_y_dimension', 'resolution_unit', 'saturation', 'scene_capture_type', 'scene_type', 'sensing_method', 'sharpness', 'shutter_speed_value', 'software', 'subject_distance', 'subject_distance_range', 'subsec_time', 'subsec_time_digitized', 'subsec_time_original', 'white_balance', 'x_resolution', 'y_and_c_positioning', 'y_resolution']
+    getattr(ei,a)
+        getattr(ei,a)
+        print(getattr(ei,a))
+        print(a, getattr(ei,a))
 ei.image_height
 ei.list_all
 ei.list_all()
@@ -6143,10 +6864,13 @@ cps(kk)
 ExifImage(ff).datetime
 ff.close
 ff.close()
+ExifImage(ff).get_file
+ExifImage(ff).get_file()
 for a in tfils:
     with open(a[0],'rb') as ff:
         print(f'{a[0]} {ExifImage(a[0]).datetime}')
 tfils=sorted(tfil, key=lambda x: x[1])
+get_ipython().run_line_magic('e', '110')
 fdates=[]
         inter=f'{a[0]} {ExifImage(a[0]).datetime}'
         print(inter)
@@ -6228,9 +6952,11 @@ kk=open('index.html', 'r').readlines(100).strip()
 kk=open('index.html', 'r').readlines().strip()
 kk=open('index.html', 'r').readline().strip()
 data=open('index.html', 'r', encoding='utf-8').read().strip().split('\n')
+get_ipython().system('nvim index.html')
 mm='jim steffes'
 data=open('index.html', 'r').read()
 re.findall('i','jim')
+url='http://raw.githubusercontent.com/wither7007/all/main/.bash_historys'
 url='https://raw.githubusercontent.com/wither7007/all/main/.bash_history'
 print(page_raw)
 page_raw.split('\n')
@@ -6287,11 +7013,14 @@ wdir(lin)
 song=wdir(lin)
 def arg(x):
     ll=f'"--no-video-title {song} --start-time {at} --stop-time {st})"'
-    return ll
 arg(song)
 fil=[a.name for a in os.scandir('.') if re.search(r'\.mp4',a.name)]
+get_ipython().system('trash leitBES.mp4')
 [(a,b) for a b in enumerate(fil)]
 [(a,b) for a, b in enumerate(fil)]
+get_ipython().system('rm letitBES.mp4')
+get_ipython().system('fd')
+get_ipython().run_line_magic('cd', 'Apr21/')
 tfils
 num2words(2)
 zdir(num2words)
@@ -6308,7 +7037,6 @@ tfils[:3]
 a=4
 num2words(a)
     xx=num2Words(a)
-    print(xx)
 xx=num2Words(a)
     print(num2words(a))
     os.rename(b[0], num2words(a)+'.jpg')
@@ -6324,6 +7052,7 @@ ii.length
 ii.width
 kk="format"
 ii.kk
+getattr(ii,kk)
 [a for a in dir(ii)]
 prop=[a for a in dir(ii)]
 print(prop)
@@ -6341,10 +7070,21 @@ for a,b  in enumerate(fil):
 ii=PillowImage.open('84.jpg')
 prop=[a for a in dir(ii) if not re.search('^_',a)]
 prop
+getattr(ii,prop[-1:])
 prop[-1:]
 prop[-1:][0]
+getattr(ii,prop[-1:][0])
+for a in prop:
+    getattr(ii,a)
+    print(getattr(ii,a))
+    print(a, getattr(ii,a))
 type(ii.save)
+    print(a, type(getattr(ii,a)))
 type(ii.verify)
+get_ipython().run_line_magic('e', '55:65')
+get_ipython().run_line_magic('e', '50:65')
+    if type(getattr(ii,a))=='method':
+        print(a, getattr(ii,a))
 type(ii.verify)=='method'
 type(ii.verify)==method
 type(ii.verify) is method
@@ -6352,6 +7092,11 @@ type(ii.verify) is "method"
 type(ii.verify) == "method"
 callable(ii.verify)
 callable(ii.width)
+    if callable(obj)(getattr(ii,a)):
+    if callable(getattr(ii,a)):
+    if not callable(getattr(ii,a)):
+        input()
+        os.system('pause')
 print('Program initiated')
 # giving the pause command to terminal using os.system()
 os.system('pause')
@@ -6432,6 +7177,10 @@ import webbrowser
 webbrowser.open(filename.absolute().as_uri())
 os.listdir('.')
 os.chdir('Apr23')
+[os.getcwd()+a.name for a in os.scandir('.')]
+[os.getcwd()+'/'a.name for a in os.scandir('.')]
+[os.getcwd()+'/'+a.name for a in os.scandir('.')]
+get_ipython().system('ls')
     print(ii.size)
     print(a,ii.size)
 [a[0] for a in tfils]
@@ -6481,6 +7230,7 @@ dir([a for a in os.scandir('.')][4])
 [a for a in os.scandir('.')][4].is_dir
 [a for a in os.scandir('.')][4].is_dir()
 os.chdir('/mnt/c/projects/camera')
+get_ipython().run_line_magic('cd', 'apr24/')
 ff=open('PXL_20230424_032326903.jpg','rb')
 ee=ExifImage(ff)
 dir(ee)
@@ -6491,6 +7241,8 @@ type(ee.datetime)
 re.sub(r':','_',ee.datetime)
 re.sub(r':|\s','_',ee.datetime)
 re.sub(r'\d{4}:','',ee.datetime)
+get_ipython().run_line_magic('e', '57:60')
+get_ipython().run_line_magic('e', '54:60')
 one=re.sub(r'\d{4}:','',ee.datetime)
 two=re.sub(r':|\s','_',one)
 two
@@ -6557,6 +7309,7 @@ URL="https://www.youtube.com/watch?v=JEp7QrOBxyQ"
     with open('json', w) as js:
         print(json.dumps(ydl.sanitize_info(info)),file=js)
     with open('json', 'w') as js:
+get_ipython().system('nvim json')
 URLS = ['https://www.youtube.com/watch?v=sGSZA6mYo4c']
 ydl_opts = {
     'format': 'mp3',
@@ -6630,7 +7383,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
@@ -6653,6 +7405,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SECRET_KEY
 print(BASE_DIR)
 BASE_DIR = Path('.').resolve().parent.parent
+get_ipython().run_line_magic('cd', 'locallibrary/')
 BASE_DIR = Path('.').resolve().parent
 # BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR ='setting'
@@ -6768,12 +7521,22 @@ jj['id']
 cps([(a,len(b)) for a, b in  jj.items() if type(b)==str])
 jj['fulltitle']
 jj['fulltitle','title']
+jj.get('title')
+[jj.get(x) for x in ['title','fulltitle']]
+[jj.get(x) for x in ['title','fulltitle','description']]
+[jj.get(x) for x in ['title','fulltitle','description','ext']]
+[jj.get(x) for x in ['id', 'title', 'description', 'url', 'ext' ]]
 [a for a in jj if re.match('url',a)]
 [a for a in jj if re.match('u',a)]
 print([a for a in jj])
+[jj.get(x) for x in ['id', 'title', 'description', 'webpage_url', 'ext' ]]
 print(sorted[a for a in jj]))
 print(sorted[a for a in jj])
 print(sorted([a for a in jj]))
+    kk=[jj.get(x) for x in ['id', 'title', 'description', 'webpage_url', 'ext' ]]
+ti=TinyTag.get('Big_Brothers.mp3')
+kk=[info.get(x) for x in ['id', 'title', 'description', 'webpage_url', 'ext' ]]
+ti=TinyTag.get('Gordon Lightfoot - Early Morning Rain (Live In Reno) [PhFP5l71PRE].m4a')
 from mutagen.easyid3 import EasyID3  
 import mutagen.id3  
 from mutagen.id3 import ID3, TIT2, TIT3, TALB, TPE1, TRCK, TYER  
@@ -6800,6 +7563,16 @@ help(yt_dlp.MetadataFromFieldPP)
 yt_dlp.DateRange
 yt_dlp.DateRange()
 help(yt_dlp.YoutubeDL)
+    'embed-metadata':True,
+    kk=[info.get(x) for x in ['id', 'title', 'description', 'webpage_url', 'ext' ]]
+    winfo=json.dumps(kk)
+get_ipython().system("rm 'Yesterday - The Beatles - Connie Talbot (Cover) [sGSZA6mYo4c].m4a'")
+    'filename: xx'
+    info = ydl.extract_info(URL, download=True, file='xx')
+    info = ydl.extract_info(URL, download=True, filename='xx')
+    'outtmpl': 'xx',     
+    info = ydl.extract_info(URL, download=True )
+    'outtmpl': 'xx.m4a'
 st3=json.loads(st2)
 st3
 type(st3)
@@ -6808,6 +7581,7 @@ type(st3)
     st3=json.loads(st2)
         print(st3,file=js)
 cps([(a,len(b)) for a, b in  st3.items() if type(b)==str])
+get_ipython().run_line_magic('e', '17')
 [('id', 11), ('title', 16), ('thumbnail', 52), ('description', 242), ('uploader', 23), ('uploader_id', 24), ('uploader_url', 55), ('channel_id', 24), ('channel_url', 56), ('webpage_url', 43), ('live_status', 8), ('album', 38), ('artist', 15), ('track', 16), ('channel', 15), ('upload_date', 8), ('creator', 15), ('alt_title', 16), ('availability', 6), ('original_url', 43), ('webpage_url_basename', 5), ('webpage_url_domain', 11), ('extractor', 7), ('extractor_key', 7), ('display_id', 11), ('fulltitle', 16), ('duration_string', 4), ('format', 49), ('format_id', 7), ('ext', 4), ('protocol', 37), ('format_note', 12), ('resolution', 9), ('dynamic_range', 3), ('vcodec', 3), ('acodec', 4)]
 [(a,len(b)) for a, b in  st3.items() if type(b)==str]
 for a in [(a,len(b)) for a, b in  st3.items() if type(b)==str]:
@@ -6820,6 +7594,7 @@ st3['fulltitle']
 st3['title']
 st3['artist']
 st3['thumbnail']
+get_ipython().run_line_magic('e', '39')
 st3['description']
 st3['webpage_url']
 st3['id']
@@ -6893,6 +7668,7 @@ cps([a[0] for a in result])
 ex=['id', 'description', 'album', 'artist', 'original_url', 'fulltitle']
 [(a,b) for a,b in st3.items if a in ex]
 [(a,b) for a,b in st3.items() if a in ex]
+get_ipython().run_line_magic('e', '151')
 URL='https://www.youtube.com/watch?v=Man4Xw8Xypo'
     ex=['id', 'description', 'album', 'artist', 'original_url', 'fulltitle']
     myin=[(a,b) for a,b in st3.items() if a in ex]
@@ -6906,6 +7682,7 @@ re.sub(r'[^a-zA-Z0-9]','','@#4myin[1][1]ji')
 re.sub(r'[^a-zA-Z0-9]','','@#4myin[1][1]j  i')
 re.sub(r'[^a-zA-Z0-9]','_','@#4myin[1][1]j  i')
 first=re.sub(r'[^a-zA-Z0-9]','_','@#4myin[1][1]j  i')
+get_ipython().run_line_magic('e', '168')
     title=myin[1][1]
     first=re.sub(r'[^a-zA-Z0-9]','_',title)
 first
@@ -6913,7 +7690,6 @@ re.sub(r'_{2,}','',first)
 re.sub(r'_{1,}','',first)
 re.sub(r'_{1,}','_',first)
 final=re.sub(r'_{1,}','_',first)
-    'embed-metadata':True,
     'outtmpl': final
 ydl_opts
 final=re.sub(r'_$','',final)
@@ -7013,6 +7789,7 @@ myl[-8:][0]
 print(" - ".join(myl[-1:][0]))
 for in myl[8:]:
 for a in myl[8:]:
+get_ipython().run_line_magic('e', '141')
 wstring=''
     temp=f'" - ".join(a))'
     wstring+=temp
@@ -7024,6 +7801,7 @@ wstring
 type(wstring)
 len(wstring)
 open('xx', 'w', encoding='utf-8').write(wstring)
+get_ipython().run_line_magic('cd', 'ditto/')
 with open('ditto_out', 'w', encoding="utf-8") as fs:
 re.sub(r'\r\n','\n',wstring)
 wstring=re.sub(r'\r\n','\n',wstring)
@@ -7041,7 +7819,6 @@ class Genre(models.Model):
     'catalog.apps.CatalogConfig',
 db=r"/mnt/c/projects/djan/locallibrary/db.sqlite3"
 conn = sqlite3.connect(db)
-q='''
 SELECT * from catalog_book_genre ;
 SELECT * from catalog_book_genre
 SELECT * from catalog_genre
@@ -7051,6 +7828,8 @@ myq="Beware the Jabberwock, my son The jaws that bite the claws that catch Bewar
 re.sub(r'[^a-zA-Z0-9]','',myq)
 [re.sub(r'[^a-zA-Z0-9]','',a) for a in myq]
 myq=[re.sub(r'[^a-zA-Z0-9]','',a) for a in myq]
+get_ipython().run_line_magic('e', '15 22')
+get_ipython().run_line_magic('e', '15:22')
     return f'INSERT into "catalog_genre" values(null,{x})'
 for w in myq:
     ip = c.execute(ins(w))
@@ -7062,8 +7841,28 @@ c.execute(q2)
 ws('List_of_Irish_ballads')
 wss('irish')
 wss('irish poets')
-submissions
+import pandas as pd
+from pmaw import PushshiftAPI
+api = PushshiftAPI() ##Note! We cannot get the actual count of upvotes without authenticating 
+## Set the time range for the search
+import datetime as dt
+before = int(dt.datetime(2022,4,1,0,0).timestamp())
+after = int(dt.datetime(2021,4,1,0,0).timestamp())
+subreddit="funny"   ## Which subreddit (optional)
+limit=1000          ## Set the limits of how many to return
+## Call the API for submissions
 submissions = api.search_submissions(subreddit=subreddit, limit=limit, before=before, after=after)
+# Turn into a dataframe for use
+df = pd.DataFrame(submissions)
+print(df.head())
+## Call the API for comments
+comments = api.search_comments(q="dog", subreddit=subreddit, limit=1000)
+df2 = pd.DataFrame(comments)
+print(df2.head())
+## Einblick does not support complex objects like dicts, structs, etc... 
+df = df.astype(str)
+df2 = df2.astype(str)
+submissions
 [a for a in submissions]
 mysub=[a for a in submissions]
 mysub
@@ -7145,6 +7944,13 @@ dir(person1.showAge)
 type(person1.showAge)
 type(person1.age)
 [a for a in person1.age]
+inspect.getsource(y)
+inspect.getsource(Person)
+class foo:
+      def bar():
+          print ('Hello')
+print(inspect.getsource(foo))
+inspect.getmembers(y)
 def dec(s):
         print('dec')
     s()
@@ -7165,9 +7971,34 @@ add_five = outer(5)
 # Import the default logging module
 # Format the log message
 # Emit a warning message
-logging.basicConfig(filename='HumioDemo.log', format='%(asctime)s %(levelname)s:%(name)s:%(message)s')
+ng
+# logging.basicConfig(format='%(asctime)s %(levelname)s:%(name)s:%(message)s')
+# # Emit a WARNING message
+# logging.WARNING('You are learning Python logging!')
+logger = logging.getLogger('HumioDemoLogger')
+# Set a log level for the logger
+# logger.setLevel(logging.INFO)
+logger.setLevel(logging.WARNING)
+# Create a console handler 
+handler = logging.StreamHandler()
+# Set INFO level for handler
+handler.setLevel(logging.INFO)
+# Create a message format that matches earlier example
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# Add our format to our handler
+handler.setFormatter(formatter)
+# Add our handler to our logger
+logging.basicConfig(filename='HumioDemo.log')
 #  Emit an INFO-level message
 logger.warning('Python logging warning is cool! to fil')
+print(handler)
+# logger = logging.getLogger('HumioDemoLogger')
+# logger.setLevel(logging.WARNING)
+# handler = logging.StreamHandler()
+# handler.setFormatter(formatter)
+# logger.addHandler(handler)
+cps('cd '+os.getcwd())
+logging.basicConfig(filename='HumioDemo.log', format='%(asctime)s %(levelname)s:%(name)s:%(message)s')
 logging.basicConfig(filename='what.log', format='%(asctime)s %(levelname)s:%(name)s:%(message)s')
 logging.basicConfig(filename='what.log')
 import abc
@@ -7217,7 +8048,6 @@ div=check(div)
 div2=check(div)
 div2(8,3)
 ins(div2)
-    pudb.set_trace()
         return func(x,y)
 div2(8,0)
 div(8,3)
@@ -7334,8 +8164,11 @@ def index(request):
         'num_authors': num_authors,
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
+inspect.getsource(admin)
+inspect.getfile(admin)
 mm=json.load('json')
     xx=json.load(sts)
+get_ipython().run_line_magic('cat', 'json')
 v j
 with open('j','r') as sts:
 [a for a in xx.keys()]
@@ -7364,7 +8197,10 @@ version('tables')
 # pretty print loaded modules
 pprint.pprint(sys.modules)
 import pendulum
+get_ipython().run_line_magic('pinfo2', 'open')
+get_ipython().run_line_magic('pinfo2', 'django')
 hi
+get_ipython().run_line_magic('pinfo2', 'Django')
 import django
 from django.core.management import execute_from_command_line
 zdir(django)
@@ -7379,12 +8215,17 @@ mpath="/mnt/c/you/lazy"
 files=cfilter(mpath,918)
 files[4]
 fi=files[4]
+ti=TinyTag.get(fi)
 zdir(ti)
 ti.comment
 x = os.environ.keys()x = os.environ.keys()
 s=dir(ti)
 import exifread
 ti.v1l1
+getattr(ti,title)
+getattr(ti,"title")
+[getattr(ti,a) for a in s]
+[[a, getattr(ti,a)] for a in s]
 print('*'*3000)
 sys.stdout = open('logfile', 'w')
 sys.stdout = sys.__stdout__
@@ -7398,6 +8239,7 @@ zdir(catalog)
 dir(catalog)
 from catalog.models import Book
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'locallibrary.settings')
+inspect.getfile(models)
 dir(models)
     """Model representing a book genre (e.g. Science Fiction, Non Fiction)."""
     name = models.CharField(
@@ -7407,6 +8249,41 @@ dir(models)
         """String for representing the Model object (in Admin site etc.)"""
 settings
 settings.configure()
+Generated by 'django-admin startproject' using Django 4.0.2.
+https://docs.djangoproject.com/en/4.0/topics/settings/
+https://docs.djangoproject.com/en/4.0/ref/settings/
+# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+#SECRET_KEY = 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+#DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# Set hosts to allow any app on Railway and the local testing URL
+ALLOWED_HOSTS = ['.railway.app','127.0.0.1']
+# Set CSRF trusted origins to allow any app on Railway and the local testing URL
+CSRF_TRUSTED_ORIGINS = ['https://*.railway.app','https://*.127.0.0.1']
+    # Add our new application 
+    'catalog.apps.CatalogConfig', #This object was created for us in /catalog/apps.py
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/4.0/topics/i18n/
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+# Add to test email:
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Update database configuration from $DATABASE_URL environment variable (if defined)
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = BASE_DIR / 'staticfiles'  #. os.path.join(BASE_DIR, 'staticfiles')
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
+# Static file serving.
+# http://whitenoise.evans.io/en/stable/django.html#django-middleware
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 type(settings)
 print(settings)
 class Fruit(models.Model):
@@ -7419,6 +8296,7 @@ class Fruit(models.Model):
     "django.contrib.messages",
     "django.contrib.staticfiles",
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
+get_ipython().run_line_magic('run', 'manage.py shell')
 zdir(Choice)
 # create a class
     # class variable
@@ -7432,6 +8310,14 @@ pprint(vars())
 vars()
 vars(models)
 print(vars(models))
+inspect.getsource(models)
+print(inspect.getsource(models))
+print(inspect.getsource(models.Lookup))
+with open('output.txt', 'w') as f:
+    print(inspect.getsource(models.Lookup),file=f)
+get_ipython().system('nvim output.txt')
+    print(inspect.getsource(models.models),file=f)
+    print(inspect.getsource(models),file=f)
 from .models import Question
 latest_question_list = Question.objects.order_by("-pub_date")[:5]
 dbName
@@ -7465,6 +8351,40 @@ my2[1][0]
 [a[0] for a in my2 if "choice" in a[0] ]
 [a[0] for a in my2 if "quest" in a[0] ]
 cps([a[0] for a in my2 if "quest" in a[0] ])
+def addDeveloper(id, name, joiningDate):
+        sqliteConnection = sqlite3.connect(dbName)
+        cursor = sqliteConnection.cursor()
+        print("Connected to SQLite")
+        sqlite_create_table_query = '''CREATE TABLE new_developers (
+                                       id INTEGER PRIMARY KEY,
+                                       name TEXT NOT NULL,
+                                       joiningDate timestamp);'''
+        cursor.execute(sqlite_create_table_query)
+        # insert developer detail
+        sqlite_insert_with_param = """INSERT INTO 'new_developers'
+                          ('id', 'name', 'joiningDate') 
+                          VALUES (?, ?, ?);"""
+        data_tuple = (id, name, joiningDate)
+        cursor.execute(sqlite_insert_with_param, data_tuple)
+        sqliteConnection.commit()
+        print("Developer added successfully \n")
+        # get developer detail
+        sqlite_select_query = """SELECT name, joiningDate from new_developers where id = ?"""
+        cursor.execute(sqlite_select_query, (1,))
+        records = cursor.fetchall()
+        for row in records:
+            developer = row[0]
+            joining_Date = row[1]
+            print(developer, " joined on", joiningDate)
+            print("joining date type is", type(joining_Date))
+        cursor.close()
+    except sqlite3.Error as error:
+        print("Error while working with SQLite", error)
+    finally:
+        if sqliteConnection:
+            sqliteConnection.close()
+            print("sqlite connection is closed")
+addDeveloper(1, 'Mark', datetime.datetime.now())
 import numpy as np
 import seaborn as sns
 # obtain dataset
@@ -7481,6 +8401,18 @@ for a in mm:
     os.rename(a,str(b)+'.mp3')
     b+=1
 b=1
+#https://pynative.com/python-sqlite-date-and-datetime/
+        sqlite_insert_with_param = """INSERT INTO 'polls_question'
+                          ('id', 'question_text', 'pub_date') 
+        # # get developer detail
+        # sqlite_select_query = """SELECT id, question_text from polls_question where id = ?"""
+        # cursor.execute(sqlite_select_query, (1,))
+        # records = cursor.fetchall()
+        # for row in records:
+        #     developer = row[0]
+        #     joining_Date = row[1]
+        #     print(developer, " joined on", joiningDate)
+        #     print("joining date type is", type(joining_Date))
 addDeveloper(4, 'Mark', datetime.datetime.now())
 wikipedia.summary("Python programming languag", sentences=2)
 wikipedia.summary("schopenhauer", sentences=2)
@@ -7488,7 +8420,6 @@ result = wikipedia.search("beethoven")
 page = wikipedia.page(result[3])
 page.content
 print(page.content)
-with open('output.txt', 'w') as f:
     print(page.content,file=f)
 re=page.content
 pc=page.content
@@ -7526,19 +8457,8 @@ print(sqlparse.format(sqi, reindent=False, keyword_case='upper'))
 from polls.models import Book
 zdir(Book)
 def addDeveloper():
-        sqliteConnection = sqlite3.connect(dbName)
-        cursor = sqliteConnection.cursor()
-        print("Connected to SQLite")
-        # insert developer detail
         schemaSql='''
 SELECT sql 
-        records = cursor.fetchall()
-    except sqlite3.Error as error:
-        print("Error while working with SQLite", error)
-    finally:
-        if sqliteConnection:
-            sqliteConnection.close()
-            print("sqlite connection is closed")
 addDeveloper()
 dbName="/mnt/c/projects/Django/mycat/locallibrary/db.sqlite3"
 def schema():
@@ -7573,6 +8493,7 @@ with open('schema','w') as schem:
         schem.write("%s\n" % c)
 content=open('schema')
 print(content.read())
+get_ipython().system('nvim schema')
 sqliteConnection = sqlite3.connect(dbName)
 cursor = sqliteConnection.cursor()
 print("Connected to SQLite")
@@ -7585,7 +8506,6 @@ insert='''insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_o
 insert='''insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_of_birth', 'date_of_death') values ('22', 'jim', 'jim','','')'''
 sqliteConnection.commit()
 insert='''insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_of_birth', 'date_of_death') values ('22', 'tome', 'tome','','')'''
-        sqliteConnection.commit()
 cursor.execute(insert)
 insert='''insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_of_birth', 'date_of_death') values ('32', 'tome', 'tome','','')'''
 insert=f'''insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_of_birth', 'date_of_death') values ('42', 'tome', 'tome',{datetime.now()},'')'''
@@ -7623,6 +8543,7 @@ ms
 with open('aut','w') as schem:
     for a in ms:
         schem.write("%s\n" % a)
+get_ipython().system('nvim aut')
 ms[13]
 ms[13][0]
 ms[13][0].split(' ')[1]
@@ -7649,7 +8570,11 @@ print(p)c
 oc=open('oc','w')
 print(pc,file=oc)
 oc.close()
+get_ipython().system('nvim oc')
+get_ipython().run_line_magic('w', ')')
 st(at[1])
+inspect.getsource(sc)
+inspect.getsource(st)
 sorted(ms, key=lambda x:x.split(),1)
 sorted(ms, key=lambda x:x.split(),[1])
 sorted(ms, key=lambda x:x.split()[1])
@@ -7670,6 +8595,8 @@ sorted([ a for a in at if len(a)<100])
 at=[ a for a in at if len(a)<100]
 with open('myaut','w') as myaut:
     myaut.write('\n'.join(at))
+get_ipython().system('nvim myaut')
+get_ipython().run_line_magic('e', '149')
 with open('myaut','r') as myaut
     con=myaut.read():
 with open('myaut','r') as myaut:
@@ -7702,7 +8629,6 @@ mys= (None,'george', 'Washington','2023-10-26','')
 con=con.split('\n')
 insert=''' insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_of_birth', 'date_of_death' 'description') VALUES(?,?,?,?,?, ?)'''
 mys= (None, 'blah', 'blah','2023-10-26','', 'whats up')
-#https://pynative.com/python-sqlite-date-and-datetime/
 insert=''' insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_of_birth', 'date_of_death', 'description') VALUES(?,?,?,?,?, ?)'''
 con[1].split('(')
 newcon=[]
@@ -7735,6 +8661,7 @@ for a in newcon:
     print(a[0].split()[0])
     print(a,a[0].split()[0])
     print(a,a[0].split()[1])
+get_ipython().run_line_magic('e', '63:70')
         print(a,a[0].split()[1])
         print(f'!!!! {a}')
 ms = 'bobby!hadz!com'
@@ -7754,6 +8681,7 @@ ms[8:]
 ms.split(s)[0:]
 ms.split(s)[0]
 ms.split(s,1)[0]
+get_ipython().run_line_magic('h', '()')
 his
 ms.split(s,1)
 ms.rsplit(s,1)
@@ -7767,6 +8695,7 @@ con[1][0].strip().find('a')
 con[1][0].strip().find('c')
 con[1][0].strip()[1]
 n=con[1][0].strip()
+get_ipython().run_line_magic('l', '')
 n[0:n.find('r')]
 n[n.find('r'):]
 'jim'.find('x')
@@ -7825,6 +8754,7 @@ newcon[1].split('-')[0].split()[1]
 newcon[1].split('-')[0].split()[1] + newcon[1].split('-')[0].split()[0]
 newcon[1].split('-')[0].split()[1] + " '+ newcon[1].split('-')[0].split()[0]
 newcon[1].split('-')[0].split()[1] + " "+ newcon[1].split('-')[0].split()[0]
+get_ipython().run_line_magic('e', '208')
 [a.split('-')[0].split()[1] + " "+ a.split('-')[0].split()[0] for a in newcon]
 [a.split('-')[0].split()[1] + " "+ a.split('-')[0].split()[0] + a.split[1:] for a in newcon]
 [a.split('-')[0].split()[1] + " "+ a.split('-')[0].split()[0] + a.split()[1:] for a in newcon]
@@ -7856,6 +8786,7 @@ nc=[[a.split('-',1)[0].split(), a.split('-')[1].strip()] for a in newcon]
 [(None,a[0][0],a[0][1],'','',a[1]) for a in nc]
 tup=[(None,a[0][0],a[0][1],'','',a[1]) for a in nc]
 for a in tup:
+get_ipython().run_line_magic('e', '245')
     cursor.execute(insert,a)
 tup=[(None,a[0][1],a[0][0],'','',a[1]) for a in nc]
 tup
@@ -7927,12 +8858,14 @@ rg('superstring', 's')
 find('superstring', 's')
 find('superstring', 'x')
 from .models import Author, Genre, Book, BookInstance, Language
+get_ipython().run_line_magic('cd', 'catalog/')
 from .models import Author
 from models import Author
 localslibrary
 files=os.scandir('.')
 [a for a in files]
 [a.name for a in files]
+get_ipython().run_line_magic('run', 'settings.py')
 INSTALLED_APPS
 W
 from catalog.models import *
@@ -8021,6 +8954,7 @@ result = wikipedia.search("Church_cantata_(Bach)")
 type(pc)
 with open('bach','w') as myaut:
     myaut.write(pc)
+get_ipython().system('nvim bach')
 result = wikipedia.search("list of us presidents")
 result = wikipedia.search("us constituion")
 result = wikipedia.search("text us constituion")
@@ -8028,7 +8962,6 @@ result = wikipedia.search("text united states constituion")
 result = wikipedia.search("Church_cantata_(Bach)#Easter_Sunday")
 page = wikipedia.page(result[1])
 with open('bach','w') as myaut: myaut.write(pc)
-from bs4 import BeautifulSoup
 # Specify url of the web page
 source = urlopen('https://en.wikipedia.org/wiki/John_D._Hunter').read()
 # Make a soup 
@@ -8062,11 +8995,15 @@ wiki.pageid
 wiki.sections
 wiki.url
 wiki.coordinates
+subject = 'Nixon'
+query = 'nixon'
 dbName="/mnt/c/projects/django/myMdn/locallibrary/bm.db"
 dbName="/mnt/c/projects/django/myMdn/locallibrary/db.sqlite3"
 type(mm)
 schem.write("\n".join(mm))
     schem.write("\n".join(mm))
+get_ipython().system('fd -a')
+get_ipython().system('fd -d 1 -a')
 schemaSql='''
 SELECT sql FROM sqlite_master where sql like '%catalog%' and sql like '%table%';
 cursor.execute(schemaSql)
@@ -8094,28 +9031,47 @@ mm=[s[0] for s in nn if isinstance(s[0],str)  ]
 pc=pc.split('\n')
 pc[1]
 with open('www','w') as w: w.write('\n'.join(pc))
+get_ipython().system('nvim www')
 source = urlopen('https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States').read()
 paras
 wikipedia.set_lang('en')
 page = wikipedia.page('Artificial intelligence')
+today = datetime.datetime.now()
+date = today.strftime('%Y/%m/%d')
+url = 'https://api.wikimedia.org/feed/v1/wikipedia/en/featured/' + date
+headers = {
+  'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+  'User-Agent': 'YOUR_APP_NAME (YOUR_EMAIL_OR_CONTACT_PAGE)'
+response = requests.get(url, headers=headers)
 query = 'Google LLC'
- 
 # Which parameters to use
-params = {
         'action': 'wbsearchentities',
-        'format': 'json',
         'search': query,
         'language': 'en'
 # Fetch API
 data = fetch_wikidata(params)
 #show response as JSON
 data = data.json()
+def fetch_wikidata(params):
+    url = 'https://www.wikidata.org/w/api.php'
+        return requests.get(url, params=params)
+        return 'There was and error'
 data['search'][0]
+# Get ID from the wbsearchentities response
+id = data['search'][0]['id'] 
+# Create parameters
+            'action': 'wbgetentities',
+            'ids':id, 
+            'languages': 'en'
+# fetch the API
+# Show response
+data 
 [a for a in data.items()]
 [list(map(str,a)) for a in data.items()]
 [list(map(str,a)) for a in data.items()][1]
 ll=[list(map(str,a)) for a in data.items()][1]
 with open('ll','w') as w: w.write('\n'.join(ll))
+get_ipython().system('nvim ll')
 ll=[list(map(str,a)) for a in data.items()]
 type(ll)
 ll[:3]
@@ -8256,6 +9212,11 @@ data['entities'][id]['claims']['P1278']
     longitude = data['entities'][id]['claims']['P625'][0]['mainsnak']['datavalue']['value']['longitude']
     latitude = 'not_found'
     longitude = 'not_found'
+import requests as r
+wiki_page_request = r.get("https://en.wikipedia.org/wiki/Tropical_cyclones_in_2020")
+wiki_page_text = wiki_page_request.text
+# New code below
+soup = BeautifulSoup(wiki_page_text, 'html.parser')
 soup.title
 soup.find_all('table')
 table_soup = soup.find_all('table')
@@ -8308,7 +9269,7 @@ cps([a[0] for a in records if 'CREATE TABLE "catalog_author"' in a[0]][0])
     mys= (None, a[0][0], a[0][1],'','', a[1])
 newcon=newcon[:3]
 insert=''' insert into 'catalog_author' ('id', 'first_name', 'last_name', 'date_of_birth', 'date_of_death', 'myinfo') VALUES(?,?,?,?,?, ?)'''
-soup = BeautifulSoup(wiki_page_text, 'html.parser')
+wiki_page_request = r.get("https://en.wikipedia.org/wiki/List_of_best-selling_books")
 [a for a in table_soup]
 len(filtered_table_soup)
 table_soup
@@ -8355,9 +9316,24 @@ my=[a.name for a in os.scandir('/mnt/c/you/alb')[0]]
 my=[a for a in os.scandir('/mnt/c/you/alb')[0]]
 my=[a for a in os.scandir('/mnt/c/you/alb')][0]
 my=[a.name for a in os.scandir('/mnt/c/you/alb')][0]
+def download_mp3(url, save_path):
+    response = requests.get(url)
+    if response.status_code == 200:
+        with open(save_path, 'wb') as f:
+            f.write(response.content)
+        print("MP3 downloaded successfully!")
+        print("Failed to download MP3.")
+# Example usage
+mp3_url = "https://twit.cachefly.net/audio/twit/twit0920/twit0929.mp3"
+save_location = "/mnt/c/twit/"
+download_mp3(mp3_url, save_location)
 save_location
+response = requests.get(url)
 mp3_url
+response = requests.get(mp3_url)
 response
+mp3_url = "https://twit.cachefly.net/audio/twit/twit0929/twit0929.mp3"
+save_location = "/mnt/c/twit/twit929.mp3"
 [a.name for a in os.scandir('.') if '929' in a]
 [a.name for a in os.scandir('.') if '929' in a.name]
 audiofile='twit929.mp3'
@@ -8378,6 +9354,7 @@ print(*dir())
 [a.name for a in os.scandir('.') if 'mp' in a]
 [a.name for a in os.scandir('.') if 'mp' in a.name]
 fi=[a.name for a in os.scandir('.') if 'mp' in a.name]
+ti=TinyTag.get(fi[0])
 zdir(eyed2)
 zdir(eyed3)
 with open(fi[0], "r+b") as f:
@@ -8411,6 +9388,8 @@ fr=f.read()
 [chr(a) for a in fr[:104]]
 [chr(a) for a in fr[104:]]
 [chr(a) for a in fr[len(fr)-300:]]
+ti=TinyTag.get(fi[2])
+ti=TinyTag.get(fi[1])
 eyefile = eyed3.load(fi[1])
 zdir(eyefile)
 eyefile.info
@@ -8430,7 +9409,9 @@ fc
 [chr(a) for a in fc]
 print([chr(a) for a in fc])
 print([chr(a) for a in fc] if chr(a)='o')
+get_ipython().run_line_magic('e', '96')
 print([chr(a) for a in fc if chr(a)='o'] )
+get_ipython().run_line_magic('e', '98')
 print([chr(a) for a in fc if chr(a)='o'])
 print([chr(a) for a in fc if chr(a)=='o'])
 " ".join([chr(a) for a] )
@@ -8461,19 +9442,40 @@ eyefile = eyed3.load(fi[3])
 fi[3]
 eyefile = eyed3.load('weightBand.mp3')
 eyefile=fi[6]
+getattr(eyefile,'album_artist')
+getattr(eyefile,'artist')
 type(eyefile)
 eyefile
 eyefile=eyed3.load(fi[6])
+getattr(eyefile.tag,'artist')
+getattr(eyefile.tag,'title')
 nn=zdir(eyefile.tag)
 nn=dir(eyefile.tag)
 nn=[a for a in nn if not '_' in a]
+getattr(eyefile.tag,n[1])
+getattr(eyefile.tag,nn[1])
+    getattr(efile.tag,a)
+    getattr(eyefile.tag,a)
+    print(getattr(eyefile.tag,a))
+    print(a,getattr(eyefile.tag,a))
+getattr(eyefile.tag,comments)
 eyefile.tag.comments
 eyefile.tag.comments()
+ti=TinyTag.get(fi[6])
 ti.artist
+ti=TinyTag.get(fi[8])
+getattr(tig,comments)
+getattr(ti,comments)
+getattr(ti,'album')
+getattr(ti,album)
 ti.ablum
 nn=dir(ti)
+    print(a,getattr(ti,a))
 tia=[]
+    tia.append(f'{a}, getattr(ti,a))
+    tia.append(f'{a}, getattr(ti,a)')
 tia
+    tia.append(f'{a}, {getattr(ti,a)}')
 tia[3:]
 tia[:1]
 tia[:3]
@@ -8489,13 +9491,16 @@ en[1]
 list_of_tuples = [(1, 'bobby'), (2, 'hadz'), (3, 'com')]
 with open('example.txt', 'w', encoding='utf-8') as f:
     f.write('\n'.join(f'{tup[0]} {tup[1]}' for tup in list_of_tuples))
+get_ipython().system('nvim example.txt')
 "\n".join(f'{a[0]}' for a in en[1]])
 '\n'.join(f'{tup[0]} {tup[1]}' for tup in en)
 print('\n'.join(f'{tup[0]} {tup[1]}' for tup in en))
 en=[(a,b) for a,b in enumerate(tia)]
+get_ipython().run_line_magic('e', '225')
 with open('tiny.txt', 'w', encoding='utf-i') as f:
     f.write('\n'.join(f'{tup[0]} {tup[1]}' for tup in en))
 with open('tiny.txt', 'w', encoding='utf-8') as f:
+get_ipython().system('nvim tiny.txt')
 list_of_integers = [7, 21, 44]
 (str(item) for item in list_of_integers)
 list((str(item) for item in list_of_integers))
@@ -8517,6 +9522,11 @@ files=[a for a in os.scandir('.')]
 files=[a.name for a in os.scandir('.')]
 me=files[0]
 path=files[0]
+m_time = os.path.getmtime(path)
+# convert timestamp into DateTime object
+dt_m = datetime.datetime.fromtimestamp(m_time)
+print('Modified on:', dt_m)
+m_time = os.path.getatime(path)
 m_time
 print(os.stat(me))
 k=os.stat(me)
@@ -8545,7 +9555,24 @@ os.stat(me).st_atime
 mytime(os.stat(me).st_atime)
     datetime_str=mytimestamp.strftime("%m-%d-%y%-H:%M:%S")
     datetime_str=mytimestamp.strftime("%m-%d-%y-%H:%M:%S")
+getattr(f,'count')
+getattr(me,'count')
+[a for a in f getattr(me,f)]
+for a in f:
+    getattr(me,f)
+    getattr(me,a)
+getattr(me,'n_fields')
+getattr(me,'st_time')
+getattr(me,'st_mtime')
+getattr(me,'st_atime')
 kk=os.stat(me)
+getattr(kk,'n_fields')
+[a for a in f getattr(kk,f)]
+    getattr(kk,a)
+    print(getattr(kk,a))
+    print(a, getattr(kk,a))
+    print(type(a), a, getattr(kk,a))
+    print(type(a), a, type(getattr(kk,a)),  getattr(kk,a))
 from sh import ifconfig
 print(ifconfig("eth0"))
 import sh
@@ -8595,6 +9622,9 @@ mutagen.File(filez[0]).keys()
 print(mutagen.File(filez[0]))
 print(mutagen.File(filez[0]).keys())
 mutagen.File(filez[0]).comment
+for frame in mutagen.File(filez[0]).tags.getall("TXXX"):
+    frame
+    print(frame)
 from mutagen.easyid3 import EasyID3
 print(EasyID3.valid_keys.keys())
 audio = MP3(filez[0])
@@ -8630,6 +9660,19 @@ mp.save()
 com4=datetime.now().strftime("%m-%d-%y")
 com4
 com4=datetime.now().strftime("%b-%d-%y")
+    #use album name for mp3 type and get caps
+    com2=mp3file['album']
+    com3=''.join(re.findall('[A-Z]', com2))
+    com4=datetime.now().strftime("%b-%d-%y")
+    print(com3, com4)
+    breakpoint()
+    # breakpoint()
+    com3=''.join(re.findall('[A-Z]', str(com2)))
+    com5=f'{com3}_{com4}'
+    print(com5)
+    mp3file['title']=com5
+    mp3file.save()
+    os.rename(a, com5+'.mp3')
 df
     a=a
     at='st_atime {mytime(os.stat(a).st_atime)}'
@@ -8651,6 +9694,10 @@ my_list = list(range(NUM))
 my_list
 my_dict = {item: item for item in my_list}
 my_dict
+pathlib_cwd = Path.cwd()
+os_cwd = os.getcwd()
+print(type(pathlib_cwd))
+print(type(os_cwd))
 pathlib_cwd
 print(pathlib_cwd)
 Path(file[0]).exists()
@@ -8726,6 +9773,479 @@ import pyclip
 help('modules')
 import clipboard
 zdir(clipboard)
+Pyperclip
+A cross-platform clipboard module for Python, with copy & paste functions for plain text.
+By Al Sweigart al@inventwithpython.com
+BSD License
+Usage:
+  import pyperclip
+  pyperclip.copy('The text to be copied to the clipboard.')
+  spam = pyperclip.paste()
+  if not pyperclip.is_available():
+    print("Copy functionality unavailable!")
+On Windows, no additional modules are needed.
+On Mac, the pyobjc module is used, falling back to the pbcopy and pbpaste cli
+    commands. (These commands should come with OS X.).
+On Linux, install xclip, xsel, or wl-clipboard (for "wayland" sessions) via package manager.
+For example, in Debian:
+    sudo apt-get install xclip
+    sudo apt-get install xsel
+    sudo apt-get install wl-clipboard
+Otherwise on Linux, you will need the gtk or PyQt5/PyQt4 modules installed.
+gtk and PyQt4 modules are not available for Python 3,
+and this module does not work with PyGObject yet.
+Note: There seems to be a way to get gtk on Python 3, according to:
+    https://askubuntu.com/questions/697397/python3-is-not-supporting-gtk-module
+Cygwin is currently not supported.
+Security Note: This module runs programs with these names:
+    - which
+    - where
+    - pbcopy
+    - pbpaste
+    - xclip
+    - xsel
+    - wl-copy/wl-paste
+    - klipper
+    - qdbus
+A malicious user could rename or add programs with these names, tricking
+Pyperclip into running them with whatever permissions the Python process has.
+__version__ = '1.8.2'
+import contextlib
+import ctypes
+import warnings
+from ctypes import c_size_t, sizeof, c_wchar_p, get_errno, c_wchar
+# `import PyQt4` sys.exit()s if DISPLAY is not in the environment.
+# Thus, we need to detect the presence of $DISPLAY manually
+# and not load PyQt4 if it is absent.
+HAS_DISPLAY = os.getenv("DISPLAY", False)
+EXCEPT_MSG = """
+    Pyperclip could not find a copy/paste mechanism for your system.
+    For more information, please visit https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error """
+PY2 = sys.version_info[0] == 2
+STR_OR_UNICODE = unicode if PY2 else str # For paste(): Python 3 uses str, Python 2 uses unicode.
+ENCODING = 'utf-8'
+    from shutil import which as _executable_exists
+except ImportError:
+    # The "which" unix command finds where a command is.
+    if platform.system() == 'Windows':
+        WHICH_CMD = 'where'
+        WHICH_CMD = 'which'
+    def _executable_exists(name):
+        return subprocess.call([WHICH_CMD, name],
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE) == 0
+# Exceptions
+class PyperclipException(RuntimeError):
+class PyperclipWindowsException(PyperclipException):
+    def __init__(self, message):
+        message += " (%s)" % ctypes.WinError()
+        super(PyperclipWindowsException, self).__init__(message)
+class PyperclipTimeoutException(PyperclipException):
+def _stringifyText(text):
+    if PY2:
+        acceptedTypes = (unicode, str, int, float, bool)
+        acceptedTypes = (str, int, float, bool)
+    if not isinstance(text, acceptedTypes):
+        raise PyperclipException('only str, int, float, and bool values can be copied to the clipboard, not %s' % (text.__class__.__name__))
+    return STR_OR_UNICODE(text)
+def init_osx_pbcopy_clipboard():
+    def copy_osx_pbcopy(text):
+        text = _stringifyText(text) # Converts non-str values to str.
+        p = subprocess.Popen(['pbcopy', 'w'],
+                             stdin=subprocess.PIPE, close_fds=True)
+        p.communicate(input=text.encode(ENCODING))
+    def paste_osx_pbcopy():
+        p = subprocess.Popen(['pbpaste', 'r'],
+                             stdout=subprocess.PIPE, close_fds=True)
+        stdout, stderr = p.communicate()
+        return stdout.decode(ENCODING)
+    return copy_osx_pbcopy, paste_osx_pbcopy
+def init_osx_pyobjc_clipboard():
+    def copy_osx_pyobjc(text):
+        '''Copy string argument to clipboard'''
+        newStr = Foundation.NSString.stringWithString_(text).nsstring()
+        newData = newStr.dataUsingEncoding_(Foundation.NSUTF8StringEncoding)
+        board = AppKit.NSPasteboard.generalPasteboard()
+        board.declareTypes_owner_([AppKit.NSStringPboardType], None)
+        board.setData_forType_(newData, AppKit.NSStringPboardType)
+    def paste_osx_pyobjc():
+        "Returns contents of clipboard"
+        content = board.stringForType_(AppKit.NSStringPboardType)
+        return content
+    return copy_osx_pyobjc, paste_osx_pyobjc
+def init_gtk_clipboard():
+    global gtk
+    import gtk
+    def copy_gtk(text):
+        global cb
+        cb = gtk.Clipboard()
+        cb.set_text(text)
+        cb.store()
+    def paste_gtk():
+        clipboardContents = gtk.Clipboard().wait_for_text()
+        # for python 2, returns None if the clipboard is blank.
+        if clipboardContents is None:
+            return ''
+            return clipboardContents
+    return copy_gtk, paste_gtk
+def init_qt_clipboard():
+    global QApplication
+    # $DISPLAY should exist
+    # Try to import from qtpy, but if that fails try PyQt5 then PyQt4
+        from qtpy.QtWidgets import QApplication
+            from PyQt5.QtWidgets import QApplication
+            from PyQt4.QtGui import QApplication
+    app = QApplication.instance()
+    if app is None:
+        app = QApplication([])
+    def copy_qt(text):
+        cb = app.clipboard()
+        cb.setText(text)
+    def paste_qt():
+        return STR_OR_UNICODE(cb.text())
+    return copy_qt, paste_qt
+def init_xclip_clipboard():
+    DEFAULT_SELECTION='c'
+    PRIMARY_SELECTION='p'
+    def copy_xclip(text, primary=False):
+        selection=DEFAULT_SELECTION
+        if primary:
+            selection=PRIMARY_SELECTION
+        p = subprocess.Popen(['xclip', '-selection', selection],
+    def paste_xclip(primary=False):
+        p = subprocess.Popen(['xclip', '-selection', selection, '-o'],
+                             stdout=subprocess.PIPE,
+                             stderr=subprocess.PIPE,
+                             close_fds=True)
+        # Intentionally ignore extraneous output on stderr when clipboard is empty
+    return copy_xclip, paste_xclip
+def init_xsel_clipboard():
+    DEFAULT_SELECTION='-b'
+    PRIMARY_SELECTION='-p'
+    def copy_xsel(text, primary=False):
+        selection_flag = DEFAULT_SELECTION
+            selection_flag = PRIMARY_SELECTION
+        p = subprocess.Popen(['xsel', selection_flag, '-i'],
+    def paste_xsel(primary=False):
+        p = subprocess.Popen(['xsel', selection_flag, '-o'],
+    return copy_xsel, paste_xsel
+def init_wl_clipboard():
+    PRIMARY_SELECTION = "-p"
+    def copy_wl(text, primary=False):
+        text = _stringifyText(text)  # Converts non-str values to str.
+        args = ["wl-copy"]
+            args.append(PRIMARY_SELECTION)
+        if not text:
+            args.append('--clear')
+            subprocess.check_call(args, close_fds=True)
+            pass
+            p = subprocess.Popen(args, stdin=subprocess.PIPE, close_fds=True)
+            p.communicate(input=text.encode(ENCODING))
+    def paste_wl(primary=False):
+        args = ["wl-paste", "-n"]
+        p = subprocess.Popen(args, stdout=subprocess.PIPE, close_fds=True)
+        stdout, _stderr = p.communicate()
+    return copy_wl, paste_wl
+def init_klipper_clipboard():
+    def copy_klipper(text):
+        p = subprocess.Popen(
+            ['qdbus', 'org.kde.klipper', '/klipper', 'setClipboardContents',
+             text.encode(ENCODING)],
+            stdin=subprocess.PIPE, close_fds=True)
+        p.communicate(input=None)
+    def paste_klipper():
+            ['qdbus', 'org.kde.klipper', '/klipper', 'getClipboardContents'],
+            stdout=subprocess.PIPE, close_fds=True)
+        # Workaround for https://bugs.kde.org/show_bug.cgi?id=342874
+        # TODO: https://github.com/asweigart/pyperclip/issues/43
+        clipboardContents = stdout.decode(ENCODING)
+        # even if blank, Klipper will append a newline at the end
+        assert len(clipboardContents) > 0
+        # make sure that newline is there
+        assert clipboardContents.endswith('\n')
+        if clipboardContents.endswith('\n'):
+            clipboardContents = clipboardContents[:-1]
+        return clipboardContents
+    return copy_klipper, paste_klipper
+def init_dev_clipboard_clipboard():
+    def copy_dev_clipboard(text):
+        if text == '':
+            warnings.warn('Pyperclip cannot copy a blank string to the clipboard on Cygwin. This is effectively a no-op.')
+        if '\r' in text:
+            warnings.warn('Pyperclip cannot handle \\r characters on Cygwin.')
+        fo = open('/dev/clipboard', 'wt')
+        fo.write(text)
+        fo.close()
+    def paste_dev_clipboard():
+        fo = open('/dev/clipboard', 'rt')
+        content = fo.read()
+    return copy_dev_clipboard, paste_dev_clipboard
+def init_no_clipboard():
+    class ClipboardUnavailable(object):
+        def __call__(self, *args, **kwargs):
+            raise PyperclipException(EXCEPT_MSG)
+        if PY2:
+            def __nonzero__(self):
+                return False
+            def __bool__(self):
+    return ClipboardUnavailable(), ClipboardUnavailable()
+# Windows-related clipboard functions:
+class CheckedCall(object):
+    def __init__(self, f):
+        super(CheckedCall, self).__setattr__("f", f)
+    def __call__(self, *args):
+        ret = self.f(*args)
+        if not ret and get_errno():
+            raise PyperclipWindowsException("Error calling " + self.f.__name__)
+        return ret
+    def __setattr__(self, key, value):
+        setattr(self.f, key, value)
+def init_windows_clipboard():
+    global HGLOBAL, LPVOID, DWORD, LPCSTR, INT, HWND, HINSTANCE, HMENU, BOOL, UINT, HANDLE
+    from ctypes.wintypes import (HGLOBAL, LPVOID, DWORD, LPCSTR, INT, HWND,
+                                 HINSTANCE, HMENU, BOOL, UINT, HANDLE)
+    windll = ctypes.windll
+    msvcrt = ctypes.CDLL('msvcrt')
+    safeCreateWindowExA = CheckedCall(windll.user32.CreateWindowExA)
+    safeCreateWindowExA.argtypes = [DWORD, LPCSTR, LPCSTR, DWORD, INT, INT,
+                                    INT, INT, HWND, HMENU, HINSTANCE, LPVOID]
+    safeCreateWindowExA.restype = HWND
+    safeDestroyWindow = CheckedCall(windll.user32.DestroyWindow)
+    safeDestroyWindow.argtypes = [HWND]
+    safeDestroyWindow.restype = BOOL
+    OpenClipboard = windll.user32.OpenClipboard
+    OpenClipboard.argtypes = [HWND]
+    OpenClipboard.restype = BOOL
+    safeCloseClipboard = CheckedCall(windll.user32.CloseClipboard)
+    safeCloseClipboard.argtypes = []
+    safeCloseClipboard.restype = BOOL
+    safeEmptyClipboard = CheckedCall(windll.user32.EmptyClipboard)
+    safeEmptyClipboard.argtypes = []
+    safeEmptyClipboard.restype = BOOL
+    safeGetClipboardData = CheckedCall(windll.user32.GetClipboardData)
+    safeGetClipboardData.argtypes = [UINT]
+    safeGetClipboardData.restype = HANDLE
+    safeSetClipboardData = CheckedCall(windll.user32.SetClipboardData)
+    safeSetClipboardData.argtypes = [UINT, HANDLE]
+    safeSetClipboardData.restype = HANDLE
+    safeGlobalAlloc = CheckedCall(windll.kernel32.GlobalAlloc)
+    safeGlobalAlloc.argtypes = [UINT, c_size_t]
+    safeGlobalAlloc.restype = HGLOBAL
+    safeGlobalLock = CheckedCall(windll.kernel32.GlobalLock)
+    safeGlobalLock.argtypes = [HGLOBAL]
+    safeGlobalLock.restype = LPVOID
+    safeGlobalUnlock = CheckedCall(windll.kernel32.GlobalUnlock)
+    safeGlobalUnlock.argtypes = [HGLOBAL]
+    safeGlobalUnlock.restype = BOOL
+    wcslen = CheckedCall(msvcrt.wcslen)
+    wcslen.argtypes = [c_wchar_p]
+    wcslen.restype = UINT
+    GMEM_MOVEABLE = 0x0002
+    CF_UNICODETEXT = 13
+    @contextlib.contextmanager
+    def window():
+        """
+        Context that provides a valid Windows hwnd.
+        # we really just need the hwnd, so setting "STATIC"
+        # as predefined lpClass is just fine.
+        hwnd = safeCreateWindowExA(0, b"STATIC", None, 0, 0, 0, 0, 0,
+                                   None, None, None, None)
+            yield hwnd
+        finally:
+            safeDestroyWindow(hwnd)
+    def clipboard(hwnd):
+        Context manager that opens the clipboard and prevents
+        other applications from modifying the clipboard content.
+        # We may not get the clipboard handle immediately because
+        # some other application is accessing it (?)
+        # We try for at least 500ms to get the clipboard.
+        t = time.time() + 0.5
+        success = False
+        while time.time() < t:
+            success = OpenClipboard(hwnd)
+            if success:
+                break
+            time.sleep(0.01)
+        if not success:
+            raise PyperclipWindowsException("Error calling OpenClipboard")
+            yield
+            safeCloseClipboard()
+    def copy_windows(text):
+        # This function is heavily based on
+        # http://msdn.com/ms649016#_win32_Copying_Information_to_the_Clipboard
+        with window() as hwnd:
+            # http://msdn.com/ms649048
+            # If an application calls OpenClipboard with hwnd set to NULL,
+            # EmptyClipboard sets the clipboard owner to NULL;
+            # this causes SetClipboardData to fail.
+            # => We need a valid hwnd to copy something.
+            with clipboard(hwnd):
+                safeEmptyClipboard()
+                if text:
+                    # http://msdn.com/ms649051
+                    # If the hMem parameter identifies a memory object,
+                    # the object must have been allocated using the
+                    # function with the GMEM_MOVEABLE flag.
+                    count = wcslen(text) + 1
+                    handle = safeGlobalAlloc(GMEM_MOVEABLE,
+                                             count * sizeof(c_wchar))
+                    locked_handle = safeGlobalLock(handle)
+                    ctypes.memmove(c_wchar_p(locked_handle), c_wchar_p(text), count * sizeof(c_wchar))
+                    safeGlobalUnlock(handle)
+                    safeSetClipboardData(CF_UNICODETEXT, handle)
+    def paste_windows():
+        with clipboard(None):
+            handle = safeGetClipboardData(CF_UNICODETEXT)
+            if not handle:
+                # GetClipboardData may return NULL with errno == NO_ERROR
+                # if the clipboard is empty.
+                # (Also, it may return a handle to an empty buffer,
+                # but technically that's not empty)
+                return ""
+            return c_wchar_p(handle).value
+    return copy_windows, paste_windows
+def init_wsl_clipboard():
+    def copy_wsl(text):
+        p = subprocess.Popen(['clip.exe'],
+    def paste_wsl():
+        p = subprocess.Popen(['powershell.exe', '-command', 'Get-Clipboard'],
+        # WSL appends "\r\n" to the contents.
+        return stdout[:-2].decode(ENCODING)
+    return copy_wsl, paste_wsl
+# Automatic detection of clipboard mechanisms and importing is done in deteremine_clipboard():
+def determine_clipboard():
+    Determine the OS/platform and set the copy() and paste() functions
+    accordingly.
+    global Foundation, AppKit, gtk, qtpy, PyQt4, PyQt5
+    # Setup for the CYGWIN platform:
+    if 'cygwin' in platform.system().lower(): # Cygwin has a variety of values returned by platform.system(), such as 'CYGWIN_NT-6.1'
+        # FIXME: pyperclip currently does not support Cygwin,
+        # see https://github.com/asweigart/pyperclip/issues/55
+        if os.path.exists('/dev/clipboard'):
+            warnings.warn('Pyperclip\'s support for Cygwin is not perfect, see https://github.com/asweigart/pyperclip/issues/55')
+            return init_dev_clipboard_clipboard()
+    # Setup for the WINDOWS platform:
+    elif os.name == 'nt' or platform.system() == 'Windows':
+        return init_windows_clipboard()
+    if platform.system() == 'Linux' and os.path.isfile('/proc/version'):
+        with open('/proc/version', 'r') as f:
+            if "microsoft" in f.read().lower():
+                return init_wsl_clipboard()
+    # Setup for the MAC OS X platform:
+    if os.name == 'mac' or platform.system() == 'Darwin':
+            import Foundation  # check if pyobjc is installed
+            import AppKit
+        except ImportError:
+            return init_osx_pbcopy_clipboard()
+            return init_osx_pyobjc_clipboard()
+    # Setup for the LINUX platform:
+    if HAS_DISPLAY:
+            import gtk  # check if gtk is installed
+            pass # We want to fail fast for all non-ImportError exceptions.
+            return init_gtk_clipboard()
+        if (
+                os.environ.get("WAYLAND_DISPLAY") and
+                _executable_exists("wl-copy")
+        ):
+            return init_wl_clipboard()
+        if _executable_exists("xsel"):
+            return init_xsel_clipboard()
+        if _executable_exists("xclip"):
+            return init_xclip_clipboard()
+        if _executable_exists("klipper") and _executable_exists("qdbus"):
+            return init_klipper_clipboard()
+            # qtpy is a small abstraction layer that lets you write applications using a single api call to either PyQt or PySide.
+            # https://pypi.python.org/pypi/QtPy
+            import qtpy  # check if qtpy is installed
+            # If qtpy isn't installed, fall back on importing PyQt4.
+            try:
+                import PyQt5  # check if PyQt5 is installed
+            except ImportError:
+                    import PyQt4  # check if PyQt4 is installed
+                except ImportError:
+                    pass # We want to fail fast for all non-ImportError exceptions.
+                else:
+                    return init_qt_clipboard()
+                return init_qt_clipboard()
+            return init_qt_clipboard()
+    return init_no_clipboard()
+def set_clipboard(clipboard):
+    Explicitly sets the clipboard mechanism. The "clipboard mechanism" is how
+    the copy() and paste() functions interact with the operating system to
+    implement the copy/paste feature. The clipboard parameter must be one of:
+        - pbcopy
+        - pbobjc (default on Mac OS X)
+        - gtk
+        - qt
+        - xclip
+        - xsel
+        - klipper
+        - windows (default on Windows)
+        - no (this is what is set when no clipboard mechanism can be found)
+    global copy, paste
+    clipboard_types = {
+        "pbcopy": init_osx_pbcopy_clipboard,
+        "pyobjc": init_osx_pyobjc_clipboard,
+        "gtk": init_gtk_clipboard,
+        "qt": init_qt_clipboard,  # TODO - split this into 'qtpy', 'pyqt4', and 'pyqt5'
+        "xclip": init_xclip_clipboard,
+        "xsel": init_xsel_clipboard,
+        "wl-clipboard": init_wl_clipboard,
+        "klipper": init_klipper_clipboard,
+        "windows": init_windows_clipboard,
+        "no": init_no_clipboard,
+    if clipboard not in clipboard_types:
+        raise ValueError('Argument must be one of %s' % (', '.join([repr(_) for _ in clipboard_types.keys()])))
+    # Sets pyperclip's copy() and paste() functions:
+    copy, paste = clipboard_types[clipboard]()
+def lazy_load_stub_copy(text):
+    A stub function for copy(), which will load the real copy() function when
+    called so that the real copy() function is used for later calls.
+    This allows users to import pyperclip without having determine_clipboard()
+    automatically run, which will automatically select a clipboard mechanism.
+    This could be a problem if it selects, say, the memory-heavy PyQt4 module
+    but the user was just going to immediately call set_clipboard() to use a
+    different clipboard mechanism.
+    The lazy loading this stub function implements gives the user a chance to
+    call set_clipboard() to pick another clipboard mechanism. Or, if the user
+    simply calls copy() or paste() without calling set_clipboard() first,
+    will fall back on whatever clipboard mechanism that determine_clipboard()
+    automatically chooses.
+    copy, paste = determine_clipboard()
+    return copy(text)
+def lazy_load_stub_paste():
+    A stub function for paste(), which will load the real paste() function when
+    called so that the real paste() function is used for later calls.
+    return paste()
+def is_available():
+    return copy != lazy_load_stub_copy and paste != lazy_load_stub_paste
+# Initially, copy() and paste() are set to lazy loading wrappers which will
+# set `copy` and `paste` to real functions the first time they're used, unless
+# set_clipboard() or determine_clipboard() is called first.
+copy, paste = lazy_load_stub_copy, lazy_load_stub_paste
+def waitForPaste(timeout=None):
+    """This function call blocks until a non-empty text string exists on the
+    clipboard. It returns this text.
+    This function raises PyperclipTimeoutException if timeout was set to
+    a number of seconds that has elapsed without non-empty text being put on
+    the clipboard."""
+    startTime = time.time()
+    while True:
+        clipboardText = paste()
+        if clipboardText != '':
+            return clipboardText
+        time.sleep(0.01)
+        if timeout is not None and time.time() > startTime + timeout:
+            raise PyperclipTimeoutException('waitForPaste() timed out after ' + str(timeout) + ' seconds.')
+def waitForNewPaste(timeout=None):
+    """This function call blocks until a new text string exists on the
+    clipboard that is different from the text that was there when the function
+    was first called. It returns this text.
+    originalText = paste()
+        currentText = paste()
+        if currentText != originalText:
+            return currentText
+            raise PyperclipTimeoutException('waitForNewPaste() timed out after ' + str(timeout) + ' seconds.')
+__all__ = ['copy', 'paste', 'waitForPaste', 'waitForNewPaste', 'set_clipboard', 'determine_clipboard']
 dir
 import jedi
 dir(jedi)
@@ -8735,7 +10255,10 @@ for path in Path(rootdir).iterdir():
     if path.is_dir():
         print(path)
 e 1
+get_ipython().run_line_magic('edit', '1')
 rootdir = '.'
+get_ipython().run_line_magic('cd', 'modules/')
+get_ipython().run_line_magic('run', 'start_strip.py')
 a=[]
         a.append(path)
 [n for b in a]
@@ -8771,9 +10294,14 @@ ar=[a for a in 'abc']
 ar[1]
 st='https://picsum.photos/600/400/\?random -O '
 [st+ a for a in ar]
+['wget ' +st+ a +.jpg for a in ar]
+['wget ' +st+ a +'.jpg' for a in ar]
+"\n".join(['wget ' +st+ a +'.jpg' for a in ar])
+ss="\n".join(['wget ' +st+ a +'.jpg' for a in ar])
 with open('a.sh' ,'w') as f:
     f.write(ss)
 ar=[a for a in 'abcdefghi']
+st='wget https://picsum.photos/600/400/\?random -O '
     f.write("\n".join([st + a + '.jpg' for a in ar]))
 [a for a in os.scandir('.') if 'jpg' in a]
 [a for a in os.scandir('.') if 'jpg' in a.name]
@@ -8805,6 +10333,7 @@ r = requests.post(url, json={"title": "from python 7-10", "description":"not har
 [a for a in files if not 'spoken' in a]
 len([a for a in files if not 'spoken' in a])
 files=[a for a in files if not 'spoken' in a]
+get_ipython().run_line_magic('e', '6')
 random.shuffle(files)
 #!/home/steff007/p11/Python-3.11.3/python
 #https://stackoverflow.com/questions/18394147/how-to-do-a-recursive-sub-folder-search-and-return-files-in-a-list
@@ -8925,6 +10454,7 @@ user_preference = (
     .first()
 user_preference.currency = "GBP"
 session.commit()
+get_ipython().run_line_magic('pip', 'install psycopg2-binary')
 import psycopg2
 conn = psycopg2.connect(database="testdb",
                         host="localhost",
@@ -8992,13 +10522,26 @@ tables=cursor.fetchall()
 tables
 tables[1]
 tables[0]
+url='http://localhost:8000/docs#/default/root__get'
+response=requests.get(url)
+rj=response.json()
+console.log(rj)
+url='http://localhost:8000/'
 print(rj)
+def myReq(url):
+    response=requests.get(url)
+    rj=response.json()
+    print(rj)
 urlOpenAi=' http://127.0.0.1:8000/openapi.json'
 myReq(urlOpenAi)
+    print(type(rj)) 
+    pprint(rj)
 stuff = ['spam', 'eggs', 'lumberjack', 'knights', 'ni']
 stuff.insert(0, stuff[:])
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(stuff)
+    pp.pprint(rj)
+pp = pprint.PrettyPrinter(indent=1)
 import asyncio
 async def main():
     print('Hello ...')
@@ -9065,11 +10608,23 @@ from export.py import sheet
 start=r'/home/steff007/.ipython/profile_default/startup/start'
 start=r'/home/steff007/.ipython/profile_default/startup/st'
     myaut.readlines()
+get_ipython().run_line_magic('e', '25')
+get_ipython().run_line_magic('cd', "'/home/steff007/.ipython/profile_default/startup/start'")
+get_ipython().run_line_magic('cd', "'/home/")
+get_ipython().run_line_magic('cd', "'/home/'")
+get_ipython().run_line_magic('cd', "'/home/steff007/.ipython/'profile_default/startup/start'")
+get_ipython().run_line_magic('cd', "'/home/steff007/.ipython/'")
+get_ipython().run_line_magic('cd', "'/home/steff007/.ipython/profile_default/startup/'")
+get_ipython().system('nvim start.py')
 from '/home/steff007/.ipython/profile_default/startup/start.py' import sheet
 from r'/home/steff007/.ipython/profile_default/startup/start.py' import sheet
 for p in sys.path:
     print( p )
 sys.path.append('/mnt/c/projects')
+sys.path.append('/mnt/c/projects/plib')
+@app.get("/")
+def index():
+    return "hello world"
 sh=sheet('data')['values']
 int('2')
 42*40*52
@@ -9083,10 +10638,25 @@ n/(n+x)
 n,x=[1,2]
 from sqlalchemy_utils import database_exists, create_database
 from local_settings import postgresql as settings
+user='steff007'
+passwd='stars1'
+def get_engine(user, passwd, host, port, db):
+    url = f"postgresql://{user}:{passwd}@{host}:{port}/{db}"
+    if not database_exists(url):
+        create_database(url)
+    engine = create_engine(url, pool_size=50, echo=False)
+    return engine
+# from local_settings import postgresql as settings
+host='localhost'
+port='5432'
 engine.url.database
+connection = get_engine()
+connection = get_engine(user,passwd,host,port,'tempdb')
     # author_id = Column(Integer(), ForeignKey('authors.id'))
     __tablename__ = 'aaaarticles'
     #
+engine=get_engine(user, password,host,port,'tempdb')
+engine=get_engine(user, passwd,host,port,'tempdb')
 print('aaaaaaaaaaaaaaaaaa')
 from psycopg2 import connect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
@@ -9302,6 +10872,7 @@ list(ml[1])
 [list(map(str,a)) for a in cursor.fetchall()][1]
 ml=[list(map(str,a)) for a in cursor.fetchall()]
 print(ml)
+get_ipython().system('nvim con.py')
 [str(a) for a in ml]
 [str(map(str,a)) for a in ml]
 [a[0] for a in ml]
@@ -9313,6 +10884,13 @@ conn = Database(dbname="xxx",
                     port="5432")
                         url="localhost",
 conn = database.connect(dbname="xxx",
+host_server = os.environ.get('host_server', 'localhost')
+db_server_port = urllib.parse.quote_plus(str(os.environ.get('db_server_port', '5432')))
+database_name = os.environ.get('database_name', 'fastapi')
+db_username = urllib.parse.quote_plus(str(os.environ.get('db_username', 'steff007')))
+db_password = urllib.parse.quote_plus(str(os.environ.get('db_password', 'stars1')))
+ssl_mode = urllib.parse.quote_plus(str(os.environ.get('ssl_mode','prefer')))
+DATABASE_URL = 'postgresql://{}:{}@{}:{}/{}?sslmode={}'.format(db_username,db_password, host_server, db_server_port, database_name, ssl_mode)
 DATABASE_URL
 cps(DATABASE_URL)
 database = Database(postgresql://steff007:stars1@localhost:5432/fastapi?sslmode=prefer)
@@ -9386,6 +10964,7 @@ query = "select *  FROM highscores"
 query = """CREATE TABLE todo (id SERIAL PRIMARY KEY, name VARCHAR(100), score INTEGER)"""
 query = "INSERT INTO todo(name, score) VALUES (:name, :score)"
     {"name": "learn golang", "score": 92},
+get_ipython().run_line_magic('ls', '-lhrt')
 with open(works,'r') as f:
     for line in f:
         print(f)
@@ -9397,6 +10976,7 @@ with open('works.py','r') as f:
         print(len(line), line)
         print(line.trim())
         print(line.strip())
+get_ipython().system('nvim works.py')
 values2=[
     ('peter',2),
     ('peter',2)
@@ -9427,6 +11007,7 @@ with open('countries.csv', 'w', encoding='UTF8') as f:
     # write the data
     writer.writerow(data)
 data = ['Afghanistan', 652090]
+get_ipython().system('nvim countries.csv')
 data = ['Afghanistan', 'kabul']
 data = ['This ? is , the coutry:;', 'kabul']
 data = [['This ? is , the coutry:;', 'kabul']
@@ -9447,6 +11028,7 @@ with open('countries.csv', 'w', encoding='UTF8', newline='') as f:
     ['nothin','from the, word nothin']
     ['nothin','from the, word nothin'],
 records_to_insert = [('fill','peters'), ('frank','churche')]
+ll=sheet('data')
 ll['values']
 ll['values'][1]
 tuple(ll['values'][1])
@@ -9464,6 +11046,7 @@ bulkInsert(myt)
 bi
 records_to_insert
 bulkInsert(bi)
+            print("PostgreSQL connection is commented")
 bi[:2]
 bulkInsert(bi[:2])
 bulkInsert(bi[:8])
@@ -9473,6 +11056,8 @@ bulkInsert(bi[:9])
 bulkInsert(bi[8])
 bi[8:9]
 bi[8:10]
+        print("Failed inserting record into  table {}".format(error))
+        breakpoint()
 [(a,b) for a,b in enumerate(bi)]
 sql='delete from authors'
 sql='delete from author'
@@ -9487,6 +11072,11 @@ print([a[0] for a in ml])
 print([a[0],a[1] for a in ml])
 print(([a[0],a[1]) for a in ml])
 print([(a[0],a[1]) for a in ml])
+        sql_insert_query = """ INSERT INTO notes (text, word) 
+url=''http://127.0.0.1:8000/notes/?skip=0&take=20''
+r = requests.get(url)
+print(r)
+url='http://127.0.0.1:8000/notes/?skip=0&take=20'
 r.headers
 r.body
 r.text
@@ -9497,17 +11087,28 @@ r.text
 [(a,r.headers[a]) for a in r.headers]
 [list((a,r.headers[a])) for a in r.headers]
 [list((a,r.headers[a])) for a in r.text]
-r
-url = 'http://httpbin.org/post'
+url = 'http://httpbin.org/get'
 payload = {
     'website':'dataquest.io',
     'courses':['Python','SQL']
-r = requests.post(url, data=payload)
+r = requests.get(url, params=payload)
 print('Response Content:\n',r.text)
+r
 url='http://127.0.0.1:8000/notes/?skip=0&take=5'
+url = 'http://httpbin.org/post'
+r = requests.post(url, data=payload)
+from requests import HTTPError
+url = "http://httpbin.org/status/404"
+    r = requests.get(url)
+    r.raise_for_status()
+    print('Response Code:', r.status_code)
+except HTTPError as ex:
+    print(ex)
+url = "http://httpbin.org"
 url='https://jsonplaceholder.typicode.com/todos'
 r=requests(url)
 r=request(url)
+r=requests.get(url)
 r.headers['Content-Type']
 r.headers['Content-Type'].json()
 r.content
@@ -9526,22 +11127,36 @@ r.raw()
 r.raw
 r.raw.read(10)
 r.raw.read(100)
+s = requests.get(url, stream=True)
 s.raw
 s.raw.read(10)
 s.raw.read(100)
 with open('stream', 'wb') as fd:
     for chunk in s.iter_content(chunk_size=128):
         fd.write(chunk)
+url='https://twit.cachefly.net/audio/twit/twit0920/twit0920.mp3'
+with open('stream.mp3', 'wb') as fd:
+url='http://localhost:8000/notes/'
+url='https://twit.tv/'
 r.headers['server']
+def server(x):
+    url=x
+    r = requests.get(url)  
+    return r.headers('server')
 server('https://www.nytimes.com/')
+    return r.headers('Server')
+    print(url)
 url='https://www.nytimes.com/'
 server('https://wikipedia.org/')
 m=server('https://wikipedia.org/')
 m.headers
+data =requests.request("GET", "https://www.example.com")
 zdir(data)
 data.text
 data.raw
 data.headers
+url='https://www.example.com'
+with open('example.raw', 'wb') as fd:
 s.headers
 [a for a in s.headers]
 s=server('https://startribune.com')
@@ -9566,6 +11181,7 @@ payload={"text": "something", "word": "Good"}
 with open('/home/steff007/xd', 'r' ) as xd:
     content =xd.read()
     print(content)
+get_ipython().system('nvim xd')
     for line in xd:
         line=line.split(' ')
 'jim is'.split(' ')
@@ -9581,7 +11197,6 @@ xx=pp.readlines()
 [a.strip() for a in xx]
 [a for a in xx]
 [a.strip() for a in pp]
-url='http://localhost:8000/notes/'
 r.json()[:-3]
 r.json()[-3:]
 url = 'https://api.github.com/users/kennethreitz/repos?page=1&per_page=10'
@@ -9603,6 +11218,8 @@ print([a for a in r.json()[1]])
 url='http://httpbin.org/'
 r.text.json()
 r.status_code
+r=requests.get(url+"//get")
+url='http://httpbin.org/get'
 r.json()['Host']
 r.json()['origin']
 js=r.jsoon()
@@ -9612,10 +11229,10 @@ del js['origin']
 params={
     "name": "mike",
     "age" : 22
+r=requests.get(url,params=params)
 r.args
 [a for a in r]
 r['args']
-print(r)
 print(r.url)
 data={
 r=requests.post(url,data=data)
@@ -9625,14 +11242,24 @@ requests.codes
 zdir(request.codes)
 zdir(requests.codes)
 requests.codes.not_found
+url='http://httpbin.org/user-agent'
+headers= {
+    "Accept": "img/png"
+url='http://httpbin.org/image'
+r=requests.get(url, headers=headers)
 response.text
+    "Accept": "image/png"
 with open('ima.png', 'rb') as img:
     img.write(r.content)
 with open('ima.png', 'wb') as img:
 proxies={
+    "http": "139.99.237.62:80"
+r=requests.get(url, proxies=proxies)
 "http": "139.99.237.62:80",
 "https": "139.99.237.62:80",
 proxies
+"http": "http://139.99.237.62:80",
+"http": "http://139.99.237.62:8000",
 c=[4,8,82,4]
 for a in c:
     if a in all:
@@ -9820,11 +11447,17 @@ dict_of_users.3
 dict_of_users['3']
 dict_of_users[3]
 dict_of_users[3]='x'
+url ="https://jsonplaceholder.typicode.com/todos"
+r=request.get(url)
+print(r.json()[:3])
 todos=r.json()[:3]
 todos
 [a for a in todos]
 [a for a in todos[1]]
 cps([a for a in todos[1]])
+url2='https://jsonplaceholder.typicode.com/todos'
+rs=requests.get(url2)
+rss=rs.json()[:-3]
 rss
 rss=rs.json()[-3:]
 data= {
@@ -9835,6 +11468,7 @@ data= {
  }
 x`
 r = requests.post(url, json.dumps(data))
+rr=requests.get(url)
 url='http://localhost:8000/todos/'
 rr.json()
 r=requests.post(url,json.dumps(data))
@@ -9854,10 +11488,6 @@ curl -X 'POST' \
 }'
 cps(r.json()[1])
 data={'text': 'from fpython', 'word': 'Saturday'}
-        sql_insert_query = """ INSERT INTO notes (text, word) 
-        print("Failed inserting record into  table {}".format(error))
-        breakpoint()
-            print("PostgreSQL connection is commented")
 60/65
 60/125
 65/125
@@ -9870,6 +11500,9 @@ import databases
 from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.sql import func
+database_name = os.environ.get('database_name', 'yyy')
+database = databases.Database(DATABASE_URL)
+metadata = sqlalchemy.MetaData()
 notes = sqlalchemy.Table(
     "notes",
     metadata,
@@ -9895,6 +11528,9 @@ score: str
             text: str
 word: str
 date_entered: DateTime
+# SQLAlchemy specific code, as with any other app
+# DATABASE_URL = "sqlite:///./test.db"
+database_name = os.environ.get('database_name', 'nnn')
 import pydantic
 import pydantic.utils
 from sqlmodel import SQLModel, Field
@@ -9915,7 +11551,6 @@ db_file=r"/mnt/c/projects/MyFast/sql_app.db"
         specified by db_file
     :param db_file: database file
     :return: Connection object or None
-    """
         return conn
     return conn
 xx=create_connection(db_file)
@@ -9950,6 +11585,7 @@ cursor.executemany("INSERT INTO notes VALUES(?, ?)", bi)
 cursor.executemany("INSERT INTO notes VALUES('text', 'word')", bi)
 cursor.executemany("INSERT INTO notes VALUES('','text', 'word')", bi)
 cursor.executemany("INSERT INTO notes VALUES('','text', 'word','','')", bi)
+get_ipython().system('pwd')
 sel='''
 select * from notes
 p=cursor.execute(sel)
@@ -9973,7 +11609,15 @@ data_tuple = ('myword', 'mytext')
 cursor.execute(sqlite_insert_with_param, data_tuple)
 for a in bi:
     cursor.execute(sqlite_insert_with_param, a )
+# bulkInsert(bi)
+                        (word, text) 
+                          VALUES (?, ?);"""
+url="https://www.mnlottery.com/games/unclaimed-prizes"
 bod
+res = requests.get(url)
+htmlData = res.content
+parsedData = BeautifulSoup(htmlData, "html.parser")
+print(parsedData.prettify())
 parsedData
 with open('data', 'w') as file:
     file.write(parsedData)
@@ -9988,6 +11632,7 @@ tags[1]
 str(tags)
 with open('tags','w') as t:
     t.write(str(tags))
+tags = bod.find_all("div", class_="card")
 # coding=utf8
 # the above tag defines encoding for this document and is for Python 2.x compatibility
 regex = r"\s{2,}"
@@ -10021,7 +11666,6 @@ result = re.sub(regex, subst, test_str, 0, re.MULTILINE)
 if result:
     print (result)
 # Note: for Python 2.7 compatibility, use ur"" to prefix the regex and u"" to prefix the test string and substitution.
-tags = bod.find_all("div", class_="card")
 bod = soup.body
 print(tags.prettify())
 print(str(tags.prettify()))
@@ -10066,7 +11710,10 @@ c=[a.strip().replace('\nPrize\nClaimed\nRemaining\n','') for a in b]
 d[1]
         w.write(a)
 b[0]
+    s=s.strip().replace('\nPrize\nClaimed\nRemaining\n','') 
 print(b[1])
+    result=result+'\n\n'
+    result=result+'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 print(c[1])
         print(c)
 c[-1]
@@ -10075,12 +11722,19 @@ print(c[-2])
 with open('f', 'w') as f:
     f.write(c[-2])
         print(a, file=f)
+    result=result+'\n\n---'
+    length=len(result.split('\n'))
+    result=lenghth+'\n'+result+'\n\n---'
+    result=length+'\n'+result+'\n\n---'
+    length=str(len(result.split('\n')))
 [a, b for a,b in enumerate(c)]
 [(a, b) for a,b in enumerate(c)]
 import datetime as datetime
 print(datetime.now().strftime("%a %m/%d/%Y, %H:%M:%S"))
 print ("Current date and time : ")
 print (now.strftime("%Y-%m-%d %H:%M:%S"))
+    length=str(len(result.split('\n'))-2)
+d=[(a, b) for a,b in enumerate(c)]
 d[39].split('\n')
 d[39]
 split('\n')d[39]
@@ -10090,7 +11744,14 @@ c[39].split('\n')[3:6]
 c[39].split('\n')[7:10]
 c[39].split('\n')[6:9]
 c[39].split('\n')[9:12]
-d=[(a, b) for a,b in enumerate(c)]
+    result=result[3:6]
+    # result=length+'\n'+result+'\n\n---'
+    breakpoint
+    result=result.split('\n')[2:6]
+# c=[a.strip().replace('\nPrize\nClaimed\nRemaining\n','') for a in b]
+    result=' '.join(result)
+    result=result.split('\n')[2:5]
+    result=result.split('\n')[1:5]
 larr = [lambda: i for i in range(10)]
 larr
 [a for a in larr]
@@ -10188,6 +11849,7 @@ async def main() -> None:
 		await run(playwright) 
 e3
 h3
+get_ipython().run_line_magic('e', '0')
 str(60*60*24*30*365)
 regex = r"(\d{1,2})(\d{2})(\d{2})"
 test_str = ("50221\n"
@@ -10234,6 +11896,7 @@ with open(file, "r") as file:
 17/40
 7/40
 7/4
+get_ipython().system('fd -d 1')
 file =open('h', "r")
 [a for a in file lines]
 [a for a in file print(a)]
@@ -10259,9 +11922,9 @@ int('22')
 sum([float(a) for a in t])
 bs4
 print(dir(soup))
+url="https://example.com"
 cps(soup)
 soup.head
-fileRan='soup.html'
     print(soup.head, file=tex)
 url.replace('https://','')
 url="https://www.mnlottery.com/"
@@ -10270,6 +11933,8 @@ fileRan
 fileRan=url.replace('https://','')[:-1]
 fileRan=url.replace('https://','')[:-1]+'.head')
 fileRan=url.replace('https://','')[:-1]+'.head'
+response = requests.get('https://oxylabs.io/')
+print(response.text)
 import scrapy
 class QuotesSpider(scrapy.Spider):
     name = "quotes"
@@ -10284,11 +11949,48 @@ class QuotesSpider(scrapy.Spider):
 response.css("title")
 response.css("body")
 response.css("head")
+response.css("head").getAll()
+esponse.css("title::text").getall()
+response.css("title::text").getall()
+response.css("body::text").getall()
+response.css("head::text").getall()
+from scrapy.selector import Selector
+from scrapy.http import HtmlResponse
+response = HtmlResponse(url="http://example.com", body=body, encoding="utf-8")
+Selector(response=response).xpath("//span/text()").get()
+from chocolatescraper.items import ChocolateProduct  
+class ChocolateSpider(scrapy.Spider):
+  #the name of the spider
+  name = 'chocolatespider'
+  #these are the urls that we will start scraping
+  start_urls = ['https://www.chocolate.co.uk/collections/all']
+  def parse(self, response):
+      products = response.css('product-item')
+      product_item = ChocolateProduct()
+      for product in products:
+          product_item['name'] = product.css('a.product-item-meta__title::text').get()
+          product_item['price'] = product.css('span.price').get().replace('<span class="price">\n              <span class="visually-hidden">Sale price</span>','').replace('</span>','')
+          product_item['url'] = product.css('div.product-item-meta a').attrib['href']
+          yield product_item
+      next_page = response.css('[rel="next"] ::attr(href)').get()
+      if next_page is not None:
+          next_page_url = 'https://www.chocolate.co.uk' + next_page
+          yield response.follow(next_page_url, callback=self.parse)
 class ChocolateProduct(scrapy.Item):
    name = scrapy.Field()
    price = scrapy.Field()
    url = scrapy.Field()
 response.css('title')
+response.css('title::text').get()
+response.css('h3::text').get()
+response.css('h3::text').getall()
+response.css('h1::text').getall()
+response.css('a::text').getall()
+response.css('h3').getall()
+response.css('a').getall()
+response.css('.post-header').getall()
+response.css('p').getall()
+response.css('p::text').getall()
 response.css('p::text').re(r'scraping')
 response.css('p::text').re(r'a')
 response.css('p::text').re(r'b')
@@ -10300,10 +12002,20 @@ response.css('p::text').re(r'(\w+) and')
 response.css('p::text').re(r'(\w+)and')
 response.css('.card')
 response.css('.card::text')
+response.css('.card').getall()
+response.css('.card::text').getall()
 response.css('.card').[0]
 response.css('.card')[0]
 response.css('.card::text')[0]
 response.css('p::text').
+response.css("title").getall()
+response.css("a").getall()
+response.css(".tag").getall()
+response.css(".tag").get()
+response.css(".tag")[0].get()
+response.css(".tag")[2:8].getall()
+response.css(".tag"::text)[2:8].getall()
+response.css(".tag::text")[2:8].getall()
 1,533,939.00/20
 str(1,533,939.00)
 int(1,533,939.00)
@@ -10323,7 +12035,10 @@ float('100000000000000000000.00')
 float('100000000000000000000.00')/20
 float('10000000000000000000230.00')/20
 resonse
+response.css("script").getall()
+a=response.css("script").getall()
 a[1]
+a=response.css("[class]").getall()
 response.css("html")
 response.css("html::text")
 response.css("body::text")
@@ -10381,8 +12096,6 @@ for a for a in soup('head'):
 for a in soup('head'):
     print(type(a))
 for a in soup('script'):
-for script in soup(["script", "style"]):
-    script.extract()
 with open('youT.html', encoding="utf-8") as f:
      read_data = f.read()
 read_data
@@ -10402,6 +12115,7 @@ dir(f[1])
 f[1].string
 print(dir(f[1]))
 f[1].contents
+f[1].get_text
 f[1].prettify
 [a.text for a in f]
 fff=[a.text for a in f]
@@ -10432,6 +12146,12 @@ ss['script']
 response.css("a")
 response.css("yDmH0d")
 response.css("#yDmH0d")
+response.css("#yDmH0d").getAll
+response.css("img").xpath("@src").getall()
+response.css("a").xpath("@src").getall()
+response.css("script").xpath("@src").getall()
+response.css("body").getall()
+response.css("head").getall()
 response.xpath('//body/')
 response.css('a')
 response.xpath('/html/body')
@@ -10439,6 +12159,7 @@ response.xpath('/html/body::text')
 response.xpath('//*[@id="div-01"]/text()')
 os.chdir('./..')
 url='http://localhost:3000/'
+page=requests.get(url).text
 mysoup=soup(page, "html.parser")
 mysoup
 str(mysoup)
@@ -10460,6 +12181,7 @@ str(mysoup)[:20]
 str(mysoup)[:220]
 str(mysoup)[:520]
 with open('nostyle.html', 'w') as file:
+get_ipython().run_line_magic('history', '')
 b=[a for a in mysoup(["script"])]
 b=[a for a in mysoup(["script"])][0]
 mysoup('head')
@@ -10485,6 +12207,7 @@ aa=[a.extract() for a in mysoup('a') ]
 sc=[a.extract() for a in mysoup('script') ]
 mysoup('.poem')
 mysoup.title
+mysoup.get_text()
 mysoup.title.parent
 mysoup.title.parent.parent
 mysoup.title.parent.parent.parent
@@ -10518,6 +12241,7 @@ ms.html[:200]
 ms.html[200]
 str(ms.html)[200]
 str(ms.html)[:200]
+new=requests.get('https://news.google.com/').text
 len(new)
 ne=soup(new, "html.parser")
 ne(["script"])
@@ -10558,15 +12282,19 @@ len(nw(["a"]))
 nw(["a"])[6].text
 [a.text for a in nw(["a"])]
 cps([a.text for a in nw(["a"])])
+espn=requests.get('https://www.espn.com/').text
 type(espn)
 e=soup(espn, "html.parser")
 e.head
 e.body
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+espn=requests.get('https://www.espn.com/', headers=headers).text
 espn.head
 type(e.head)
 with open('head.html', 'w') as f:
     f.write(str(e.head))
+new=requests.get('https://news.google.com/', header=header).text
+new=requests.get('https://news.google.com/', headers=headers).text
 n=soup(new,'html.parser')
 n.head
 n("[a]")
@@ -10610,6 +12338,11 @@ f/20
 f/40
 f'{f/40:_}'
 f'{f/80:_}'
+# %load 
+pwd
+history
+req=requests.get('localhost:3000').text
+req=requests.get('http://localhost:3000').text
 req
 data=soup('req','html.parser')
 data['script']
@@ -10636,6 +12369,8 @@ data.p
 data.find('p')
 data.find('div')
 data.find_all('div')
+[g.get_text() for g in data.find_all('div')]
+gg=[g.get_text() for g in data.find_all('div')]
 d=[(a, b) for a,b in enumerate(gg)]
 d=[[a, b] for a,b in enumerate(gg)]
 data.prettify
@@ -10646,10 +12381,26 @@ from bs4 import SoupStrainer
 only_tables = SoupStrainer("div")
 s = BeautifulSoup(req, parse_only=only_tables)
 s = soup(req, parse_only=only_tables)
+url = "https://www.imdb.com/chart/moviemeter/"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+if response.status_code == 200:
+    soup = BeautifulSoup(response.text, 'html.parser')
+    # Finding all the <h3> tags with class 'ipc-title__text' which have the movie names
+    title_tags = soup.find_all('h3', class_='ipc-title__text')
+    movies = []
+    for title_tag in title_tags:
+        # Extracting movie names from the <h3> tags
+        movie_name = title_tag.get_text(strip=True)
+        movies.append(movie_name)
+    # Printing the list of movie names
+    for i, movie in enumerate(movies, start=1):
+        print(f"{i}. {movie}")
+    print("Failed to retrieve the webpage. Status Code:", response.status_code)
 movies
 movies[:10]
 movies[10:]
 print(movies)
+h=requests.get('https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow').text
 hs=soup(h,'html.parser')
 [tag.name for tag in hs.findall()]
 hs.prettify
@@ -10680,6 +12431,7 @@ df.group_by("a").agg(pl.col("b").sum())
 df.group_by("a")
 df.group_by("a").agg(pl.col("b"))
 data=open('tet.html','r', encoding='utf-8').read()
+data=open('get.html','r', encoding='utf-8').read()
 so=soup(data,'html'.parse)
 so=soup(data,'html.parse')
 so=soup(data,'html.parser')
@@ -10741,7 +12493,11 @@ rep
 type(rep)
 float(rep)
 url="https://news.google.com/home?hl=en-US&gl=US&ceid=US:en"
+ht=requests.get(url).text
 open('ht','w').write(ht)
+nt=requests.get('url').text
+nt=request.get('url').text
+nt=requests.get(url).text
 len(nt)
 nt
 type(nt)
@@ -10771,6 +12527,8 @@ nts.find_all('p')[10]
 nts.find_all('p')
 nts
 len(nts)
+get=requests.get('https://news.google.com/home?hl=en-US&gl=US&ceid=US:en').text
+ss=soup(get, "html.parser")
 ss.find_all('a')
 len(ss.find_all('a'))
 kk=[a.text.strip() for a in ss.find_all('a') ]
@@ -10789,6 +12547,10 @@ open('new','w').write(str(ss.prettify))
 ss(['script'])
 len(ss(['script']))
 url='https://www.sacbee.com/health-wellness/cannabis/article270746947.html'
+spr=requests.get('https://www.sacbee.com/health-wellness/cannabis/article270746947.html').text
+spr=requests.get('https://www.sacbee.com/health-wellness/cannabis/article270746947.html', headers=headers).text
+spr=requests.get('http:/localhost:3000', headers=headers).text
+spr=requests.get('http://localhost:3000', headers=headers).text
 spr
 sps=soup(spr,'html.parser')
 sps.find_all()
@@ -10874,6 +12636,8 @@ for a in m:
 m[11]
 m.pop(11)
 m.pop(-1)
+get_ipython().system('v d')
+get_ipython().system('nvim d')
 sorted(m)
 '1.1m'.replace('m','000')
 [a[0].replace('m','000') for a in m]
@@ -10888,7 +12652,17 @@ dd=[a.split('\t') for a in duh.split('\n')]
 [a for a in dd if len(a[0]) > 1]
 [a for a in dd if len(a[0]) > 1 and len(a[1])> 1]
 dd=[a for a in dd if len(a[0]) > 1 and len(a[1])> 1]
+thelines = ['hello:3.1 GB', 'world:1.2 MB', 'foo:956.2 KB']
+mult = dict(KB=2**10, MB=2**20, GB=2**30)
+def getsize(aline):
+  fn, size = aline.split(':', 1)
+  value, unit = size.split(' ')
+  multiplier = mult[unit]
+  return float(value) * multiplier
+thelines.sort(key=getsize)
 thelines
+thelines.sort(key=getsize,reverse=true)
+thelines.sort(key=getsize,reverse=True)
 dd[1]
 dd[1][1]
 dd[1][0]
@@ -10942,6 +12716,7 @@ sorted([float(a[0][-1],[mult[a[0][-1]]]) for a in duh])
 [float(a[0][-1]) for a in duh]
 [float(a[0][:-1]) for a in duh]
 [a[0][-1] for a in duh]
+get_ipython().run_line_magic('e', '90:94')
 [float(a[0][:-1])*3 for a in duh]
 [float(a[0][:-1])*mult[a[0][-1]] for a in duh]
 sorted([float(a[0][:-1])*mult[a[0][-1]] for a in duh])
@@ -10956,6 +12731,8 @@ sorted(xx)
 [f'{a[1:,]} for a in sorted(xx,key=lambda x:x[1])]
 [f'{a[1]:,}' for a in sorted(xx,key=lambda x:x[1])]
 [(f'{a[1]:,}',a[0]) for a in sorted(xx,key=lambda x:x[1])]
+get_ipython().run_line_magic('load', 'head.py')
+# %load head.py
 soup = BeautifulSoup(response.text, 'html.parser')
 print(str(soup.body))
 print(str(soup.head))
@@ -10968,10 +12745,12 @@ url = "http://localhost:3000"
 soup.findall('script')
 soup.find_all('script')
 soup.find_all('head')
+url = "https://bringmethenews.com/minnesota-news"
 soup=BeautifulSoup(response, 'html.parse')
 soup.find_all('a')
+headers = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36"}
+webpage = requests.get(url,headers=headers)
 webpage
-headers = {
     'authority': 'www.google.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9',
@@ -11002,9 +12781,9 @@ soup = BeautifulSoup (data, "html.parser")
 for script in soup(["img", "style"]):
 str(soup)
 str(soup.pretty)
-    print(datetime.now().strftime("%a %m/%d/%Y, %H:%M:%S"), file=tex)
 fileRan='moby'
 print([a.name for a in os.scan('.')])
+get_ipython().run_line_magic('e', '2')
 print([a.name for a in os.scan('.') if a.name.endswith('json')])
 print([a.name for a in os.scandir('.') if a.name.endswith('json')])
 data = open('har.json', 'r', encoding='utf-8').read()
@@ -11179,7 +12958,6 @@ template = {
     "c": ["C", "CC"],
     "d": [{"D1": "D2", "DD1": None}, {"D1": None, "DD1": "DD2"}],
 pl.DataFrame(template)
-import pandas as pd
 template = {    'a':['A', 'AA'],
                 'b':['B', 'BB'],
                 'c':['C', 'CC'],
@@ -11193,6 +12971,7 @@ df_polars
 gi=open('gifs','r').read().strip().split('\n'))
 gi=open('gifs','r').read().strip().split('\n')
 gi
+response = requests.get(gi[3])
 with open("py.gif", "wb").write(response.content)
 open("py.gif", "wb").write(response.content)
 characters = [chr(num) for num in range(32, 127)]
@@ -11217,9 +12996,13 @@ for x in f:
     response=requests(x)
     open('jim','wb').write(resonse.content)
 f[0]
+    response=requests.get(x)
+    open('jim','wb').write(response.content)
 ch = [chr(num) for num in range(65, 91)]
 f'{ch[count]}'
 f'{ch[count]}.gif'
+    open(f'{ch[count].gif}','wb').write(response.content)
+    open(f'{ch[count]}.gif','wb').write(response.content)
 ht=open("hgif","r").read().strip().split('\n')
 [a for a in ht]
 [f'<img src="{a}">' for a in ht]
@@ -11285,6 +13068,13 @@ const data = {
 const dd = {
 print(json.dumps(jo))
 print(json.dumps(jo, indent=2))
+data = {"widget": { "debug": "on", "window": { "title": "SampleWidget", "name": "main_window", "width": 500, "height": 500 }, "image": { "src": "Images/Sun.png", "name": "sun1", "hOffset": 250, "vOffset": 250, "alignment": "center" }, "text": { "data": "Click Here", "size": 36, "style": "bold", "name": "text1", "hOffset": 250, "vOffset": 100, "alignment": "center", "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;" } }} 
+def pairs(d):
+    for k, v in d.items():
+        if isinstance(v, dict):
+            yield from pairs(v)
+            yield '{}={}'.format(k, v)
+print(list(pairs(data)))
 list(pairs(jo))
 print(list(pairs(jo)))
 jo[[a for a in jo.keys()]]
@@ -11315,9 +13105,13 @@ pprint.PrettyPrinter(data)
 [a for a in data['projects']]
 [type(a) for a in data['projects']]
 [type(a) for a in data]
+data.get('age')
+data.get('projects')
+type(data.get('projects'))
 type(data.('projects'))
 type(data('projects'))
 type(data['projects'])
+data.get('projects1')
 data.values()
 for a in data.keys():
 for x in [a for a in data.keys()]:
@@ -11380,6 +13174,7 @@ cps(ps)
 print(ps)
 import pprint;pprint.pprint(zip(('Byte', 'KByte', 'MByte', 'GByte', 'TByte'), (1 << 10*i for i in range(5))))
 print([line.strip() for line in open("bsp2.py")])
+get_ipython().run_line_magic('e', '106')
 myfile=[line.strip() for line in open("bsp2.py")]
 '\n'.join(myfile)
 open('zz','w').write('\n'.join(myfile))
@@ -11467,7 +13262,6 @@ d.replace('"','')
 d.replace('\'','"')
 json.loads(d.replace('\'','"'))
 [a.name for a in os.scandir('.') if 'har' in a.name][0]
-# %load 
 e 0
 e 6
     w=json.load(j)
@@ -11477,6 +13271,7 @@ e 6
 [a for a,b in w.keys()]
 [a for a in w.keys()]
 [a for a in w.values()]
+get_ipython().system('nvim w.json')
 w['projects']
 w['projects']['project 1']
 del w['name']
@@ -11534,7 +13329,6 @@ isinstance(3,Iterable)
     if isinstance(w[a], Iterable):
         print(w[a])
         print(f'{w[a]} is iterable')
-    print('\n\n')
         for b in w[a]:
 iter([1,3])
 iter(33)
@@ -11639,9 +13433,15 @@ s.pop('range')
 s.pop('values[1]')
 s['values']
 s['values'][1]
+s.get('values')
+s.get('valuess')
+s.get('values','nothing')
+s.get('valuesx','nothing')
 for [a in s]:
 for [a for a in s]:
 for a in s:
+    print(s.get(a))
+    print(a,s.get(a))
 s.clear()
 p:list[str]=['a','b']
 users:dict=dict.fromkeys(p)
@@ -11886,7 +13686,6 @@ f'{24*60*60*365*20:_}'
 f'{24*60*60*365*40:_}'
 f'{24*60*60*365*37:_}'
 f'{24*60*60*365*32:_}'
-thelines = ['hello:3.1 GB', 'world:1.2 MB', 'foo:956.2 KB']
 ''hello:3.1 GB'
 'hello:3.1 GB'
 'hello:3.1 GB'.split(':')
@@ -11918,9 +13717,12 @@ b,a
 ':'.join([b,a])
 b,a =du[1].split('\t')
 [a,b]
-mult = dict(KB=2**10, MB=2**20, GB=2**30)
 gitsize('10kb')
+getsize('10kb')
+getsize('a:10kb')
+getsize('hello im a file:3.1 GB')
 sorted(thelines)
+sorted(thelines,key=getsize)
 rd=random.random()
 rd
 def rd():
@@ -11952,6 +13754,7 @@ sorted(v,key=k, reverse=True)
 print(Path.cwd())
 zdir(Path)
 list(Path('.').iterdir())[1]
+get_ipython().run_line_magic('e', '99')
 zdir(list(Path('.').iterdir())[1])
 list(Path('.').iterdir().name)[1]
 list(Path('.').iterdir().name)
@@ -12283,6 +14086,8 @@ c.split(' ')
 [a.strip() for a in c.split(' ')]
 [a for a in c.split(' ') if not len(a)==0]
 [a for a in c.split(' ') if not len(a)==0][0]
+get_ipython().run_line_magic('e', '1,5')
+get_ipython().run_line_magic('e', '1:5')
 join(' ')(c.split(' '))
 ' '.join(c.split(' '))
 for a in c.split(' '):
@@ -12333,6 +14138,7 @@ f'''"insert'''
 f'''"{c[3]}'''
 f'''"{c}'''
 f'''" {qu} " '''
+get_ipython().run_line_magic('e', '28')
 f=[a for a in sorted(d.split(' ')) if not a=='"']
 print('C:\Users\John')
 print('C:\\Users\\John')
@@ -12382,6 +14188,7 @@ li[1]
 def c(x):
     x[1]='noooo'
 c(li)
+get_ipython().run_line_magic('e', '60')
     x[1]=['yes']
 os.chdir('\mnt\c\projects')
 os.chdir(r'\mnt\c\projects')
@@ -12451,6 +14258,8 @@ print(sys.__all__))
 print(sys.__all__)
 from convert import *
 zdir(convert)
+get_ipython().system('cat convert')
+get_ipython().system('cat convert.py')
 from convert import decTime, fime
 dir(fime)
 zdir(fime)
@@ -12522,6 +14331,9 @@ cps(f'{string1} {string3} \n ` ')
 final=f'{string1} {string3} \n ` '
 open('more.ps1','w',encoding='utf-8').write(final)
 open('/mnt/c/projects/music/gut/script/more.ps1','w',encoding='utf-8').write(final)
+url='https://www.mnlottery.com/winners/game'
+page = requests.get(url).text
+mysoup = soup(page, "html.parser")
 mysoup.body
 str(mysoup.body)
 open('winners.html','w',encoding='utf-8').write(str(mysoup.body))
@@ -12643,13 +14455,23 @@ chrs=[[str(a),chr(a)] for a in range(97,123)]
 data=open('image','r', encoding='utf-8').read()
 data=open('image','r', encoding='utf-8').read().strip()
 ds=data.split('\n')
+def m1(x):
+    return f'wget $x'
 m1('jim')
+    return f'wget {x}'
 [m1(a) for a in ds]
 [(a,b) for a,b in enumerate(ds)]
 [(m1(a),b) for a,b in enumerate(ds)]
 [(chrs[a],b) for a,b in enumerate(ds)]
 [(chrs[a][1],b) for a,b in enumerate(ds)]
 [f'{(chrs[a][1]}',b) for a,b in enumerate(ds)]
+f'wget {chrs[3][1]}'
+[(f'wget {(chrs[a][1]}',b) for a,b in enumerate(ds)]
+[(f'wget {a}',b) for a,b in enumerate(ds)]
+[(f'wget {chrs[a]}',b) for a,b in enumerate(ds)]
+[(f'wget {chrs[a][1]}',b) for a,b in enumerate(ds)]
+[[f'wget {chrs[a][1]}',b] for a,b in enumerate(ds)]
+[' '.join([f'wget {chrs[a][1]}'),b] for a,b in enumerate(ds)]
 ' '.join(chrs)
 ' '.join(f'{chrs[1]}')
 ''.join(f'{chrs[1]}')
@@ -12660,6 +14482,9 @@ m1('jim')
 [(f'{a}',b) for a,b in enumerate(ds)]
 chrs[23]
 chrs[23][1]
+[[f'wget -O {chrs[a][1]}',b] for a,b in enumerate(ds)]
+[[f'wget -O {chrs[a][1]}.png',b] for a,b in enumerate(ds)]
+part1=[[f'wget -O {chrs[a][1]}.png',b] for a,b in enumerate(ds)]
 [' '.join(a) for a in part1]
 [' '.join(a) for a in part1][1]
 cps([' '.join(a) for a in part1][1])
@@ -12677,7 +14502,9 @@ ds[1][-3]
 ds[1][-3:]
     print(f'{chrs[a][1]} {b[-3:}')
     print(f'{chrs[a][1]} {b[-3:]}')
+    print(f'wget -O {chrs[a][1]}.{b[-3:]} {b}')
 mm=[]
+    mm.append(f'wget -O {chrs[a][1]}.{b[-3:]} {b}')
 '\n'.join(mm)
 open('final','w', encoding='utf-8').write('\n'.join(mm))
 [a.name for a in os.scandir('.') if 'png' in a]
@@ -12693,6 +14520,9 @@ cps('\n'.join([img(a) for a in pic]))
     html=f' <div> {x} </div>\n <img src="{x}" alt="">\n  '
 ds[4]
 cps(ds[4])
+url = "https://example.com/image.jpg"
+with open("image.jpg", "wb") as f:
+    f.write(response.content)
 img_url = 'https://blog.finxter.com/wp-content/uploads/2022/04/greenland_04a.jpg'
 urllib.request.urlretrieve(img_url, "greenland_04a.png")
 data=open('image','r', encoding='utf-8').read().strip().split('\n')
@@ -12703,7 +14533,7 @@ f"greenland_04a.png"
 f"{chrs[23][1]}greenland_04a.png"
     urllib.request.urlretrieve(b, f"{chrs[a][1]}greenland_04a.png")   
 u='https://raw.githubusercontent.com/tg12/script-toolbox/main/fast_portscanner.py'
-print(response.text)
+response=requests.get(u)
 with open('port.py', 'w', encoding='utf-8').write(response.text)
 with open('port.py', 'w', encoding='utf-8').write(response.text))
 open('port.py', 'w', encoding='utf-8').write(response.text))
@@ -12744,6 +14574,10 @@ fime('330')
 file_path = 'path/to/save/myscore.mscx'
 print(os.environment)
 print(os.environ)
+os.environ.get('url')
+url = os.environ.get('url')
+get_ipython().system('v head.py')
+get_ipython().system('nvim head.py')
 import head.py
 xx=[a for a in range(10)]
 def f(x):
@@ -12751,13 +14585,19 @@ def f(x):
 filter(f,xx)
 list(filter(f,xx))
 list(filter(lambda n:n>3,xx))
+list(filter(lambda n:'get' in n,xx))
+list(filter(lambda n:'get' in n,zdir(os)))
 k='The lady doth protest too much, methinks'.split('')
 k='The lady doth protest too much, methinks'.split(' ')
+list(filter(lambda n:'get' in n,k))
 list(filter(lambda n:'0' in n,k))
 list(filter(lambda n:'o' in n,k))
 type(zdir(os))
 type(dir(os))
+list(filter(lambda n:'get' in n,(dir(os))))
 dir(os)[:3]
+[a for a in dir(os) if 'get' in a]
+[a for a in dir(os) if 'geten' in a]
 import * from  head.py
 import head
 zdir(head)
@@ -12765,6 +14605,7 @@ head.response
 head.response.text
 head.BeautifulSoup
 head.url
+response = requests.get(url, headers=headers).text
 soup=bsoup(response, 'html.parser')
 dir(head)
 soup=head.bsoup(response, 'html.parser')
@@ -12776,12 +14617,14 @@ execfile('head.py')
 exec('head.py')
 exec('head')
 exec(open('head.py').read())
+get_ipython().run_line_magic('w', '()')
 '\n'.join(soup.find_all('head'))
 '\n'.join(str(soup.find_all('head')))
 ''.join(str(soup.find_all('head')))
 ''.join(str(soup.find_all('head')[0]))
 k=''.join(str(soup.find_all('head')[0]))
 open('head','w',encoding='utf-8').write(k)
+head_datas = [head.get_text() for head in soup.find_all('head')]
 head_datas
 [head for head in soup.find_all('head')]
 soup.find_all('head')[1]
@@ -12937,10 +14780,8 @@ print(new_text)
             print(f'word {a}')
 not re.findall('a','ax')
         print(f'{a} {y}')
-            pass
         print(f'pb loop {a} {y}')
 pa,pb
-    breakpoint()
 adj = ["red", "big", "tasty"]
 fruits = ["apple", "banana", "cherry"]
 for x in adj:
@@ -13023,7 +14864,6 @@ foler
 folder
 folder='/mnt/c/you/'
 open('allsongs','w', encoding='utf-8').write('/n'.join(files))
-pwd
 open('allsongs','w', encoding='utf-8').write('\n'.join(files))
     linest[1]=f'vlc -Z c:\you\{fn}.m3u'
 scriptLine=f'vlc -Z c:\you\{fn}.m3u'
@@ -13031,6 +14871,9 @@ scriptLine
 with open(psScript,'w') as myaut:
     myaut.write(scriptLine)
 files[:100]
+#create file name date
+#creat random name for file
+#complicated function to walk dir and get extensions
 print('creates random m3u file in /you directory\nand updates all\ps\son.ps1 to play it')
 print('\nCreates random m3u file in /you directory\nand updates all\ps\son.ps1 to play it')
 mnt/c/projects/pillow()
@@ -13054,6 +14897,7 @@ def download_image(url, file_path, file_name):
     urllib.urlretrieve(url, full_path)
 url=myfile[1]
 download_image(url, '.', 'url.jpg')
+url = myfile[1]
 Fs = 8000
 f = 5
 sample = 8000
@@ -13167,20 +15011,30 @@ print(df.info(),file=myaut)
 print(df.info(),file=mya)
 mya.close()
     print(df.info(), file=f)
+get_ipython().run_line_magic('cd', 'panda/')
 n=df.info()
 print(n)
 pd.DataFrame(df.dtypes)
 m=pd.DataFrame(df.dtypes)
 print(m)
+buffer = io.StringIO()
+df.info(buf=buffer)
+s = buffer.getvalue()
+with open("df_info.txt", "w", encoding="utf-8") as f:
+    f.write(s)
 buffer
 [a for a in buffer]
-buffer = io.StringIO()
+buffer.getvalue
+buffer.getvalue()
+get_ipython().run_line_magic('ls', '(buf=buffer)')
 open('xx', 'w', encoding='utf-8').write(s)
 df.dtypes
 print(df.dtypes)
-df.info(buf=buffer)
+s=buffer.getvalue()
 open('buf','w').write(s)
+open('brColumn','w').write(buffer.getvalue())
 import panda as pd
+get_ipython().run_line_magic('history', '-g -f hist')
 df2 = pd.read_csv('/mnt/c/projects/jup/pds/countries of the world.txt')
 df2
 jim='steffes'
@@ -13201,6 +15055,7 @@ print(myfile[1])
 myfile[1].replace('\t','     ')
 data = pd.DataFrame(data=[tweet.text for tweet in tweets], columns=['Tweets'])
 display(data.head(10))
+get_ipython().system('cd panda')
 data = pd.DataFrame(data=[urn for tweet in tweets], columns=['Tweets'])
 data=pd.read_csv(urn)
 data=pd.read_csv('urn')
@@ -13340,3 +15195,38 @@ myf[:-3]
 myf[:-1]
 myf[-1]
 [f'{a[0]} {a[-1]}' for a in myf]
+    nvalue=float(value[:-1])
+finalMy=[f'{a[0]} {a[-1]}' for a in myf]
+finalMy[:-3]
+finalMy[-3:]
+open('mnt/c/all/finalSize.txt').write('\n'.join(finalMy))
+open('mnt/c/all/finalSize.txt', 'w', encoding='utf-i').write('\n'.join(finalMy))
+open('mnt/c/all/finalSize.txt', 'w', encoding='utf-8').write('\n'.join(finalMy))
+open('/mnt/c/all/finalSize.txt', 'w', encoding='utf-8').write('\n'.join(finalMy))
+myf.sort(key=mysize,reverse=True)
+data = [line.strip() for line in open('src')]
+with open("src", "r", encoding="utf-8") as f:
+    data=json.load(f)
+response=requests.get(data[1])
+with open('01.jpg','wb') as file:
+    file.write(response)
+    file.write(response.content)
+data[1].split('/')
+data[1].split('/')[-1]
+[a.split('/')[-1] for a in data]
+response=requests.get(data[1]).content
+open('1.jpg','wb').write(response)
+def last(x):
+    return x.split('/')[-1]
+    response=requests.get(x).content
+    open(last(a), 'wb').write(response)
+    response=requests.get(a).content
+xit
+img='https://picsum.photos/600/400/\?random'
+imgdata=requests.get(img).content
+open('1.jpg','wb').write(imgdata)
+imgdata
+img='https://unsplash.it/1920/1080/?random'
+print('wgt')
+print('get')
+print('am i done')

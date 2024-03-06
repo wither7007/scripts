@@ -1,0 +1,4 @@
+#!/usr/bin/bash 
+##c start http npm server with directory parm
+sqlite3 "/home/steff007/.ipython/profile_default/history.sqlite" "SELECT source from history;" ".exit" > ~/script/sqlh
+nvim -c "normal Gzz" ~/script/sqlh

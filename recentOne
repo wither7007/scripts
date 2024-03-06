@@ -1,0 +1,11 @@
+#!/bin/bash
+##c runs script once a day
+# https://stackoverflow.com/questions/16157187/bashrc-code-to-execute-1-time-a-day-upon-first-login 
+if [[ ! -e /tmp/$(date +"%Y%m%d").sem ]]
+then
+    touch /tmp/$(date +"%Y%m%d").sem
+    # Do your one-time stuff
+    printf '%s\n' "('one time recent')"
+    ~/script/recents
+fi
+

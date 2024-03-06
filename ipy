@@ -8,4 +8,4 @@ awk '!a[$0]++' ~/script/sql_hist > ~/script/sql_hist_awk
 #t=$(mktemp)
 #awk '...' filename >"$t" && mv "$t" filename
 #changed to awk unique version
-nvim -c "normal Gzz" ~/script/sql_hist_awk
+nvim -c "normal Gzz" ~/script/sql_hist

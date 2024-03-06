@@ -7,6 +7,17 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+
+jser()
+{
+fdm -ejs | xargs -r rg -i --max-count 2 "$1"
+}
+house()
+{
+cd /mnt/c/projects/house/
+nvim /mnt/c/projects/house/todos.txt
+}
+
 gitweb()
 {
 #py script to web format git remote -v 
@@ -72,7 +83,7 @@ dud() {
   (duh >"$(date | sed 's/\s/_/g' | sed 's/_C.*//g')".txt 2>&1 &)
 }
 duc() {
-  (du -sh -- * | sort -rh >"$(date | sed 's/\s/_/g' | sed 's/_C.*//g')".txt 2>&1 &)
+  (du -sh -- * | sort -rh >"/mnt/c/all/$(date | sed 's/\s/_/g' | sed 's/_C.*//g')".txt 2>&1 &)
 }
 killst() {
   pgrep node | xargs kill -9 && (npm run server >jserver.txt 2>&1 &)
@@ -82,16 +93,16 @@ pkill() {
 }
 mcut() {
   printf '%s\n' 'ffmpeg -ss 90 -i "$1" -acodec copy o$1'
-  ffmpeg -ss 90 -i "$1" -acodec copy o"$1"
+  ffmpeg -ss "$1" -i "$2" -acodec copy o"$1"
 }
 dpost() {
   cat db.json | jq 'del(.posts[] )' >temp && mv temp db.json
 }
 lsd() {
-  ls -ltr | awk '{ print $9 }'
+  ls "$1" -lshrt
 }
 pretty() {
-  npx js-beautify "$1" >tempx && mv tempx "$1"
+  npx js-beautify "$1" >tempx && mv tempx "p$1"
 }
 tid() {
   tidy "$1" >temp || mv temp "$1"

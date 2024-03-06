@@ -6,7 +6,7 @@ import sqlite3
 conn = sqlite3.connect(sqldb)
 c = conn.cursor()
 q='''
-SELECT source from history where source not like '%get%';
+SELECT source from history;
 '''
 ip = c.execute(q)
 ipl=list(ip)
