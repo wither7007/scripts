@@ -1,6 +1,7 @@
 #!/bin/bash
 ##c list recent file changes to projects/left.txt
 #todo mv left to better dir?
+printf '\n%.0s' 
 shopt -s expand_aliases
 source ~/.bash_aliases
 rm /mnt/c/projects/recent.txt || echo "no recent"
@@ -19,4 +20,5 @@ else
   fdm --changed-within="$me"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort >/mnt/c/projects/myr/left.txt
 fi
 #call py order left
+# printf '\n%.0s' {1,1}
 /mnt/c/projects/myr/lsort.py

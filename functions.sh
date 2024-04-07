@@ -7,6 +7,15 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+myb()
+{
+esbuild "$1"  --platform=node --target=esnext --outdir=build --format=cjs
+}
+nkill()
+{
+  printf '%s\n' "pgrep node | xargs kill -9"
+pgrep node | xargs kill -9
+}
 
 jser()
 {
@@ -45,7 +54,7 @@ lintow() {
 #  printf '%s\n' "$1"
 #  printf '%s\n' "$1" | sed 's.C:./mnt/c.g' | sed 's.\\./.g'
 #wintoL $(fd -a iv)
-printf "$(fd -a $1)" | sed 's|\/mnt\/c|c\:|' | sed 's|\/|\\|g' | nvim -
+printf "$(fdm -a $1)" | sed 's|\/mnt\/c|c\:|' | sed 's|\/|\\|g' | nvim -
 }
 wpwd() {
   #clip path window windows
@@ -101,9 +110,11 @@ dpost() {
 lsd() {
   ls "$1" -lshrt
 }
-pretty() {
-  npx js-beautify "$1" >tempx && mv tempx "p$1"
+
+pretty () {
+	npx js-beautify "$1" > tempx && mv tempx "p$1" && sed -i '/^\s*$/d' "p$1"
 }
+
 tid() {
   tidy "$1" >temp || mv temp "$1"
 }
@@ -210,8 +221,8 @@ ltv() {
   ls -lhrt | awk '{print $9}' | nvim -
 }
 winfi() {
-  fd -a "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g'
-  fd -a "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' | cl
+  fdm -d 1 -a books.html | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g'
+  fd -d 1 -a "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' | cl
 }
 ltvs() {
   ls -lhrt | awk '{print $9, "--" $5}' | nvim -
@@ -263,7 +274,7 @@ chah() {
   fd -H -I -tf -L --changed-within="$1"hours | rg -v "tld|conf|\.git|hyp|cache|\.local" | xargs stat -c "%n   %.19z" | sort | sed -e "s/[0-9]*\:.*00\///g"
 }
 cham() {
-  fd -H -I -tf -L --changed-within="$1"minutes | rg -v "tld|conf|\.git|hyp|cache|\.local" | xargs stat -c "%y/%n" | sort | sed -e "s/[0-9]*\:.*00\///g"
+  fdm -tf -L --changed-within="$1"minutes |  xargs stat -c "%y/%n" | sort | sed -e "s/[0-9]*\:.*00\///g"
 }
 hit() {
   history | tail -n "$1"

@@ -15230,3 +15230,164 @@ img='https://unsplash.it/1920/1080/?random'
 print('wgt')
 print('get')
 print('am i done')
+myfile=[line.strip() for line in open("new")]
+myfile[0]
+myfile[0].replace'/mnt/c/','')
+myfile[0].replace('/mnt/c/','')
+myfile[0].replace('/mnt/c/','c:\')
+myfile[0].replace('/mnt/c/','c:\\')
+myfile[0].replace('/mnt/c/',r'c:\')
+myfile[0].replace('/mnt/c/','c:\\').replace('/','\\')
+cps(myfile[0].replace('/mnt/c/','c:\\').replace('/','\\'))
+def ltow(ff):
+  return ff.replace('/mnt/c/','c:\\').replace('/','\\')
+ltow(myfile[1])
+a for a in myfile:
+    print(ltow(a))
+[ltow(a) for a in myfile]
+xx=[ltow(a) for a in myfile]
+open('xx', 'w', encoding='utf-8').write("\n".join(xx))
+lfile
+string2=" ".join(slistLow)
+string2
+with open('data.json') as f:
+    p=json.load(f)
+    print(p, type(p))
+type(p)
+p.address
+p['name']
+with open('f.html') as f:
+f='package.json'
+with open(f,'r') as file:
+    data=json.load(file)
+data['main']
+print(json.dumps(data, indent=2))
+data['description']
+json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
+python_obj = {'name': 'John', 'age': 30}
+python_obj
+type(python_obj)
+type(json.dumps(python_obj))
+aa=(json.dumps(python_obj))
+aa=(json.loads(python_obj))
+jss== '{"name": "John", "age": 30}'
+jss='{"name": "John", "age": 30}'
+type(jss)
+aa=(json.loads(jss))
+nn== [1, 2, 3, "four", "five"]
+nn= [1, 2, 3, "four", "five"]
+json.dumps(nn)
+kk=json.dumps(nn)
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+print(json.dumps(data, indent=4))
+print(json.dumps(data))
+print(json.dumps(data),sort_keys=true)
+print(json.dumps(data),sort_keys=True)
+json.dumps(data),sort_keys=True
+json.dumps(data,sort_keys=True)
+json.dumps(data,sort_keys=True,indent=2)
+print(json.dumps(data,sort_keys=True,indent=2))
+with open('package.json' 'r') as file:
+    nn=json.load(file)
+with open('package.json', 'r') as file:
+print(json.dumps(nn,sort_keys=True,indent=2))
+url = "https://jsonplaceholder.typicode.com/posts"
+    data = json.loads(response.text)
+    print(f"Error retrieving data, status code: {response.status_code}")
+data=open('package.json', 'r', encoding='utf-8').read().strip().split('\n')
+data = open('package.json', 'r', encoding='utf-8').read()
+d=json.loads(data)
+data = json.loads(open('package.json', 'r', encoding='utf-8').read())
+data.keys
+[a for a in tables]
+myu = 'https://api.github.com/search/repositories\?q\=language:python\&sort\=stars\&order\=desc\&per_page\=13'
+r = requests.get('https://reqbin.com/echo/get/json')
+r = requests.get(myu)
+myu
+import http.client
+conn = http.client.HTTPSConnection("api.github.com")
+headersList = {
+ "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+ "Accept": "application/json",
+ "Content-Type": "application/json" 
+payload = ""
+conn.request("GET", "/search/repositories?q=languge%3Apython&per_page=10&sort=stars&order=desc", payload, headersList)
+response = conn.getresponse()
+result = response.read()
+print(result.decode("utf-8"))
+result.json()
+reqUrl = "https://api.github.com/search/repositories?q=languge%3Apython&per_page=10&sort=stars&order=desc"
+response = requests.request("GET", reqUrl, data=payload,  headers=headersList)
+response.json()
+url= https://api.github.com/search/repositories\?q\=language:python\&sort\=stars\&order\=desc\&per_page\=1
+url= 'https://api.github.com/search/repositories\?q\=language:python\&sort\=stars\&order\=desc\&per_page\=1'
+r=requests.request(url)
+r=requests.request.get(url)
+myu = 'https://api.github.com/search/repositories\?q\=language:python\&sort\=stars\&order\=desc\&per_page\=1'
+r=requests.get(myu)
+print(myu)
+r.content()
+r=requests.get(myu).text
+url=r'https://api.github.com/search/repositories?q=language:python&sort=stars&order=desc&per_page=1'
+r=requests.get(url).text
+r=requests.get(url).json
+r=requests.get(url).json()
+r.keys
+r.keys()
+r['items'].keys()
+r['items']
+print(r['items'])
+r['items'][1]
+type(r['items'])
+r['items'][0]
+r['items'][0][0]
+r['items'][0].length
+[a for a in r['items'][0]]
+print([a for a in r['items'][0]])
+r['items'][0]['license']
+cps(r['items')[0])
+cps(r['items'][0])
+len(r['items'][0])
+m=r['items'][0]
+open('xx', 'w', encoding='utf-8').write("\n".join(m))
+m[1]
+[a for a in m]
+type(m)
+m.values
+m.values()
+for k, v in m.items():
+    print(k, v)
+[(k,v) for k,v in m.items]
+[(k,v) for k,v in m.items()]
+[[k,v] for k,v in m.items()]
+n=[[k,v] for k,v in m.items()]
+open('xx', 'w', encoding='utf-8').write("\n".join(n))
+n=[k,v for k,v in m.items()]
+with open('data.json', 'w') as file:
+    json.dump(m, file)
+with open('data.txt', 'w') as file:
+    file.write('
+'.join(f"{k}:{v}" for k, v in m.items()))
+    file.write(' '.join(f"{k}:{v}" for k, v in m.items()))
+    file.write('\n '.join(f"{k}:{v}" for k, v in m.items()))
+[a for a in os]
+dir(os)
+print(dir(os))
+[a for a in dir(os)]
+[a for a in dir(os) if a.contains('a')]
+[a for a in dir(os) if 'dir' in a]
+os.chdir('/mnt/c/projects/pygit')
+type(r.json)
+s=r.json()
+[(k,v) for k,v in s.items()]
+type([(k,v) for k,v in s.items()])
+kk=[(k,v) for k,v in s.items()]
+open('xx', 'w', encoding='utf-8').write("\n".join(kk))
+"\n".join(kk)
+print("\n".join(kk))
+kk[1:5]
+kk[1:2]
+kk[1:3]
+print(kk[1:3])

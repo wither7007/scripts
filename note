@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 ##c call all notes file | same as alt c in ahk
-nvim -p /mnt/c/all/note/notes /mnt/c/all/note/power /mnt/c/all/note/work /mnt/c/all/note/python /mnt/c/all/note/other /mnt/c/all/note/js
+nvim -p /mnt/c/all/note/notes /mnt/c/all/note/power /mnt/c/all/note/work /mnt/c/all/note/python /mnt/c/all/note/other /mnt/c/all/note/js /mnt/c/all/note/git

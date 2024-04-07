@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /home/steff007/.ssh 
+unzip -o jim.zip
+cat /home/steff007/.ssh/id_ed25519.pub
+cd -
