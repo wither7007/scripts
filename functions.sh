@@ -7,6 +7,13 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+
+blue(){
+  wget 'https://raw.githubusercontent.com/wither7007/htmlTemplate/main/blue.html'
+}
+mslice(){
+  ffmpeg -i "$1" -ss 19 -to 42  -vcodec libx264 -acodec copy x"$1".mp4
+}
 myb()
 {
 esbuild "$1"  --platform=node --target=esnext --outdir=build --format=cjs
@@ -109,6 +116,10 @@ dpost() {
 }
 lsd() {
   ls "$1" -lshrt
+}
+pret () {
+  printf '%s\n' "npx prettier --write '$1'"
+  npx prettier --write "$1"
 }
 
 pretty () {
@@ -270,9 +281,14 @@ gith() {
 take() { mkdir -p -- "$1" && cd -P -- "$1" || exit; }
 rgg() { rg "$1" /mnt/c/all/gcloud_his "$HISTFILE"; }
 
+# chah() {
+#   fd -H -I -tf -L --changed-within="$1"hours | rg -v "tld|conf|\.git|hyp|cache|\.local" | xargs stat -c "%n   %.19z" | sort | sed -e "s/[0-9]*\:.*00\///g"
+# }
+
 chah() {
-  fd -H -I -tf -L --changed-within="$1"hours | rg -v "tld|conf|\.git|hyp|cache|\.local" | xargs stat -c "%n   %.19z" | sort | sed -e "s/[0-9]*\:.*00\///g"
+  fdm -tf -L --changed-within="$1"hours |  xargs stat -c "%y/%n" | sort | sed -e "s/[0-9]*\:.*00\///g"
 }
+
 cham() {
   fdm -tf -L --changed-within="$1"minutes |  xargs stat -c "%y/%n" | sort | sed -e "s/[0-9]*\:.*00\///g"
 }
