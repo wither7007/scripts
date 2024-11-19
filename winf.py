@@ -1,8 +1,12 @@
 #!/usr/bin/python3.10
 ##c good print windows of linux path
+print('Enter your name:')
+x = input()
+print('Hello, ' + x)
 import re
 import sys
 import os
+print('winf')
 myos = sys.platform
 print("Current OS: ", myos)
 mydir=os.getcwd()
