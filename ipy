@@ -1,3 +1,5 @@
+#!/bin/bash 
+trash /mnt/c/projects/script/sql_hist
 /usr/bin/python3.10 ~/script/ipysql.py
 ##c part one of ipy | needs ipysql python script
 #uniq py output !!tried this but screwed order
