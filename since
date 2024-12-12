@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+  else 
+  fd -H -I --changed-within="$1"days --ignore-file ~/.fdignore
+    # echo "$1"
+fi
+

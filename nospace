@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+#alias di="docker image ls"
+# rename is an alias for /usr/bin/prename.pl
+alias 'rename'='/usr/bin/prename.pl'
+rename  's/^(.{30}).*?(\.[^.]*)$/$1$2/' * #replace long name
+rename "s/[^a-zA-Z0-9\.]/_/g" *
+rename "s/_+/_/g" *
+rename -f "y/A-Z/a-z/" *
