@@ -1,0 +1,31 @@
+#!/bin/bash
+
+read -p "please provide a name for a new user:" name
+if [ "$name" == ""  ]; then
+        echo "You did not entered a user name, so no user will be added."
+        exit;
+fi
+
+USER=$name
+HOME=/home/$USER
+
+echo "Add user $USER"
+adduser $USER --disabled-login
+
+echo "generate .ssh dir in homedir for user $USER"
+mkdir $HOME/.ssh
+chmod 0700 $HOME/.ssh
+
+echo "clone zsh git repo in $USER homedir"
+git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+chmod 0755 $HOME/.oh-my-zsh
+
+echo "setup default zsh settings"
+cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
+chmod 0755 $HOME/.zshrc
+
+echo "set correct permissions"
+chown -R $USER:$USER /home/$USER
+
+echo "change shell for user $USER"
+chsh --shell /bin/zsh $USER

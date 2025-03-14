@@ -5,4 +5,5 @@ alias 'rename'='/usr/bin/prename.pl'
 rename  's/^(.{30}).*?(\.[^.]*)$/$1$2/' * #replace long name
 rename "s/[^a-zA-Z0-9\.]/_/g" *
 rename "s/_+/_/g" *
+#caps to lower case
 rename -f "y/A-Z/a-z/" *

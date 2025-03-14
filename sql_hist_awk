@@ -516,3 +516,19 @@ conn = connection.MySQLConnection(user = 'mysql',
                               database = 'pets')
 print(conn)
 															password='secret',
+mydatabase
+  user="steff007",
+  password="secret",
+  database="junk"
+  user="admin",
+cursor=mydb.cursor
+query = ("SELECT * from junk")
+cursor.execute(query)
+cursor
+print(query)
+query = ("SELECT * from junk;")
+cursor=mydb.cursor()
+query = ("SELECT * from prodcuts;")
+query = ("SELECT * from products;")
+print(cursor)
+cursor.fetchall()
